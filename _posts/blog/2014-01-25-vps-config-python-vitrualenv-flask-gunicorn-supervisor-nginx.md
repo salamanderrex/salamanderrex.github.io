@@ -1,11 +1,4 @@
----
-layout: post
-title: Qing Yu's Curriculum Vitae
-description: 
-category: blog
----
 
-Qing Yu 's cv
 <!DOCTYPE html>
 <html>
 <head>
