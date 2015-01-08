@@ -4,7 +4,7 @@
    <title>salamanderrex.github.io/</title>
    <link href="http://salamanderrex.github.io//atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://salamanderrex.github.io/" rel="alternate" type="text/html" />
-   <updated>2014-12-21T17:47:27+08:00</updated>
+   <updated>2015-01-08T15:15:13+08:00</updated>
    <id>http://salamanderrex.github.io/</id>
    <author>
      <name></name>
@@ -114,6 +114,260 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
    
    <entry>
      <title>cv</title>
+     <link href="http://beiyuu.com/cv_ch"/>
+     <updated>2014-01-25T00:00:00+08:00</updated>
+     <id>http://sakanabderrex.github.io//cv_ch</id>
+     <content type="html">&lt;div id=&quot;main&quot;&gt;
+	
+	&lt;h1 id=&quot;title&quot;&gt;   周 庆予&lt;/h1&gt;
+	&lt;div class=&quot;basic-info section&quot;&gt;
+					&lt;h2 class=&quot;title&quot;&gt;联系方式&lt;/h2&gt;
+				&lt;div class=&quot;set&quot;&gt;
+		
+							&lt;p class=&quot;address&quot;&gt;
+					&lt;span class=&quot;value&quot;&gt;
+						59号 虹梅路, 301 室&lt;br /&gt;上海, 201103&lt;br /&gt;中国					&lt;/span&gt;
+				&lt;/p&gt;
+						&lt;div class=&quot;r&quot;&gt;
+									&lt;p class=&quot;email&quot;&gt;&lt;label&gt;电子邮箱&lt;span class=&quot;colon&quot;&gt;:&lt;/span&gt;&lt;/label&gt; &lt;span class=&quot;value&quot;&gt;zhouqingyu@sjtu.edu.cn&lt;/span&gt;&lt;/p&gt;
+				
+				
+									&lt;p class=&quot;phone&quot;&gt;&lt;label&gt;移动电话&lt;span class=&quot;colon&quot;&gt;:&lt;/span&gt;&lt;/label&gt; &lt;span class=&quot;value&quot;&gt;011-86-13661750218&lt;/span&gt;&lt;/p&gt;
+							&lt;/div&gt;
+			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
+		&lt;/div&gt;&lt;!-- set //--&gt;
+		&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
+	&lt;/div&gt;&lt;!-- basic-info //--&gt;
+
+	
+		
+			&lt;div class=&quot;section section-education&quot;&gt;
+			&lt;h2 class=&quot;title&quot;&gt;教育背景&lt;/h2&gt;
+			&lt;div class=&quot;set&quot;&gt;
+						&lt;div class=&quot;item&quot;&gt;
+							&lt;h3&gt;&lt;span class=&quot;course l&quot;&gt;工程理学士 电子与计算机工程&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;九月 2011 &amp;mdash; 现今&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;school&quot;&gt;上海交通大学&lt;/span&gt;
+							&lt;span class=&quot;school&quot;&gt;上海交大密西根学院 (UMJI)&lt;/span&gt;
+							&lt;span class=&quot;info&quot;&gt;本科在读 &lt;b&gt;绩点: 3.6224/4  专业排名:10/93&lt;/b&gt;                                                                                                                      &lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+						&lt;/div&gt;
+						&lt;/div&gt;
+			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
+		&lt;/div&gt;
+			&lt;div class=&quot;section section-work&quot;&gt;
+			&lt;h2 class=&quot;title&quot;&gt;项目经历&lt;/h2&gt;
+			&lt;div class=&quot;set&quot;&gt;
+                            
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Ve489 计算机网络&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;五月 2014 &amp;mdash; 八月 2014&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;密西根学院  课程项目&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;开发基于套接字的对等网络下载软件 &lt;/li&gt;&lt;li&gt;项目托管网址 &lt;a href=&quot;http://salamanderrex.github.io/jtorrent&quot;&gt;http://salamanderrex.github.io/jtorrent/&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+						
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Ve373 基于微处理器的系统设计&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;五月 2014 &amp;mdash; 八月 2014&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;密西根学院  课程项目&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;开发硬件基于PIC32,加密算法基于 s-AES(简化-高级加密标准) 的便携加密设备&lt;/li&gt;&lt;li&gt;项目托管网址 &lt;a href=&quot;http://salamanderrex.github.io/Edongle&quot;&gt;http://salamanderrex.github.io/Edongle/&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+						
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Vg100 工程导论&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;九月 2011 &amp;mdash; 十二月 2011&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;密西根学院  课程项目&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;设计基于红外感应手势调节转速的展示台&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+						
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;无人四旋翼控制终端&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;三月 2014 &amp;mdash; 四月 2014&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;上海交通大学&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;开发四旋翼移动控制终端，声控部分基于Sphinx &lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+						
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;智能汽车控制与显示终端&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;三月 2013 &amp;mdash; 三月 2014&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;上海交通大学, 大学生创新实践计划&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;开发基于安卓平板的电动汽车的显示与控制终端 &lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+						
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;安卓应用 - JPing&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;五月 2013 &amp;mdash; 五月 2013&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;上海交通大学, 密西根学院 &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt; 开发可以自动同步 SAKAI 作业和通告的安卓应用&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;section section-work&quot;&gt;
+			&lt;h2 class=&quot;title&quot;&gt;在校职位&lt;/h2&gt;
+			&lt;div class=&quot;set&quot;&gt;
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Ve451 助教&lt;/br&gt;数字信号处理&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;九月 2014 &amp;mdash; 十二月 2014&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;上海交通大学, 密西根学院  &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;教授每周一次的复习课 &lt;/li&gt;&lt;li&gt;批改作业试卷，回答问题与开答疑时间&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+						
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Ve270 助教&lt;/br&gt;逻辑电路设计&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;五月 2014 &amp;mdash; 八月 2014&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;上海交通大学, 密西根学院 &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;教授每周一次的复习课以及Xilinx的FPGA开发实验课&lt;/li&gt;&lt;li&gt;批改作业试卷，回答问题与开答疑时间&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+						
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;学生会网络部门部长&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;六月 2013 &amp;mdash; 六月 2014&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                            &lt;span class=&quot;job_title&quot;&gt;上海交通大学, 密西根学院 &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;开发维护学生会学院网站&lt;/li&gt;&lt;li&gt;网站样例： &lt;a href=&quot;http://umji.sjtu.edu.cn/fxjscholarship&quot;&gt;umji.sjtu.edu.cn/fxjscholarship&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+		
+						&lt;/div&gt;
+			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
+		&lt;/div&gt;
+				
+		&lt;div class=&quot;section section-work&quot;&gt;
+			&lt;h2 class=&quot;title&quot;&gt;实习经验&lt;/h2&gt;
+			&lt;div class=&quot;set&quot;&gt;
+			
+							
+							
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;卡瓦盛邦 软件专家	&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;一月 2014 &amp;mdash; 三月 2014&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;卡瓦, 上海 &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;测试医疗软件包括 Kavo PACS 和 Kavo viewer &lt;/li&gt;&lt;li&gt;作为技术支持参加广州展会&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+					&lt;br/&gt;&lt;br/&gt;
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;移动网络开发&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;十一月 2013 &amp;mdash; 十二月 2013&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;advpower, 上海 &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;参与电动汽车控制部分的安卓应用&lt;/li&gt;&lt;li&gt;同时开发网站 &lt;u&gt;&lt;a href=&quot;http://www.advpower.cn&quot;&gt;www.advpower.cn&lt;/a&gt;&lt;/u&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
+		&lt;/div&gt;
+		
+		&lt;div class=&quot;section section-work&quot;&gt;
+			&lt;h2 class=&quot;title&quot;&gt;学科奖项&lt;/h2&gt;
+			&lt;div class=&quot;set&quot;&gt;
+
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;优秀本科生奖学金 &lt;/br&gt;&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;十一月 2014&lt;/span&gt;
+							&lt;/h3&gt;
+							
+							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+							
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;通用汽车杯&lt;/br&gt;汽车创新应用比赛, 全国一等 &lt;/br&gt;&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;十一月 2013&lt;/span&gt;
+							&lt;/h3&gt;
+						
+							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+							
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;院长奖&lt;/br&gt;&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;十一月 2013&lt;/span&gt;
+							&lt;/h3&gt;
+						
+							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;		
+						
+						&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;院长奖&lt;/br&gt;&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;十月 2013&lt;/span&gt;
+							&lt;/h3&gt;
+							
+							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;	
+							
+						&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;优秀本科生奖学金  &lt;/br&gt;&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;十二月 2012&lt;/span&gt;
+							&lt;/h3&gt;
+						
+							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+							
+						&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;院长奖 &lt;/br&gt;&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;九月 2011&lt;/span&gt;
+							&lt;/h3&gt;
+						
+							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;	
+						
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;&quot;&gt;全国中学生物理竞赛 &lt;/br&gt; 上海二等 &lt;/br&gt;&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;十月 2010&lt;/span&gt;
+							&lt;/h3&gt;
+				
+							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+						
+						
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;上师杯物理实验竞赛 &lt;/br&gt; 上海二等 &lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;十一月 2009&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
+		&lt;/div&gt;
+			&lt;div class=&quot;section section-qualifications&quot;&gt;
+			&lt;h2 class=&quot;title&quot;&gt;电脑技能&lt;/h2&gt;
+			&lt;div class=&quot;set&quot;&gt;
+						&lt;div class=&quot;item&quot;&gt;
+							&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;JAVA; C/C++; PHP; Python; MySQL; 汇编语言 (MIPS); HDL: Verilog; Matlab&lt;/li&gt;&lt;li&gt;MVC 框架: Zend, CodeIgniter, J2EE ssh; web services; JSON, XML&lt;/li&gt;&lt;li&gt;SVN, GIT&lt;/li&gt;&lt;li&gt;硬件: MicroChip PIC32 (MPLAB) and Xilinx&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;
+							&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;网络和移动网络开发 (LAMP, J2EE, Python flask, Android) &lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
+		&lt;/div&gt;
+			&lt;div class=&quot;section section-interests&quot;&gt;
+			&lt;h2 class=&quot;title&quot;&gt;在校活动&lt;/h2&gt;
+			&lt;div class=&quot;set&quot;&gt;
+						&lt;div class=&quot;item&quot;&gt;
+							&lt;span class=&quot;info &quot;  &gt;&lt;span style=&quot;float:left; width=200px&quot;&gt;&lt;ul&gt;&lt;li&gt;微软 MSmart-Youth Career Fair&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;float:right;	width:200px;text-align: right;&quot;&gt;六月 3,2013 &lt;/span&gt;
+							&lt;/br&gt;
+							&lt;span class=&quot;info &quot;  &gt;&lt;span style=&quot;float:left; width=200px&quot;&gt;&lt;ul&gt;&lt;li&gt;英特尔 (紫竹) 参观  &lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;float:right;	width:200px;text-align: right;&quot;&gt;五月 9,2013&lt;/span&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
+		&lt;/div&gt;
+			
+		&lt;/div&gt;
+		
+&lt;/div&gt;
+
+</content>
+   </entry>
+   
+   <entry>
+     <title>cv</title>
      <link href="http://beiyuu.com/cv"/>
      <updated>2014-01-25T00:00:00+08:00</updated>
      <id>http://sakanabderrex.github.io//cv</id>
@@ -159,6 +413,16 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 			&lt;div class=&quot;section section-work&quot;&gt;
 			&lt;h2 class=&quot;title&quot;&gt;experience&lt;/h2&gt;
 			&lt;div class=&quot;set&quot;&gt;
+                            &lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Cs315 Web Service Technology&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;Sept. 2014 &amp;mdash; Jan. 2015&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                            &lt;span class=&quot;job_title&quot;&gt;SJTU Course Project&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;
+                                 &lt;li&gt;Developed University course reference Web Service APIs &lt;/li&gt;
+                                 &lt;li&gt;RESTful framework based on &lt;a href=&quot;https://jersey.java.net/&quot;&gt;Jersey&lt;/a&gt; and user authetication based &lt;a href=&quot;http://oauth.net/&quot;&gt;oAuth&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+                         &lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
 							&lt;div class=&quot;item&quot;&gt;
 								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Ve489 Computer Network&lt;/span&gt;
 						&lt;span class=&quot;date r&quot;&gt;May 2014 &amp;mdash; Aug. 2014&lt;/span&gt;
@@ -243,15 +507,27 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 		&lt;div class=&quot;section section-work&quot;&gt;
 			&lt;h2 class=&quot;title&quot;&gt;INTERNSHIP&lt;/h2&gt;
 			&lt;div class=&quot;set&quot;&gt;
+			
 							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Software Specialist	&lt;/span&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Cisco Automation Test Engineer	&lt;/span&gt;
+								&lt;span class=&quot;date r&quot;&gt;Jan. 2015 &amp;mdash; Present&lt;/span&gt;
+								&lt;/h3&gt;
+								&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+								&lt;span class=&quot;job_title&quot;&gt;Cisco, Shanghai &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
+									&lt;ul&gt;
+										&lt;li&gt;Responsible for automation scripts development for new devices including  L2/L3 switch, wireless router, wireless AP&lt;/li&gt;
+										&lt;li&gt;Responsible for defect report and assist developer to resolve the issue &lt;/li&gt;
+										&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+							
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Kavo Software Specialist	&lt;/span&gt;
 						&lt;span class=&quot;date r&quot;&gt;Jan. 2014 &amp;mdash; Mar. 2014&lt;/span&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;span class=&quot;job_title&quot;&gt;Kavo, Shanghai &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Tested the health-care software products including Kavo PACS and Kavo viewer and wrote the user documents &lt;/li&gt;&lt;li&gt;Attended the GuangZhou exhibit as technique support&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;
-						&lt;/br&gt;
-							&lt;/br&gt;	&lt;/br&gt;	&lt;/br&gt;	&lt;/br&gt;&lt;/br&gt;
+					
 							&lt;div class=&quot;item&quot;&gt;
 								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Mobile app and web developer&lt;/span&gt;
 						&lt;span class=&quot;date r&quot;&gt;Nov. 2013 &amp;mdash; Dec. 2013&lt;/span&gt;
@@ -276,7 +552,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 							&lt;/div&gt;
 							
 							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;&quot;General Motor Cup&quot; &lt;/br&gt;Car app contest,First Prize &lt;/br&gt;&lt;/span&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;&quot;General Motor Cup&quot; &lt;/br&gt;Car application Contest, National First Prize &lt;/br&gt;&lt;/span&gt;
 						&lt;span class=&quot;date r&quot;&gt;Dec. 2013&lt;/span&gt;
 							&lt;/h3&gt;
 						
@@ -3413,35 +3689,6 @@ if ($document) {
 &lt;/div&gt;
 
 
-
-</content>
-   </entry>
-   
-   <entry>
-     <title>只有好的棋手才会走运</title>
-     <link href="http://beiyuu.com/build-facebook"/>
-     <updated>2013-01-21T00:00:00+08:00</updated>
-     <id>http://sakanabderrex.github.io//build-facebook</id>
-     <content type="html">&lt;p&gt;能和Facebook这样的公司一起成长太幸福，对作者真是羡慕嫉妒恨。&lt;/p&gt;
-
-&lt;p&gt;Facebook快速并且顺利的成长，作者初期选择他，悬念并不大，不过在第一章谈到对公司的忠诚度倒是个不错的话题，树倒猢狲散、墙倒众人推，这就是现实，更何况赤裸裸的签订的打工合同，每个人都会做对自己最有利的选择，同样的，公司招聘也不是做慈善，所以忠诚在这里的定义是，在职期间尽心尽力做到自己该做的事情。&lt;/p&gt;
-
-&lt;p&gt;对于初创互联网公司来说，招聘是重中之重，任何苛刻都不为过，臭味相投的一流人才的内部推荐，是作者首推的方法。最早听到Facebook的“Fire Fast”原则有些惊讶，招聘成本如此之高，还有这样严厉的作为，足见对人的重视。&lt;/p&gt;
-
-&lt;p&gt;盛行工程师文化，并且对应聘者非常挑剔的公司，经理这个职位有时候会显得力量薄弱，所以书中讲团队管理章节的部分就比较没有新意，产品流程业界合格的公司大抵都如此罢。值得注意的一点就是Facebook的快，将迭代这个概念完好的贯彻执行，在Web时代，不完美不重要，错一点也不重要，慢了就很要命。当然，这需要高水平的“黑客”。&lt;/p&gt;
-
-&lt;p&gt;其实整本书趋于平淡，尤其身处行业内、并且经常捕风捉影关注此类信息，不过，我不在其中亲身感受，很多观感自然也是架空的，也无法完整体会Facebook的优秀之处。&lt;/p&gt;
-
-&lt;p&gt;最后一章，作者的投资理念很务实很合理，不过，窃以为这在互联网行业应该也是标配吧。&lt;/p&gt;
-
-&lt;p&gt;当然，祝作者报效祖国成功！&lt;/p&gt;
-
-&lt;p&gt;多废话一句：在我看来，豆瓣和Facebook有许多的相似之处，或许这只是我一厢情愿吧，哈哈。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;豆瓣链接：&lt;a href=&quot;http://book.douban.com/subject/20471120/&quot; title=&quot;打造Facebook&quot;&gt;《打造Facebook》&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;在线阅读：&lt;a href=&quot;http://read.douban.com/ebook/500486/?referral_code=myg7ot50&quot;&gt;《打造Facebook》&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 
 </content>
    </entry>
