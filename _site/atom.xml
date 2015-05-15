@@ -4,7 +4,7 @@
    <title>salamanderrex.github.io/</title>
    <link href="http://salamanderrex.github.io//atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://salamanderrex.github.io/" rel="alternate" type="text/html" />
-   <updated>2015-01-08T15:37:54+08:00</updated>
+   <updated>2015-05-15T21:58:16+08:00</updated>
    <id>http://salamanderrex.github.io/</id>
    <author>
      <name></name>
@@ -373,7 +373,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
      <id>http://sakanabderrex.github.io//cv</id>
      <content type="html">&lt;div id=&quot;main&quot;&gt;
 	
-	&lt;h1 id=&quot;title&quot;&gt;Qing Yu, Zhou&lt;/h1&gt;
+	&lt;h1 id=&quot;title&quot;&gt;QingYu, Zhou&lt;/h1&gt;
 	&lt;div class=&quot;basic-info section&quot;&gt;
 					&lt;h2 class=&quot;title&quot;&gt;Contact&lt;/h2&gt;
 				&lt;div class=&quot;set&quot;&gt;
@@ -419,31 +419,45 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
                             &lt;span class=&quot;job_title&quot;&gt;SJTU Course Project&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;
                                  &lt;li&gt;Developed University course reference Web Service APIs &lt;/li&gt;
-                                 &lt;li&gt;RESTful framework based on &lt;a href=&quot;https://jersey.java.net/&quot;&gt;Jersey&lt;/a&gt; and user authetication based &lt;a href=&quot;http://oauth.net/&quot;&gt;oAuth&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+                                 &lt;li&gt;Based on RESTful framework &lt;a href=&quot;https://jersey.java.net/&quot;&gt;Jersey&lt;/a&gt; and user authetication based on &lt;a href=&quot;http://oauth.net/&quot;&gt;oAuth&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
                          &lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;
 							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Ve489 Computer Network&lt;/span&gt;
+                                &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Ve489 Computer Network&lt;/span&gt;
 						&lt;span class=&quot;date r&quot;&gt;May 2014 &amp;mdash; Aug. 2014&lt;/span&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;UMJI Course Project&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Developed a Peer to Peer (P2P) software based on socket programming &lt;/li&gt;&lt;li&gt;Project is available on &lt;a href=&quot;http://salamanderrex.github.io/jtorrent&quot;&gt;http://salamanderrex.github.io/jtorrent/&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;UMJI Course Project  &lt;a href=&quot;http://salamanderrex.github.io/jtorrent&quot; class=&quot;glyphicon glyphicon-link&quot;&gt;&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
+							&lt;ul&gt;
+							&lt;li&gt;Developed a P2P (Peer to Peer) software based on socket programming  
+							&lt;/li&gt;
+							&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;
 						
 							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Ve373 Design of Microprocessor Based Systems&lt;/span&gt;
+                                &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Ve373 Design of Microprocessor Based Systems&lt;/span&gt;
 						&lt;span class=&quot;date r&quot;&gt;May 2014 &amp;mdash; Aug. 2014&lt;/span&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;UMJI Course Project&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Developed a portable hardware encryption device on PIC32 by s-AES (simplified -Advanced Encryption Standard)&lt;/li&gt;&lt;li&gt;Project is available on &lt;a href=&quot;http://salamanderrex.github.io/Edongle&quot;&gt;http://salamanderrex.github.io/Edongle/&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;UMJI Course Project  &lt;a href=&quot;http://salamanderrex.github.io/Edongle/&quot; class=&quot;glyphicon glyphicon-link&quot;&gt;&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
+								&lt;ul&gt;
+									&lt;li&gt;Developed a portable hardware encryption device on pic32 by s-AES (Advanced Encryption Standard) 
+								
+									&lt;/li&gt;
+								&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; 
+							&lt;/span&gt;
 							&lt;/div&gt;
 						
 							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Vg100 Intro to Engineering&lt;/span&gt;
+                                &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Vg100 Intro to Engineering&lt;/a&gt;&lt;/span&gt;
 						&lt;span class=&quot;date r&quot;&gt;Sept.2011 &amp;mdash; Dec.2011&lt;/span&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;UMJI Course Project&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Designed an automatic display shelf which changes its revolution speed by gestures based on Infrared Detector Sensors&lt;/li&gt;&lt;li&gt;Project is available on &lt;a href=&quot;http://salamanderrex.github.io/vg100&quot;&gt;http://salamanderrex.github.io/vg100&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;UMJI Course Project  &lt;a href=&quot;http://salamanderrex.github.io/vg100&quot; class=&quot;glyphicon glyphicon-link&quot;&gt; &lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
+								&lt;ul&gt;
+									&lt;li&gt;Designed an automatic display shelf which changes its revolution speed by gestures based on Infrared Detector Sensors 
+									&lt;/li&gt;
+								&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;
 						
 							&lt;div class=&quot;item&quot;&gt;
@@ -477,7 +491,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 			&lt;div class=&quot;set&quot;&gt;
 							&lt;div class=&quot;item&quot;&gt;
 								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Teaching Assistant of Ve451 &lt;/br&gt;Digital Signal Processing and Analysis&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Sept. 2014 &amp;mdash; Present&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;Sept. 2014 &amp;mdash; Dec. 2014&lt;/span&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, UMJI &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Held recitation class once a week &lt;/li&gt;&lt;li&gt;Graded the homework and exam papers and answered questions in Office Hour and email&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
@@ -496,7 +510,12 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 						&lt;span class=&quot;date r&quot;&gt;June 2013 &amp;mdash; June 2014&lt;/span&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-                            &lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, UMJI &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Constructed and maintained web sites and web service for the institute and Students’ Union&lt;/li&gt;&lt;li&gt;website &lt;a href=&quot;http://umji.sjtu.edu.cn/fxjscholarship&quot;&gt;umji.sjtu.edu.cn/fxjscholarship&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                            &lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, UMJI &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
+                            &lt;ul&gt;
+                            &lt;li&gt;Constructed and maintained web sites and web service for the institute and Students’ Union  &lt;a href=&quot;http://umji.sjtu.edu.cn/fxjscholarship&quot; class=&quot;glyphicon glyphicon-link&quot;&gt; &lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;/ul&gt;
+                            &lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;
 		
 						&lt;/div&gt;
@@ -505,19 +524,24 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 				
 		&lt;div class=&quot;section section-work&quot;&gt;
 			&lt;h2 class=&quot;title&quot;&gt;INTERNSHIP&lt;/h2&gt;
+
 			&lt;div class=&quot;set&quot;&gt;
-			
-							&lt;div class=&quot;item&quot;&gt;
+						&lt;div class=&quot;item&quot;&gt;
 								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Cisco Automation Test Engineer	&lt;/span&gt;
 								&lt;span class=&quot;date r&quot;&gt;Jan. 2015 &amp;mdash; Present&lt;/span&gt;
 								&lt;/h3&gt;
 								&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-								&lt;span class=&quot;job_title&quot;&gt;Cisco, Shanghai &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
+								&lt;span class=&quot;job_title&quot;&gt;Cisco, China Research and Develop Center &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
 									&lt;ul&gt;
-										&lt;li&gt;Responsible for automation scripts development for new devices including  L2/L3 switch, wireless router, wireless AP&lt;/li&gt;
-										&lt;li&gt;Responsible for defect report and assist developer to resolve the issue &lt;/li&gt;
+                                        &lt;li&gt;Writed automation scripts on &lt;b&gt;CSR-100v&lt;/b&gt; (Cloud Service Router) Smart license Feature&lt;/li&gt;
+                                        &lt;li&gt;Developed web-based &lt;b&gt;UCS&lt;/b&gt; (Unified Computing System) management tool via SNMP&lt;/li&gt;
+                                        &lt;li&gt;Maintained all &lt;b&gt;CSR-1000v&lt;/b&gt; series license feature local regression tests&lt;/li&gt; 
+                                        &lt;li&gt;Maintained all &lt;b&gt;ISR-4000&lt;/b&gt; series &lt;b&gt;NGIO&lt;/b&gt; (Next Generation Input Out) project local regression tests&lt;/li&gt; 
+                                        &lt;li&gt;Administrated the team lab including setup testbed, implementing test &amp; troubleshooting and hardware updating &lt;/li&gt; 
+                                        
 										&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
+						&lt;/div&gt;
+
 							
 							&lt;div class=&quot;item&quot;&gt;
 								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Kavo Software Specialist	&lt;/span&gt;
@@ -619,6 +643,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 					&lt;/div&gt;
 			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
 		&lt;/div&gt;
+        &lt;!--
 			&lt;div class=&quot;section section-interests&quot;&gt;
 			&lt;h2 class=&quot;title&quot;&gt;activities&lt;/h2&gt;
 			&lt;div class=&quot;set&quot;&gt;
@@ -629,6 +654,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 						&lt;/div&gt;
 					&lt;/div&gt;
 			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
+            !--&gt;
 		&lt;/div&gt;
 			
 		&lt;/div&gt;
