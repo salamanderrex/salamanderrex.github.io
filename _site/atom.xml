@@ -4,7 +4,7 @@
    <title>salamanderrex.github.io/</title>
    <link href="http://salamanderrex.github.io//atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://salamanderrex.github.io/" rel="alternate" type="text/html" />
-   <updated>2015-05-15T21:58:16+08:00</updated>
+   <updated>2015-08-17T18:46:28+08:00</updated>
    <id>http://salamanderrex.github.io/</id>
    <author>
      <name></name>
@@ -379,10 +379,10 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 				&lt;div class=&quot;set&quot;&gt;
 							&lt;p class=&quot;address&quot;&gt;
 					&lt;span class=&quot;value&quot;&gt;
-						59 HongMei Road, 301 Shi&lt;br /&gt;Shanghai, 201103&lt;br /&gt;China					&lt;/span&gt;
+						9226 Regents Road #I&lt;br /&gt;La Jolla, CA  92037&lt;br /&gt;	&lt;/span&gt;
 				&lt;/p&gt;
 						&lt;div class=&quot;r&quot;&gt;
-									&lt;p class=&quot;email&quot;&gt;&lt;label&gt;E-mail&lt;span class=&quot;colon&quot;&gt;:&lt;/span&gt;&lt;/label&gt; &lt;span class=&quot;value&quot;&gt;zhouqingyu@sjtu.edu.cn&lt;/span&gt;&lt;/p&gt;
+									&lt;p class=&quot;email&quot;&gt;&lt;label&gt;E-mail&lt;span class=&quot;colon&quot;&gt;:&lt;/span&gt;&lt;/label&gt; &lt;span class=&quot;value&quot;&gt;qyzhou@eng.ucsd.edu&lt;/span&gt;&lt;/p&gt;
 				
 				
 									&lt;p class=&quot;phone&quot;&gt;&lt;label&gt;Phone&lt;span class=&quot;colon&quot;&gt;:&lt;/span&gt;&lt;/label&gt; &lt;span class=&quot;value&quot;&gt;011-86-13661750218&lt;/span&gt;&lt;/p&gt;
@@ -409,6 +409,82 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 						&lt;/div&gt;
 			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
 		&lt;/div&gt;
+				&lt;div class=&quot;section section-work&quot;&gt;
+			&lt;h2 class=&quot;title&quot;&gt;POSITION&lt;/h2&gt;
+			&lt;div class=&quot;set&quot;&gt;
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Teaching Assistant of Ve451 &lt;/br&gt;Digital Signal Processing and Analysis&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;Sept. 2014 &amp;mdash; Dec. 2014&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, UMJI &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Held recitation class once a week &lt;/li&gt;&lt;li&gt;Graded the homework and exam papers and answered questions in Office Hour and email&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+						
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Teaching Assistant of Ve270 &lt;/br&gt;Introduction to Logic Design&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;May 2014 &amp;mdash; Aug. 2014&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, UMJI &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Held the lab session on Xilinx Development and recitation class once a week&lt;/li&gt;&lt;li&gt;Graded the homework and exam paper and answered questions in Office Hour and email&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+						
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Leader of UMJI Network Department &lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;June 2013 &amp;mdash; June 2014&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                            &lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, UMJI &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
+                            &lt;ul&gt;
+                            &lt;li&gt;Constructed and maintained web sites and web service for the institute and Students’ Union  &lt;a href=&quot;http://umji.sjtu.edu.cn/fxjscholarship&quot; class=&quot;glyphicon glyphicon-link&quot;&gt; &lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;/ul&gt;
+                            &lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+		
+						&lt;/div&gt;
+			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
+		&lt;/div&gt;
+
+
+		&lt;div class=&quot;section section-work&quot;&gt;
+			&lt;h2 class=&quot;title&quot;&gt;INTERNSHIP&lt;/h2&gt;
+
+			&lt;div class=&quot;set&quot;&gt;
+						&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Cisco Automation Test Engineer	&lt;/span&gt;
+								&lt;span class=&quot;date r&quot;&gt;Jan. 2015 &amp;mdash; Present&lt;/span&gt;
+								&lt;/h3&gt;
+								&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+								&lt;span class=&quot;job_title&quot;&gt;Cisco, China Research and Develop Center &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
+									&lt;ul&gt;
+                                        &lt;li&gt;Writed automation scripts on &lt;b&gt;CSR-100v&lt;/b&gt; (Cloud Service Router) Smart license Feature&lt;/li&gt;
+                                        &lt;li&gt;Developed web-based &lt;b&gt;UCS&lt;/b&gt; (Unified Computing System) management tool via SNMP&lt;/li&gt;
+                                        &lt;li&gt;Maintained &lt;b&gt;CSR-1000v&lt;/b&gt; and &lt;b&gt;ISR&lt;/b&gt; series project local regression tests&lt;/li&gt; 
+                                        &lt;li&gt;Administrated the team lab including setup testbed, implementing test &amp; troubleshooting and hardware updating &lt;/li&gt; 
+                                        
+										&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+						&lt;/div&gt;
+
+							
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Kavo Software Specialist	&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;Jan. 2014 &amp;mdash; Mar. 2014&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;Kavo, Shanghai &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Tested the health-care software products including Kavo PACS and Kavo viewer and wrote the user documents &lt;/li&gt;&lt;li&gt;Attended the GuangZhou exhibit as technique support&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+					
+							&lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Mobile app and web developer&lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;Nov. 2013 &amp;mdash; Dec. 2013&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;advpower, Shanghai &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Participated in android user-interface app for controlling component on EV&lt;/li&gt;&lt;li&gt;Developed website &lt;u&gt;&lt;a href=&quot;http://www.advpower.cn&quot;&gt;www.advpower.cn&lt;/a&gt;&lt;/u&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
+		&lt;/div&gt;
+
 			&lt;div class=&quot;section section-work&quot;&gt;
 			&lt;h2 class=&quot;title&quot;&gt;experience&lt;/h2&gt;
 			&lt;div class=&quot;set&quot;&gt;
@@ -486,81 +562,8 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 						&lt;/div&gt;
 			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
 		&lt;/div&gt;
-		&lt;div class=&quot;section section-work&quot;&gt;
-			&lt;h2 class=&quot;title&quot;&gt;POSITION&lt;/h2&gt;
-			&lt;div class=&quot;set&quot;&gt;
-							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Teaching Assistant of Ve451 &lt;/br&gt;Digital Signal Processing and Analysis&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Sept. 2014 &amp;mdash; Dec. 2014&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, UMJI &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Held recitation class once a week &lt;/li&gt;&lt;li&gt;Graded the homework and exam papers and answered questions in Office Hour and email&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-						
-							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Teaching Assistant of Ve270 &lt;/br&gt;Introduction to Logic Design&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;May 2014 &amp;mdash; Aug. 2014&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, UMJI &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Held the lab session on Xilinx Development and recitation class once a week&lt;/li&gt;&lt;li&gt;Graded the homework and exam paper and answered questions in Office Hour and email&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-						
-							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Leader of UMJI Network Department &lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;June 2013 &amp;mdash; June 2014&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-                            &lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, UMJI &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
-                            &lt;ul&gt;
-                            &lt;li&gt;Constructed and maintained web sites and web service for the institute and Students’ Union  &lt;a href=&quot;http://umji.sjtu.edu.cn/fxjscholarship&quot; class=&quot;glyphicon glyphicon-link&quot;&gt; &lt;/a&gt;
-                            &lt;/li&gt;
-                            &lt;/ul&gt;
-                            &lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-		
-						&lt;/div&gt;
-			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
-		&lt;/div&gt;
+
 				
-		&lt;div class=&quot;section section-work&quot;&gt;
-			&lt;h2 class=&quot;title&quot;&gt;INTERNSHIP&lt;/h2&gt;
-
-			&lt;div class=&quot;set&quot;&gt;
-						&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Cisco Automation Test Engineer	&lt;/span&gt;
-								&lt;span class=&quot;date r&quot;&gt;Jan. 2015 &amp;mdash; Present&lt;/span&gt;
-								&lt;/h3&gt;
-								&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-								&lt;span class=&quot;job_title&quot;&gt;Cisco, China Research and Develop Center &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
-									&lt;ul&gt;
-                                        &lt;li&gt;Writed automation scripts on &lt;b&gt;CSR-100v&lt;/b&gt; (Cloud Service Router) Smart license Feature&lt;/li&gt;
-                                        &lt;li&gt;Developed web-based &lt;b&gt;UCS&lt;/b&gt; (Unified Computing System) management tool via SNMP&lt;/li&gt;
-                                        &lt;li&gt;Maintained all &lt;b&gt;CSR-1000v&lt;/b&gt; series license feature local regression tests&lt;/li&gt; 
-                                        &lt;li&gt;Maintained all &lt;b&gt;ISR-4000&lt;/b&gt; series &lt;b&gt;NGIO&lt;/b&gt; (Next Generation Input Out) project local regression tests&lt;/li&gt; 
-                                        &lt;li&gt;Administrated the team lab including setup testbed, implementing test &amp; troubleshooting and hardware updating &lt;/li&gt; 
-                                        
-										&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-						&lt;/div&gt;
-
-							
-							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Kavo Software Specialist	&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Jan. 2014 &amp;mdash; Mar. 2014&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;Kavo, Shanghai &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Tested the health-care software products including Kavo PACS and Kavo viewer and wrote the user documents &lt;/li&gt;&lt;li&gt;Attended the GuangZhou exhibit as technique support&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-					
-							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Mobile app and web developer&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Nov. 2013 &amp;mdash; Dec. 2013&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;advpower, Shanghai &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Participated in android user-interface app for controlling component on EV&lt;/li&gt;&lt;li&gt;Developed website &lt;u&gt;&lt;a href=&quot;http://www.advpower.cn&quot;&gt;www.advpower.cn&lt;/a&gt;&lt;/u&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
-		&lt;/div&gt;
 		
 		&lt;div class=&quot;section section-work&quot;&gt;
 			&lt;h2 class=&quot;title&quot;&gt;AWARDS&lt;/h2&gt;
@@ -614,31 +617,18 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;	
 						
-							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;&quot;&gt;National Olympics Physics Award &lt;/br&gt; second prize  &lt;/br&gt;&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Oct. 2010&lt;/span&gt;
-							&lt;/h3&gt;
-				
-							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-						
-						
-							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Physics Experiment Competition &lt;/br&gt; second prize &lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Dec. 2009&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
 			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
 		&lt;/div&gt;
 			&lt;div class=&quot;section section-qualifications&quot;&gt;
 			&lt;h2 class=&quot;title&quot;&gt;SKILLS&lt;/h2&gt;
 			&lt;div class=&quot;set&quot;&gt;
 						&lt;div class=&quot;item&quot;&gt;
-							&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;JAVA; C/C++; PHP; Python; MySQL; Assembly language (MIPS); HDL: Verilog; Matlab&lt;/li&gt;&lt;li&gt;MVC Frameworks: Zend, CodeIgniter, J2EE ssh; web services; JSON, XML&lt;/li&gt;&lt;li&gt;SVN, GIT&lt;/li&gt;&lt;li&gt;Hardware: MicroChip PIC32 (MPLAB) and Xilinx&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;
-							&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Network and mobile network development (LAMP, J2EE, Python flask, Android) &lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;
+							&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;JAVA; C/C++; PHP; Python; HTML; JS; MySQL; Assembly language (on MIPS); Matlab &lt;/li&gt;
+							 &lt;li&gt;HDL: Verilog &lt;/li&gt;&lt;li&gt;MVC Frameworks: Zend, Laravel, J2EE ssh; jekyll; Ruby on Rails; web services; JSON, XML&lt;/li&gt;
+							&lt;li&gt;Version Control: SVN, GIT&lt;/li&gt;
+							&lt;li&gt;Hardware: MicroChip PIC32 (MPLAB) and Xilinx&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;
+							&lt;li&gt; IDE: Eclipse, Visual Studio &lt;/li&gt;
+							&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Solid Network and mobile network development knowledge(LAMP, J2EE, Python flask, Android) &lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;
 						&lt;/div&gt;
 					&lt;/div&gt;
 			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
