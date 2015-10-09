@@ -1,211 +1,8 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<!-- <link rel="stylesheet" href="/css/cv.css" type="text/css" /> -->
-  <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
-<title>cv</title>
-		<style type="text/css">
-		.award_date {
-			float: right;
-			width: 38%;
-			text-align: right;
-		}
-		body {
-			background: #f0f0f0;
-			margin: 0;
-			padding: 0;
-			
-			font-family: 'Helvetica Neue', Helvetica, Arial;
-			line-height: 18px;
-			font-size: 12px;
+---
+layout: cv
+title: cv
+---
 
-			color: #222;
-		}
-
-		h1, h2, h3, h4 {
-			margin: 0 0 15px 0;
-			padding: 0;
-		}
-		h1 {
-			font-size: 300%;
-		}
-		h2 {
-			font-size: 210%;
-		}
-		h3 {
-			font-size: 130%;
-		}
-		
-		p {
-			margin: 0 0 10px 0;
-		}
-		
-		ul {
-			margin: 0;
-			padding: 0 0 0 20px;
-			list-style-type: square;
-		}
-		a {
-			color: #222;
-		}
-		/* ________________________________________________________ */
-		
-		.clear {
-			clear: both;
-		}
-
-		#main {
-			background: #fff;
-			width: 900px;
-			padding: 35px;
-			margin: 0 auto 15px auto;
-			overflow: hidden;
-			
-			box-shadow: 0 0 6px #ccc;
-		}
-		
-		#title {
-			line-height: 42px;
-			border-bottom: 3px solid #000;
-			padding-bottom: 20px;
-			padding-left:37%;
-			margin: 0px 0 20px 0;
-			font-weight: bold;
-		}
-		
-		#credit {
-			margin-bottom: 20px;
-			font-size: 11px;
-			color: #999;
-			text-align: center;
-		}
-			#credit a {
-				color: #999;
-			}
-		
-		p label {
-			font-weight: bold;
-			
-			font-size: 110%;
-			margin-right: 10px;
-		}
-			p label span.colon {
-				display: inline;
-			}
-
-		
-		.section {
-			margin-bottom: 5px;
-		}
-		
-		.item {
-			margin: 0 0 10px 0;
-		}
-
-		/*  _____________________________ */
-		.rtl {
-			direction: rtl;
-		}
-
-		.photo .basic-info .set {
-			float: none !important;
-			width: auto !important;
-		}
-		.basic-info .address {
-			width: 40%;
-			float: left;
-		}
-		.basic-info .r {
-			float: right;
-			width: 58%;
-			text-align: right;
-		}
-			.basic-info label {
-				font-weight: bold;
-			}
-			.basic-info label, .basic-info span  {
-				display: inline !important;
-			}
-		.basic-info p {
-			margin: 0;
-		}
-		
-		.section .title {
-			background: #000;
-			float: left;
-			text-transform: uppercase;
-			font-size: 105%;
-			font-weight: bold;
-			word-wrap: break-word;
-			color: #fff;
-			padding: 4px 6px;
-			width: 16%;
-			margin-right: 30px;
-		}
-		.section .set {
-			float: left;
-			width: 78%;
-		}
-			.section .set h3 {
-				margin: 0;
-			}
-		.section span {
-			display: block;
-		}
-		.section h3 span.l, .section span.r {
-			width:49%;
-			float: left;
-		}
-			.section span.r {
-		
-				float: right;
-				text-align: right;
-			}
-			.section-education .school,
-			.section-work .job_title {
-				font-size: 100%;
-				display: block;
-				margin: 5px 0 5px 0;
-			}
-
-		/* ___ photo ___ */
-		#photo {
-			width: 160px;
-			height: 200px;
-			overflow: hidden;
-			float: left;
-			margin-top: 8px;
-			border-radius: 4px;
-		}
-		#photo img {
-			width: 100%;
-			height: auto;
-		}
-		.header.photo {
-			margin-left: 190px;
-		}
-		.header.photo #title {
-			text-align: left;
-		}
-		.header.photo .basic-info {
-			float: none;
-			padding: 0;
-		}
-
-		@media screen and (max-width: 950px) {
-			body {
-				background: #fff;
-			}
-			#main {
-				box-shadow: none;
-				padding: 0;
-				padding: 5px;
-			}
-		}
-	</style>
-</head>
-<body class="lang-en ">
 
 <div id="main">
 	
@@ -358,35 +155,33 @@
 						<span class="date r">Sept. 2014 &mdash; Jan. 2015</span>
 							</h3>
 							<span class="clear"> </span>
-                            <!-- <span class="job_title">SJTU Course Project</span> --> <span class="info"><ul>
+                            <!--  <span class="job_title">SJTU Course Project</span><span class="info"><ul> -->
                                  <li>Developed University course reference book Web Service and web application uses WS API</li>
                                  <li>Based on RESTful framework <a href="https://jersey.java.net/">Jersey</a> and user authetication based on <a href="http://oauth.net/"> oAuth </a>to realize single-login in all apps</li></ul>
                          </span><span class="clear"> </span>
 							</div>
 							<div class="item">
-                                <h3><span class="company l">Jtorrent: A P2P download software  <a href="http://salamanderrex.github.io/jtorrent" class="glyphicon glyphicon-link"></a></span>
+                                <h3><span class="company l">Jtorrent: A P2P download software</span>
 						<span class="date r">May 2014 &mdash; Aug. 2014</span>
 							</h3>
 							<span class="clear"> </span>
-                            <!-- <span class="job_title">UMJI Course Project  <a href="http://salamanderrex.github.io/jtorrent" class="glyphicon glyphicon-link"></a> --> 
-                        </span><span class="info">
+							<span class="job_title">UMJI Course Project  <a href="http://salamanderrex.github.io/jtorrent" class="glyphicon glyphicon-link"></a></span><span class="info">
 							<ul>
-							<li>Developed a P2P software based on socket programming in C++ and implemented our peer selection algorithm</li>
-                            <li>Tested the torrent server, tracker and clients in different network topologies</li>
+							<li>Developed a P2P software based on socket programming in C++ and tested on different topologies
+							</li>
 							</ul></span><span class="clear"> </span>
 							</div>
 						
 							<div class="item">
-                                <h3><span class="company l">EDongle: A portable encryption device <a href="http://salamanderrex.github.io/Edongle/" class="glyphicon glyphicon-link"></a>
-</span> 
-                                    <span class="date r">May 2014 &mdash; Aug. 2014</span>
+                                <h3><span class="company l">EDongle: A portable encryption device</span>
+						<span class="date r">May 2014 &mdash; Aug. 2014</span>
 							</h3>
 							<span class="clear"> </span>
-                            <!-- <span class="job_title">UMJI Course Project  <a href="http://salamanderrex.github.io/Edongle/" class="glyphicon glyphicon-link"></a></span> -->
-                            <span class="info"> 
+							<span class="job_title">UMJI Course Project  <a href="http://salamanderrex.github.io/Edongle/" class="glyphicon glyphicon-link"></a></span><span class="info">
 								<ul>
-									<li>Built a portable hardware encryption device on pic32 by s-AES (Advanced Encryption Standard) </li>
-                                    <li>Implemented the communication between PC and pic32 by USB and Websocket</li>
+									<li>Developed a portable hardware encryption device on pic32 by s-AES (Advanced Encryption Standard) 
+								
+									</li>
 								</ul></span><span class="clear"> 
 							</span>
 							</div>
@@ -398,7 +193,8 @@
 							<span class="clear"> </span>
 							<span class="job_title">UMJI Course Project  <a href="http://salamanderrex.github.io/vg100" class="glyphicon glyphicon-link"> </a></span><span class="info">
 								<ul>
-									<li>Designed an automatic display shelf which changes its revolution speed by gestures based on Infrared Detector Sensors NBBBBBBBB </li>
+									<li>Designed an automatic display shelf which changes its revolution speed by gestures based on Infrared Detector Sensors 
+									</li>
 								</ul></span><span class="clear"> </span>
 							</div>
 						-->
@@ -407,12 +203,7 @@
 						<span class="date r">Mar. 2014 &mdash; Apr. 2014</span>
 							</h3>
 							<span class="clear"> </span>
-                            <!--	<span class="job_title">Shanghai Jiao Tong University</span> --> 
-                            <span class="info"><ul>
-                                    <li>Constructed a quadcopter voice control panel on mobile phone based on CMU Sphinx </li>
-                                    <li>Installed the OpenWrt on wireless module and writed code on quadcopter to enable wireless communication </li>
-                            </ul></span><span class="clear"> </span>
-
+							<span class="job_title">Shanghai Jiao Tong University</span><span class="info"><ul><li>Developed a quadcopter voice control panel on mobile phone based on Sphinx </li></ul></span><span class="clear"> </span>
 							</div>
 						
 						<div class="item">
@@ -420,24 +211,15 @@
 						<span class="date r">May 2013 &mdash; May 2013</span>
 							</h3>
 							<span class="clear"> </span>
-                            <!-- <span class="job_title">Shanghai Jiao Tong University, UMJI</span> --> 
-                            <span class="info"><ul>
-                                    <li>Developed an android application which can retrieve announcements and assignments from SAKAI </li>
-                                    <li>Retrived data from website by web-scraping in BeautifulSoup automatically</li>
-                            </ul></span><span class="clear"> </span>
+							<span class="job_title">Shanghai Jiao Tong University, UMJI</span><span class="info"><ul><li>Developed an android application which can automatically retrieve announcements and assignments from SAKAI </li></ul></span><span class="clear"> </span>
 						</div>
 
 							<div class="item">
-								<h3><span class="company l">An Intelligent Display and Control Terminal System for EVs</span><span class="date r">Mar. 2013 &mdash; Mar. 2014</span>
+								<h3><span class="company l">An Intelligent Display and Control Terminal System for EVs</span>
+						<span class="date r">Mar. 2013 &mdash; Mar. 2014</span>
 							</h3>
 							<span class="clear"> </span>
-                            <!-- <span class="job_title">Shanghai Jiao Tong University, Innovation project</span> -->
-                            <span class="info">
-                                <span class="info"> 
-                                    <ul>
-                                    <li>Developed a displaying and controlling system based on the Android tablet for electric vehicles </li>
-                                    <li>Installed sensors on EV to gather environment data and EV status </li>
-                            </ul></span><span class="clear"> </span>
+							<span class="job_title">Shanghai Jiao Tong University, Innovation project</span><span class="info"><ul><li> Developed a displaying and controlling system based on the Android tablet for electric vehicles </li></ul></span><span class="clear"> </span>
 							</div>
 						
 		
@@ -503,12 +285,12 @@
 			<h2 class="title">SKILLS</h2>
 			<div class="set">
 						<div class="item">
-							<span class="info"><ul><li>JAVA; C/C++; PHP; Python; HTML; JS; TCL;  MySQL; Assembly language (on MIPS) </li>
+							<span class="info"><ul><li>JAVA; C/C++; PHP; Python; HTML; JS; TCL;  MySQL; Assembly language (on MIPS); Matlab </li>
 							 <li>HDL: Verilog </li><li>MVC Frameworks: Zend, Laravel, J2EE ssh; jekyll; web services; JSON, XML</li>
 							<li>Version Control: SVN, GIT</li>
-							<li>Hardware: MicroChip PIC32 (MPLAB) and Xilinx</li>
-							<li> IDE: Eclipse, Visual Studio, pyCharm, Matlab,vim  </li>
-							<li>Network and mobile network development knowledge(LAMP, J2EE, Python flask, Android) </li></ul></span>
+							<li>Hardware: MicroChip PIC32 (MPLAB) and Xilinx</li></ul></span>
+							<li> IDE: Eclipse, Visual Studio </li>
+							<span class="info"><ul><li>Solid Network and mobile network development knowledge(LAMP, J2EE, Python flask, Android) </li></ul></span>
 						</div>
 					</div>
 			<div class="clear"> </div>
@@ -531,7 +313,3 @@
 		
 </div>
 
-
-
-</body>
-</html>

@@ -4,7 +4,7 @@
    <title>salamanderrex.github.io/</title>
    <link href="http://salamanderrex.github.io//atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://salamanderrex.github.io/" rel="alternate" type="text/html" />
-   <updated>2015-10-09T00:15:15-07:00</updated>
+   <updated>2015-10-09T13:56:06-07:00</updated>
    <id>http://salamanderrex.github.io/</id>
    <author>
      <name></name>
@@ -469,7 +469,8 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 						&lt;span class=&quot;date r&quot;&gt;Nov. 2013 &amp;mdash; Dec. 2013&lt;/span&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;advpower, Shanghai &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Participated in Android user-interface app for controlling component on EV&lt;/li&gt;&lt;li&gt;Participated in development of website &lt;u&gt;&lt;a href=&quot;http://www.advpower.cn&quot;&gt;www.advpower.cn&lt;/a&gt;&lt;/u&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;advpower, Shanghai &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Participated in Android user-interface app for controlling component on EV based on bluetooth communication&lt;/li&gt;
+                                &lt;li&gt;Participated in development of company business website &lt;u&gt;&lt;a href=&quot;http://www.advpower.cn&quot;&gt;www.advpower.cn&lt;/a&gt;&lt;/u&gt; based on WordPress&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;
 						&lt;/div&gt;
 			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
@@ -521,33 +522,35 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 						&lt;span class=&quot;date r&quot;&gt;Sept. 2014 &amp;mdash; Jan. 2015&lt;/span&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-                            &lt;span class=&quot;job_title&quot;&gt;SJTU Course Project&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;
-                                 &lt;li&gt;Developed University course reference book Web Service APIs &lt;/li&gt;
-                                 &lt;li&gt;Based on RESTful framework &lt;a href=&quot;https://jersey.java.net/&quot;&gt;Jersey&lt;/a&gt; and user authetication based on &lt;a href=&quot;http://oauth.net/&quot;&gt;oAuth&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+                            &lt;!-- &lt;span class=&quot;job_title&quot;&gt;SJTU Course Project&lt;/span&gt; --&gt; &lt;span class=&quot;info&quot;&gt;&lt;ul&gt;
+                                 &lt;li&gt;Developed University course reference book Web Service and web application uses WS API&lt;/li&gt;
+                                 &lt;li&gt;Based on RESTful framework &lt;a href=&quot;https://jersey.java.net/&quot;&gt;Jersey&lt;/a&gt; and user authetication based on &lt;a href=&quot;http://oauth.net/&quot;&gt; oAuth &lt;/a&gt;to realize single-login in all apps&lt;/li&gt;&lt;/ul&gt;
                          &lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;
 							&lt;div class=&quot;item&quot;&gt;
-                                &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Jtorrent: A P2P download software&lt;/span&gt;
+                                &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Jtorrent: A P2P download software  &lt;a href=&quot;http://salamanderrex.github.io/jtorrent&quot; class=&quot;glyphicon glyphicon-link&quot;&gt;&lt;/a&gt;&lt;/span&gt;
 						&lt;span class=&quot;date r&quot;&gt;May 2014 &amp;mdash; Aug. 2014&lt;/span&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;UMJI Course Project  &lt;a href=&quot;http://salamanderrex.github.io/jtorrent&quot; class=&quot;glyphicon glyphicon-link&quot;&gt;&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
+                            &lt;!-- &lt;span class=&quot;job_title&quot;&gt;UMJI Course Project  &lt;a href=&quot;http://salamanderrex.github.io/jtorrent&quot; class=&quot;glyphicon glyphicon-link&quot;&gt;&lt;/a&gt; --&gt; 
+                        &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
 							&lt;ul&gt;
-							&lt;li&gt;Developed a P2P software based on socket programming in C++
-							&lt;/li&gt;
+							&lt;li&gt;Developed a P2P software based on socket programming in C++ and implemented our peer selection algorithm&lt;/li&gt;
+                            &lt;li&gt;Tested the torrent server, tracker and clients in different network topologies&lt;/li&gt;
 							&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;
 						
 							&lt;div class=&quot;item&quot;&gt;
-                                &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;EDongle: A portable encryption device&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;May 2014 &amp;mdash; Aug. 2014&lt;/span&gt;
+                                &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;EDongle: A portable encryption device &lt;a href=&quot;http://salamanderrex.github.io/Edongle/&quot; class=&quot;glyphicon glyphicon-link&quot;&gt;&lt;/a&gt;
+&lt;/span&gt; 
+                                    &lt;span class=&quot;date r&quot;&gt;May 2014 &amp;mdash; Aug. 2014&lt;/span&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;UMJI Course Project  &lt;a href=&quot;http://salamanderrex.github.io/Edongle/&quot; class=&quot;glyphicon glyphicon-link&quot;&gt;&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
+                            &lt;!-- &lt;span class=&quot;job_title&quot;&gt;UMJI Course Project  &lt;a href=&quot;http://salamanderrex.github.io/Edongle/&quot; class=&quot;glyphicon glyphicon-link&quot;&gt;&lt;/a&gt;&lt;/span&gt; --&gt;
+                            &lt;span class=&quot;info&quot;&gt; 
 								&lt;ul&gt;
-									&lt;li&gt;Developed a portable hardware encryption device on pic32 by s-AES (Advanced Encryption Standard) 
-								
-									&lt;/li&gt;
+									&lt;li&gt;Built a portable hardware encryption device on pic32 by s-AES (Advanced Encryption Standard) &lt;/li&gt;
+                                    &lt;li&gt;Implemented the communication between PC and pic32 by USB and Websocket&lt;/li&gt;
 								&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; 
 							&lt;/span&gt;
 							&lt;/div&gt;
@@ -559,8 +562,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;span class=&quot;job_title&quot;&gt;UMJI Course Project  &lt;a href=&quot;http://salamanderrex.github.io/vg100&quot; class=&quot;glyphicon glyphicon-link&quot;&gt; &lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
 								&lt;ul&gt;
-									&lt;li&gt;Designed an automatic display shelf which changes its revolution speed by gestures based on Infrared Detector Sensors 
-									&lt;/li&gt;
+									&lt;li&gt;Designed an automatic display shelf which changes its revolution speed by gestures based on Infrared Detector Sensors NBBBBBBBB &lt;/li&gt;
 								&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;
 						--&gt;
@@ -569,7 +571,12 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 						&lt;span class=&quot;date r&quot;&gt;Mar. 2014 &amp;mdash; Apr. 2014&lt;/span&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Developed a quadcopter voice control panel on mobile phone based on Sphinx &lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                            &lt;!--	&lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University&lt;/span&gt; --&gt; 
+                            &lt;span class=&quot;info&quot;&gt;&lt;ul&gt;
+                                    &lt;li&gt;Constructed a quadcopter voice control panel on mobile phone based on CMU Sphinx &lt;/li&gt;
+                                    &lt;li&gt;Installed the OpenWrt on wireless module and writed code on quadcopter to enable wireless communication &lt;/li&gt;
+                            &lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+
 							&lt;/div&gt;
 						
 						&lt;div class=&quot;item&quot;&gt;
@@ -577,15 +584,24 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 						&lt;span class=&quot;date r&quot;&gt;May 2013 &amp;mdash; May 2013&lt;/span&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, UMJI&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Developed an android application which can automatically retrieve announcements and assignments from SAKAI &lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                            &lt;!-- &lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, UMJI&lt;/span&gt; --&gt; 
+                            &lt;span class=&quot;info&quot;&gt;&lt;ul&gt;
+                                    &lt;li&gt;Developed an android application which can retrieve announcements and assignments from SAKAI &lt;/li&gt;
+                                    &lt;li&gt;Retrived data from website by web-scraping in BeautifulSoup automatically&lt;/li&gt;
+                            &lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 						&lt;/div&gt;
 
 							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;An Intelligent Display and Control Terminal System for EVs&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Mar. 2013 &amp;mdash; Mar. 2014&lt;/span&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;An Intelligent Display and Control Terminal System for EVs&lt;/span&gt;&lt;span class=&quot;date r&quot;&gt;Mar. 2013 &amp;mdash; Mar. 2014&lt;/span&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, Innovation project&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt; Developed a displaying and controlling system based on the Android tablet for electric vehicles &lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                            &lt;!-- &lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, Innovation project&lt;/span&gt; --&gt;
+                            &lt;span class=&quot;info&quot;&gt;
+                                &lt;span class=&quot;info&quot;&gt; 
+                                    &lt;ul&gt;
+                                    &lt;li&gt;Developed a displaying and controlling system based on the Android tablet for electric vehicles &lt;/li&gt;
+                                    &lt;li&gt;Installed sensors on EV to gather environment data and EV status &lt;/li&gt;
+                            &lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;
 						
 		
@@ -594,7 +610,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 		&lt;/div&gt;
 
 				
-		
+	&lt;!--	
 		&lt;div class=&quot;section section-work&quot;&gt;
 			&lt;h2 class=&quot;title&quot;&gt;AWARDS&lt;/h2&gt;
 			&lt;div class=&quot;set&quot;&gt;
@@ -614,7 +630,6 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 						
 							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;
-							&lt;!--
 							&lt;div class=&quot;item&quot;&gt;
 								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Dean’s List &lt;/br&gt;&lt;/span&gt;
 						&lt;span class=&quot;date r&quot;&gt;Dec. 2013&lt;/span&gt;
@@ -622,8 +637,6 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 						
 							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;		
-							--&gt;
-					&lt;!--	
 						&lt;div class=&quot;item&quot;&gt;
 								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Dean’s List &lt;/br&gt;&lt;/span&gt;
 						&lt;span class=&quot;date r&quot;&gt;Oct. 2013&lt;/span&gt;
@@ -644,22 +657,22 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Dean’s List  &lt;/br&gt;&lt;/span&gt;
 						&lt;span class=&quot;date r&quot;&gt;Sept. 2011&lt;/span&gt;
 							&lt;/h3&gt;
-						--&gt;
 							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;	
 						
 			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
 		&lt;/div&gt;
+        --&gt;
 			&lt;div class=&quot;section section-qualifications&quot;&gt;
 			&lt;h2 class=&quot;title&quot;&gt;SKILLS&lt;/h2&gt;
 			&lt;div class=&quot;set&quot;&gt;
 						&lt;div class=&quot;item&quot;&gt;
-							&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;JAVA; C/C++; PHP; Python; HTML; JS; TCL;  MySQL; Assembly language (on MIPS); Matlab &lt;/li&gt;
+							&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;JAVA; C/C++; PHP; Python; HTML; JS; TCL;  MySQL; Assembly language (on MIPS) &lt;/li&gt;
 							 &lt;li&gt;HDL: Verilog &lt;/li&gt;&lt;li&gt;MVC Frameworks: Zend, Laravel, J2EE ssh; jekyll; web services; JSON, XML&lt;/li&gt;
 							&lt;li&gt;Version Control: SVN, GIT&lt;/li&gt;
-							&lt;li&gt;Hardware: MicroChip PIC32 (MPLAB) and Xilinx&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;
-							&lt;li&gt; IDE: Eclipse, Visual Studio &lt;/li&gt;
-							&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Solid Network and mobile network development knowledge(LAMP, J2EE, Python flask, Android) &lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;
+							&lt;li&gt;Hardware: MicroChip PIC32 (MPLAB) and Xilinx&lt;/li&gt;
+							&lt;li&gt; IDE: Eclipse, Visual Studio, pyCharm, Matlab,vim  &lt;/li&gt;
+							&lt;li&gt;Network and mobile network development knowledge(LAMP, J2EE, Python flask, Android) &lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;
 						&lt;/div&gt;
 					&lt;/div&gt;
 			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
