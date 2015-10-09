@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>OverAPI | salamanderrex.github.io/</title>
+    <title>Edongle | salamanderrex.github.io/</title>
     <meta name="author" content="BieYuu" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="BeiYuu's Blog" />
@@ -41,41 +41,98 @@
 
 <div id="content">
     <div class="entry">
-        <h1 class="entry-title"><a href="/overapi-cheatsheet" title="OverAPI">OverAPI</a></h1>
-        <p class="entry-date">2012-09-22</p>
-        <p><a href="http://overapi.com" title="OverAPI - Collecting all the cheat sheets">OverAPI</a>是一个从我自己的需求出发，搭建起来的项目。项目结构很简单，将常用语言的API很扁平的展现出来，方便翻阅和查找。</p>
+        <h1 class="entry-title"><a href="/edongle" title="Edongle">Edongle</a></h1>
+        <p class="entry-date">2013-04-12</p>
+        <h1>Edongle</h1>
 
-<p>Chrome插件下载：<a href="https://chrome.google.com/webstore/detail/oedodeocfdeegliepeeoieemhdgoijod?hl=zh-CN" title="All Cheat Sheets">All Cheat Sheets</a></p>
+<hr />
 
-<p><a href="http://overapi.com" title="OverAPI - Collecting all the cheat sheets" target="_blank"><img src="/images/overapi/overapi.jpg" alt="OverAPI"></a></p>
+<p> Dongle which enables user to do their own configurations.
+ <img src="http://salamanderrex.github.io/image_for_projects/Edongle/Edongle.jpg" alt="" /></p>
 
-<p>生活在继续，遇到的人和事越来越繁杂，于是，满目的秋意、愉悦的欢叫，都像微风一样，带来的是美妙的简单。</p>
+<h1>Function</h1>
 
-<p>我们总想拥有一切，可一切到底有多少，就像诺兰的处女作<a href="http://movie.douban.com/subject/1397546/" title="Following">Following</a>中表现的一样，一些物品只有在失去时才知道他存在过。</p>
+<hr />
 
-<p>人生有目标才能前进，无论这个目标能否实现，OverAPI的目标是拥有一切，如果你有兴趣一起实现，可以联系我。</p>
+<p> Function:
+ * 1. A movable pocket device which can store the secret, classified or confidential, different kind of level info (base on s-AES encryption)
+ * 2. Provide interface and create secure bridge between user software
+ * 3. Provide encryption and decryption service (parallel )</p>
 
-<p>现在已经有：</p>
+<h1>How to run midware</h1>
+
+<hr />
+
+<p> make sure you run connect the PIC32
+ the type in terminal <code>sudo midware</code>  (need root permission)</p>
+
+<h1>How to use client communication</h1>
+
+<hr />
+
+<p> We provide test client in /client
+ run the client <code>client</code></p>
+
+<h1>How to use encryption service</h1>
+
+<hr />
+
+<p> If you want encrypt a file
+ you should type <code>sudo midware cleartext.txt Encrypted.txt 1</code></p>
+
+<p> If you want to decrypte a file
+ you should type `sudo midware Encrypted.txt outClear.txt 2'</p>
+
+<h1>How to use browser extension module</h1>
+
+<hr />
+
+<p> to load the Chrome extension, open the Chrome
+ <pre>
+ option->Tool->extension
+ Load the developing tools
+ </pre></p>
+
+<p> to configure or store the web
+ <pre>
+ right click the icon on tool bar
+ input the info, click save, wait it stores info in PIC32 , then close
+ </pre></p>
+
+<h1>Support</h1>
+
+<hr />
 
 <ul>
-<li><a href="http://overapi.com/python/">Python Cheat Sheet</a></li>
-<li><a href="http://overapi.com/jquery/">jQuery Cheat Sheet</a></li>
-<li><a href="http://overapi.com/nodejs/">NodeJS Cheat Sheet</a></li>
-<li><a href="http://overapi.com/php/">PHP Cheat Sheet</a></li>
-<li><a href="http://overapi.com/ruby/">Ruby Cheat Sheet</a></li>
-<li><a href="http://overapi.com/javascript/">Javascript Cheat Sheet</a></li>
-<li><a href="http://overapi.com/actionscript/">ActionScript Cheat Sheet</a></li>
-<li><a href="http://overapi.com/css/">CSS Cheat Sheet</a></li>
-<li><a href="http://overapi.com/git/">Git Cheat Sheet</a></li>
-<li><a href="http://overapi.com/svn/">SVN Cheat Sheet</a></li>
-<li><a href="http://overapi.com/mysql/">MySQL Cheat Sheet</a></li>
-<li><a href="http://overapi.com/regex/">Regex Cheat Sheet</a></li>
-<li><a href="http://overapi.com/linux/">Linux Cheat Sheet</a></li>
-<li><a href="http://overapi.com/html/">HTML Cheat Sheet</a></li>
-<li><a href="http://overapi.com/html-dom/">HTML-DOM Cheat Sheet</a></li>
-<li><a href="http://overapi.com/mod_rewrite/">mod_rewrite Cheat Sheet</a></li>
+<li>Ubuntu 12.04</li>
 </ul>
 
+
+<h1>Development tool</h1>
+
+<hr />
+
+<ul>
+<li>MPLAB</li>
+<li>QtCreator</li>
+</ul>
+
+
+<h1>library and used open source project</h1>
+
+<hr />
+
+<ul>
+<li>salamanderrex/jtorrent</li>
+<li>openssl/openssl</li>
+<li>mortzdk/Websocket</li>
+<li>jiaxiluo/sakai_plus</li>
+<li>open-source-parsers/jsoncpp</li>
+<li>SHA-1</li>
+</ul>
+
+
+<h2> `category : project description: VE373 project in 2014 summer semester</h2>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -133,17 +190,9 @@
         
             <li><a href="/a-bug-in-java">A bug in JAVA</a></li>
         
-            <li><a href="/css3-animation">CSS3动画详解</a></li>
-        
-            <li><a href="/grunt-in-action">Grunt.js 在前端项目中的实战</a></li>
-        
             <li><a href="/readable-code">编写可读代码的艺术</a></li>
         
             <li><a href="/git-vim-tutorial">Git时代的VIM不完全使用教程</a></li>
-        
-            <li><a href="/backbone-js-chrome-extension">使用Backbone.js开发Chrome便签插件</a></li>
-        
-            <li><a href="/buy-guitar">如何选择与购买吉他</a></li>
         
             <li><a href="/github-pages">使用Github Pages建独立博客</a></li>
         
@@ -175,13 +224,11 @@
         <h2>Project</h2>
         <ul class="artical-list">
         
-            <li><a href="/tabby">Tabby</a></li>
+            <li><a href="/edongle">Edongle</a></li>
         
-            <li><a href="/notty-notes">Notty Notes</a></li>
+            <li><a href="/jtorrent">Jtorrent</a></li>
         
-            <li><a href="/overapi-cheatsheet">OverAPI</a></li>
-        
-            <li><a href="/raining-in-chrome">听雨</a></li>
+            <li><a href="/vg100">Semi-auto Shelf</a></li>
         
         </ul>
     </div>

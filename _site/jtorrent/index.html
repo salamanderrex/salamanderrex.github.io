@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Notty Notes | salamanderrex.github.io/</title>
+    <title>Jtorrent | salamanderrex.github.io/</title>
     <meta name="author" content="BieYuu" />
     <meta name="renderer" content="webkit">
     <meta name="description" content="BeiYuu's Blog" />
@@ -41,32 +41,72 @@
 
 <div id="content">
     <div class="entry">
-        <h1 class="entry-title"><a href="/notty-notes" title="Notty Notes">Notty Notes</a></h1>
-        <p class="entry-date">2012-10-17</p>
-        <p><a href="https://chrome.google.com/webstore/detail/notty-notes/ggbmjahbkbhakkfgjiggdclpmmpmhajn?hl=zh-CN" title="Notty Notes">Notty Notes</a>是为我自己写的便签插件，满足基本需求，并且看起来比较舒适，这是我的目标。可以在Chrome Store中下载安装，感谢<a href="http://www.douban.com/people/JGuo/">靖哥哥</a>帮我做宣传图：</p>
+        <h1 class="entry-title"><a href="/jtorrent" title="Jtorrent">Jtorrent</a></h1>
+        <p class="entry-date">2012-09-22</p>
+        <h2>introduction</h2>
 
-<p><a href="https://chrome.google.com/webstore/detail/notty-notes/ggbmjahbkbhakkfgjiggdclpmmpmhajn?hl=zh-CN" title="Notty Notes" target="_blank"><img src="/images/backbonechrome/notes-logo.jpg" alt="Notty Notes"></a></p>
+<p>Jtorrent a a P2P download software like BitTorrent, uTorrent.
+This is a final project for course Computer Network in <a href="http://umji.sjtu.edu.cn/">UMJI</a></p>
 
-<p>主要有如下几个优势：</p>
+<h2>A note on compatibility</h2>
+
+<p>This program is developed under Ubuntu Linux.
+It is stable under: Ubuntu 12.04
+both 32-bit and 64-bit are available.</p>
+
+<h2>How to compile and run</h2>
+
+<h3>This is a qt project</h3>
+
+<p>This project is developed by <a href="http://qt-project.org/">Qt Creator</a> IDE
+If you have this IDE, you can directly import the project and run it.
+When you load the project, you may have problem like <code>Path or permissions wrong?</code>
+In order to avoid this problem, you can delete the <code>.pro.user</code> file and re-open the project, rebuild.</p>
+
+<h3>Run in the terminal</h3>
+
+<p>In order to run in the terminal and get input, you need to modify the configuration of the qt creator.(Because Qt creator does not support the terminal console in Ubuntu)</p>
+
+<p>open the qt creator
+change System/Terminal: /usr/bin/xterm -e)
+in run setting, set it to the "runn in terminal" option,
+it will use xterm to open</p>
+
+<p>How to use
+---------layout------------------------</p>
+
+<h2>server</h2>
+
+<p>Run the project</p>
+
+<h2>client</h2>
+
+<p>First you need to input user name and port, and then just follow the menu(input should be correct, no error checking here)</p>
+
+<h2>Design</h2>
+
+<p>There is a document in the <code>design</code> folder containing the communication protocal. You can check it in details.</p>
+
+<h2>Algorithm</h2>
+
+<p>There is a document in the <code>Algorithm</code> folder . You can check it in details.</p>
+
+<h2>Libraries used</h2>
 
 <ul>
-    <li>简单、美观</li>
-    <li>离线使用</li>
-    <li>自动保存</li>
+<li><code>jsoncpp</code> (32bit and 64 bit)</li>
 </ul>
 
 
-<p>在背景上双击，就会添加新的便签，点击便签的标题部分可以单独配置背景主题、字号大小等。可以加锁，可以收起。</p>
+<p>if you are under the 32-bit, you should copy libjsoncpp.so
+    if you are under the 64-bit, you should copy libjson_linux-gcc-4.6_libmt.so
+        (copy the corresponding .so file to the directory /usr/local/lib/)</p>
 
-<p>现在还没有做同步功能，仍在考虑之中，这个插件的完成，花了不少功夫，细节方面我认为想到做到很多，可以自行体会，如果有不满意的地方，欢迎吐槽。 截图看看：</p>
+<pre><code>    NOTICE: in order titleo let qt to load, you should change .pro file, unix:!macx: LIBS += -L$$PWD/../lib/ -ljsoncpp,
+    change to specific name,  example , if you rename to layoutlibjson.cpp then should change -ljsoncpp to -ljson
 
-<p><img src="/images/backbonechrome/notes-draft.jpg" alt="Notes Draft" /></p>
-
-<p>日子穿行而过，带来很多，也逝去很多，不管你愿不愿意接受，就这么自然的发生了。</p>
-
-<p>追求的太多，必定是折磨，只是，不一定所有人都知道，折磨越久，快乐才更高。</p>
-
-<p>怎样写这个插件，可以看我的教程：<a href="http://beiyuu.com/backbone-js-chrome-extension/" title="Backbone.js的使用及Chrome插件开发">Backbone.js的使用及Chrome插件开发</a>。</p>
+    * `SHA-1`
+</code></pre>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -124,17 +164,9 @@
         
             <li><a href="/a-bug-in-java">A bug in JAVA</a></li>
         
-            <li><a href="/css3-animation">CSS3动画详解</a></li>
-        
-            <li><a href="/grunt-in-action">Grunt.js 在前端项目中的实战</a></li>
-        
             <li><a href="/readable-code">编写可读代码的艺术</a></li>
         
             <li><a href="/git-vim-tutorial">Git时代的VIM不完全使用教程</a></li>
-        
-            <li><a href="/backbone-js-chrome-extension">使用Backbone.js开发Chrome便签插件</a></li>
-        
-            <li><a href="/buy-guitar">如何选择与购买吉他</a></li>
         
             <li><a href="/github-pages">使用Github Pages建独立博客</a></li>
         
@@ -166,13 +198,11 @@
         <h2>Project</h2>
         <ul class="artical-list">
         
-            <li><a href="/tabby">Tabby</a></li>
+            <li><a href="/edongle">Edongle</a></li>
         
-            <li><a href="/notty-notes">Notty Notes</a></li>
+            <li><a href="/jtorrent">Jtorrent</a></li>
         
-            <li><a href="/overapi-cheatsheet">OverAPI</a></li>
-        
-            <li><a href="/raining-in-chrome">听雨</a></li>
+            <li><a href="/vg100">Semi-auto Shelf</a></li>
         
         </ul>
     </div>
