@@ -4,7 +4,7 @@
    <title>salamanderrex.github.io/</title>
    <link href="http://salamanderrex.github.io//atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://salamanderrex.github.io/" rel="alternate" type="text/html" />
-   <updated>2015-10-10T01:40:13-07:00</updated>
+   <updated>2015-10-10T02:12:41-07:00</updated>
    <id>http://salamanderrex.github.io/</id>
    <author>
      <name></name>
@@ -461,7 +461,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 						&lt;span class=&quot;date r&quot;&gt;Jan. 2014 &amp;mdash; Mar. 2014&lt;/span&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;Kavo, Shanghai &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Tested health-care software products including Kavo PACS and Kavo viewer and wrote the user documents &lt;/li&gt;&lt;li&gt;Attended the GuangZhou exhibit as technique support &lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;Kavo, Shanghai &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Tested health-care software products including Kavo PACS and Kavo viewer and wrote user documents &lt;/li&gt;&lt;li&gt;Attended the GuangZhou exhibit as technique support &lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;
 					
 							&lt;div class=&quot;item&quot;&gt;
@@ -535,7 +535,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
                             &lt;!-- &lt;span class=&quot;job_title&quot;&gt;UMJI Course Project  &lt;a href=&quot;http://salamanderrex.github.io/jtorrent&quot; class=&quot;glyphicon glyphicon-link&quot;&gt;&lt;/a&gt; --&gt; 
                         &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
 							&lt;ul&gt;
-							&lt;li&gt;Developed a P2P software based on socket programming in C++ and implemented our peer selection algorithm&lt;/li&gt;
+							&lt;li&gt;Developed a P2P software based on socket programming in C++ and implemented peer selection algorithm&lt;/li&gt;
                             &lt;li&gt;Tested the torrent server, tracker and clients in different network topologies&lt;/li&gt;
 							&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;
@@ -574,7 +574,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
                             &lt;!--	&lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University&lt;/span&gt; --&gt; 
                             &lt;span class=&quot;info&quot;&gt;&lt;ul&gt;
                                     &lt;li&gt;Constructed a quadcopter voice control panel on mobile phone based on CMU Sphinx &lt;/li&gt;
-                                    &lt;li&gt;Installed the OpenWrt on wireless module and writed code on quadcopter to enable wireless communication &lt;/li&gt;
+                                    &lt;li&gt;Installed the OpenWrt on wireless module and wrote code on quadcopter to enable wireless communication &lt;/li&gt;
                             &lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 
 							&lt;/div&gt;
@@ -587,12 +587,12 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
                             &lt;!-- &lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, UMJI&lt;/span&gt; --&gt; 
                             &lt;span class=&quot;info&quot;&gt;&lt;ul&gt;
                                     &lt;li&gt;Developed an android application which can retrieve announcements and assignments from SAKAI &lt;/li&gt;
-                                    &lt;li&gt;Retrived data from website by web-scraping in BeautifulSoup automatically&lt;/li&gt;
+                                    &lt;li&gt;Retrieved data from website by using BeautifulSoup to do web-scraping automatically&lt;/li&gt;
                             &lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 						&lt;/div&gt;
 
 							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;An Intelligent Display and Control Terminal System for EVs&lt;/span&gt;&lt;span class=&quot;date r&quot;&gt;Mar. 2013 &amp;mdash; Mar. 2014&lt;/span&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;An Intelligent Display and Control Terminal System for EVs&lt;/span&gt;&lt;span class=&quot;date r&quot;&gt;Mar. 2013 &amp;mdash; Mar.2014&lt;/span&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
                             &lt;!-- &lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, Innovation project&lt;/span&gt; --&gt;
@@ -600,7 +600,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
                                 &lt;span class=&quot;info&quot;&gt; 
                                     &lt;ul&gt;
                                     &lt;li&gt;Developed a displaying and controlling system based on the Android tablet for electric vehicles &lt;/li&gt;
-                                    &lt;li&gt;Installed sensors on EV to gather environment data and EV status &lt;/li&gt;
+                                    &lt;li&gt;Installed sensors on EV to gather environmental data and internal status &lt;/li&gt;
                             &lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;
 						
