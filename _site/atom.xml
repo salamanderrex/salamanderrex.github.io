@@ -4,7 +4,7 @@
    <title>salamanderrex.github.io/</title>
    <link href="http://salamanderrex.github.io//atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://salamanderrex.github.io/" rel="alternate" type="text/html" />
-   <updated>2015-10-09T13:56:06-07:00</updated>
+   <updated>2015-10-10T01:40:13-07:00</updated>
    <id>http://salamanderrex.github.io/</id>
    <author>
      <name></name>
@@ -448,8 +448,8 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 									&lt;ul&gt;
                                         &lt;li&gt;Writed python and TCL
                                         automation scripts on &lt;b&gt;CSR-1000v&lt;/b&gt; (Cloud Service Router) Smart license Feature&lt;/li&gt;
-                                        &lt;li&gt;Developed a web-based &lt;b&gt;UCS&lt;/b&gt; (Unified Computing System) management tool via SNMP&lt;/li&gt;
-                                        &lt;li&gt;Maintained &lt;b&gt;CSR-1000v&lt;/b&gt; and &lt;b&gt;ISR&lt;/b&gt; local regression tests&lt;/li&gt; 
+                                        &lt;li&gt;Developed a web-based &lt;b&gt;UCS&lt;/b&gt; (Unified Computing System) management tool via SNMP, zf &amp;ext3&lt;/li&gt;
+                                        &lt;li&gt;Maintained &lt;b&gt;CSR-1000v&lt;/b&gt; and &lt;b&gt;ISR &lt;/b&gt; (Integrated Services Router) local regression tests&lt;/li&gt; 
                                         &lt;li&gt;Administrated team lab including testbed setup, implementing test &amp; troubleshooting and hardware updating &lt;/li&gt; 
                                         
 										&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
@@ -461,7 +461,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 						&lt;span class=&quot;date r&quot;&gt;Jan. 2014 &amp;mdash; Mar. 2014&lt;/span&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;Kavo, Shanghai &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Tested health-care software products including Kavo PACS and Kavo viewer and wrote the user documents &lt;/li&gt;&lt;li&gt;Attended the GuangZhou exhibit as technique support&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;span class=&quot;job_title&quot;&gt;Kavo, Shanghai &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Tested health-care software products including Kavo PACS and Kavo viewer and wrote the user documents &lt;/li&gt;&lt;li&gt;Attended the GuangZhou exhibit as technique support &lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;
 					
 							&lt;div class=&quot;item&quot;&gt;
@@ -469,7 +469,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 						&lt;span class=&quot;date r&quot;&gt;Nov. 2013 &amp;mdash; Dec. 2013&lt;/span&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;advpower, Shanghai &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Participated in Android user-interface app for controlling component on EV based on bluetooth communication&lt;/li&gt;
+							&lt;span class=&quot;job_title&quot;&gt;advpower, Shanghai &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Developed Android user-interface app for controlling component on EV based on bluetooth communication&lt;/li&gt;
                                 &lt;li&gt;Participated in development of company business website &lt;u&gt;&lt;a href=&quot;http://www.advpower.cn&quot;&gt;www.advpower.cn&lt;/a&gt;&lt;/u&gt; based on WordPress&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;
 						&lt;/div&gt;
@@ -523,7 +523,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
                             &lt;!-- &lt;span class=&quot;job_title&quot;&gt;SJTU Course Project&lt;/span&gt; --&gt; &lt;span class=&quot;info&quot;&gt;&lt;ul&gt;
-                                 &lt;li&gt;Developed University course reference book Web Service and web application uses WS API&lt;/li&gt;
+                                 &lt;li&gt;Developed University course reference book Web Service and the web application based on WS API&lt;/li&gt;
                                  &lt;li&gt;Based on RESTful framework &lt;a href=&quot;https://jersey.java.net/&quot;&gt;Jersey&lt;/a&gt; and user authetication based on &lt;a href=&quot;http://oauth.net/&quot;&gt; oAuth &lt;/a&gt;to realize single-login in all apps&lt;/li&gt;&lt;/ul&gt;
                          &lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 							&lt;/div&gt;
@@ -667,8 +667,9 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 			&lt;h2 class=&quot;title&quot;&gt;SKILLS&lt;/h2&gt;
 			&lt;div class=&quot;set&quot;&gt;
 						&lt;div class=&quot;item&quot;&gt;
-							&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;JAVA; C/C++; PHP; Python; HTML; JS; TCL;  MySQL; Assembly language (on MIPS) &lt;/li&gt;
-							 &lt;li&gt;HDL: Verilog &lt;/li&gt;&lt;li&gt;MVC Frameworks: Zend, Laravel, J2EE ssh; jekyll; web services; JSON, XML&lt;/li&gt;
+							&lt;span class=&quot;info&quot;&gt;
+                            &lt;ul class=&quot;ul_s&quot;&gt;&lt;li&gt;JAVA; C/C++; PHP; Python; HTML; JS; TCL;  MySQL; Assembly language (on MIPS) &lt;/li&gt;
+							&lt;li&gt;HDL: Verilog &lt;/li&gt;&lt;li&gt;MVC Frameworks: Zend, Laravel, J2EE ssh; jekyll; web services; JSON, XML&lt;/li&gt;
 							&lt;li&gt;Version Control: SVN, GIT&lt;/li&gt;
 							&lt;li&gt;Hardware: MicroChip PIC32 (MPLAB) and Xilinx&lt;/li&gt;
 							&lt;li&gt; IDE: Eclipse, Visual Studio, pyCharm, Matlab,vim  &lt;/li&gt;
@@ -823,9 +824,9 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
    
    <entry>
      <title>Edongle</title>
-     <link href="http://beiyuu.com/edongle"/>
+     <link href="http://beiyuu.com/edongle_blog"/>
      <updated>2013-04-12T00:00:00-07:00</updated>
-     <id>http://sakanabderrex.github.io//edongle</id>
+     <id>http://sakanabderrex.github.io//edongle_blog</id>
      <content type="html">&lt;h1&gt;Edongle&lt;/h1&gt;
 
 &lt;hr /&gt;
