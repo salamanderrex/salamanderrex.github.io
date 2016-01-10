@@ -4,13 +4,30 @@
    <title>salamanderrex.github.io/</title>
    <link href="http://salamanderrex.github.io//atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://salamanderrex.github.io/" rel="alternate" type="text/html" />
-   <updated>2015-10-10T02:12:41-07:00</updated>
+   <updated>2016-01-10T09:58:21-08:00</updated>
    <id>http://salamanderrex.github.io/</id>
    <author>
      <name></name>
      <email></email>
    </author>
 
+   
+   <entry>
+     <title>Dock in apple system</title>
+     <link href="http://beiyuu.com/dock"/>
+     <updated>2015-11-16T00:00:00-08:00</updated>
+     <id>http://sakanabderrex.github.io//dock</id>
+     <content type="html">&lt;h2&gt;problem&lt;/h2&gt;
+
+&lt;p&gt;Docker moves between monitor and laptop monitor.
+&lt;img src=&quot;http://i.imgur.com/LhWpiS0.jpg&quot; alt=&quot;desk&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;How to Solve?&lt;/h2&gt;
+
+&lt;p&gt;Move your cursor from the bottom of the screen to the center of the screen.
+Dock will change to current monitor.&lt;/p&gt;
+</content>
+   </entry>
    
    <entry>
      <title>A bug in JAVA</title>
@@ -414,23 +431,23 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
                             &lt;span class=&quot;school&quot;&gt;University of California, San Diego&lt;/span&gt;
-							&lt;span class=&quot;info&quot;&gt; First year M.S student. Courseworks: Artificial Intelligence, Software Engineering, Advance Compilers&lt;/span&gt;
+							&lt;!-- &lt;span class=&quot;info&quot;&gt; First year M.S student. &lt;/span&gt; --&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
                         &lt;/div&gt;
-                         &lt;!--
                         &lt;div class=&quot;item&quot;&gt;
-
+                               &lt;!--
 							&lt;h3&gt;&lt;span class=&quot;course l&quot;&gt;B.S.E Electrical and Computer Engineering&lt;/span&gt;
 						&lt;span class=&quot;date r&quot;&gt;Sept. 2011 &amp;mdash; Aug. 2015&lt;/span&gt;
 							&lt;/h3&gt;
+           
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;school&quot;&gt;Shanghai Jiao Tong University&lt;/span&gt;
-							&lt;span class=&quot;school&quot;&gt;University of Michigan – Shanghai Jiao Tong University Joint Institute (UMJI)&lt;/span&gt;
-							--&gt;
-							&lt;!-- &lt;span class=&quot;info&quot;&gt;Earning the degree with &lt;b&gt;GPA: 3.6224  Major rank:10/93&lt;/b&gt;                                                                                                                      &lt;/span&gt; --&gt;
-						&lt;!--	&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt; 
+                            --&gt;
+                            &lt;!-- &lt;span class=&quot;school&quot;&gt;Shanghai Jiao Tong University&lt;/span&gt;--&gt;
+							&lt;!-- &lt;span class=&quot;school&quot;&gt;University of Michigan – Shanghai Jiao Tong University Joint Institute (UMJI) &lt;b&gt;GPA: 3.6224  Major rank:10/93&lt;/b&gt; &lt;/span&gt; --&gt;
+                            &lt;!-- &lt;span class=&quot;info&quot;&gt;Earning the degree with &lt;b&gt;GPA: 3.6224  Major rank:10/93&lt;/b&gt;                                                                                                                      &lt;/span&gt; --&gt;
+                            
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt; 
 							
-						&lt;/div&gt;--&gt;
 						&lt;/div&gt;
 			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
 		&lt;/div&gt;
@@ -517,6 +534,36 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 					&lt;div class=&quot;section section-work&quot;&gt;
 			&lt;h2 class=&quot;title&quot;&gt;experience&lt;/h2&gt;
 			&lt;div class=&quot;set&quot;&gt;
+                
+                                
+                            &lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Home Harmony &lt;a href=&quot;https://github.com/mrburninator/Home-Harmony&quot; class=&quot;glyphicon glyphicon-link&quot;&gt;&lt;/a&gt; &lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;Sept. 2015 &amp;mdash; Dec. 2015&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                            &lt;!-- &lt;span class=&quot;job_title&quot;&gt;SJTU Course Project&lt;/span&gt; --&gt;
+                             &lt;span class=&quot;info&quot;&gt;
+                                &lt;ul&gt;
+                                 &lt;li&gt;Developed an app based on Cordova to help build roommate relationship and apartment management&lt;/li&gt;
+                                 &lt;li&gt;Used AngularJs and Firebase to develop and Mocha Chai to test the application&lt;/li&gt;
+                             &lt;/ul&gt;
+                         &lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+                
+                            &lt;div class=&quot;item&quot;&gt;
+								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;LLVM Optimization and Analysis  &lt;a href=&quot;http://salamanderrex.github.io/LLVM_231/&quot; class=&quot;glyphicon glyphicon-link&quot;&gt;&lt;/a&gt; &lt;/span&gt;
+						&lt;span class=&quot;date r&quot;&gt;Sept. 2015 &amp;mdash; Dec. 2015&lt;/span&gt;
+							&lt;/h3&gt;
+							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                            &lt;!-- &lt;span class=&quot;job_title&quot;&gt;SJTU Course Project&lt;/span&gt; --&gt;
+                             &lt;span class=&quot;info&quot;&gt;
+                                &lt;ul&gt;
+                                 &lt;li&gt;Designed a three-layer mechanism to analyse and optimize the program based on LLVM &lt;/li&gt;
+                                 &lt;li&gt;Tested on Constant Propagation, Available Expression, Range Analysis and Pointer Analysis&lt;/li&gt;
+                             &lt;/ul&gt;
+                         &lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+							&lt;/div&gt;
+                            
                             &lt;div class=&quot;item&quot;&gt;
 								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Reference Book System&lt;/span&gt;
 						&lt;span class=&quot;date r&quot;&gt;Sept. 2014 &amp;mdash; Jan. 2015&lt;/span&gt;
@@ -668,10 +715,9 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 			&lt;div class=&quot;set&quot;&gt;
 						&lt;div class=&quot;item&quot;&gt;
 							&lt;span class=&quot;info&quot;&gt;
-                            &lt;ul class=&quot;ul_s&quot;&gt;&lt;li&gt;JAVA; C/C++; PHP; Python; HTML; JS; TCL;  MySQL; Assembly language (on MIPS) &lt;/li&gt;
-							&lt;li&gt;HDL: Verilog &lt;/li&gt;&lt;li&gt;MVC Frameworks: Zend, Laravel, J2EE ssh; jekyll; web services; JSON, XML&lt;/li&gt;
-							&lt;li&gt;Version Control: SVN, GIT&lt;/li&gt;
-							&lt;li&gt;Hardware: MicroChip PIC32 (MPLAB) and Xilinx&lt;/li&gt;
+                            &lt;ul class=&quot;ul_s&quot;&gt;&lt;li&gt;JAVA; C/C++; PHP; Python; HTML; JS; TCL;  MySQL; Assembly language (on MIPS) HDL: Verilog &lt;/li&gt;&lt;li&gt;MVC Frameworks: Zend, Laravel, J2EE ssh; jekyll; web services; JSON, XML&lt;/li&gt;
+							&lt;!-- &lt;li&gt;Version Control: SVN, GIT&lt;/li&gt; --&gt;
+							&lt;!-- &lt;li&gt;Hardware: MicroChip PIC32 (MPLAB) and Xilinx&lt;/li&gt; --&gt;
 							&lt;li&gt; IDE: Eclipse, Visual Studio, pyCharm, Matlab,vim  &lt;/li&gt;
 							&lt;li&gt;Network and mobile network development knowledge(LAMP, J2EE, Python flask, Android) &lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;
 						&lt;/div&gt;
@@ -2511,41 +2557,6 @@ if ($document) {
 &lt;li&gt;在线阅读：&lt;a href=&quot;http://read.douban.com/ebook/500486/?referral_code=myg7ot50&quot;&gt;《打造Facebook》&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-</content>
-   </entry>
-   
-   <entry>
-     <title>令人焦虑的列表设计</title>
-     <link href="http://beiyuu.com/bad-list-design"/>
-     <updated>2013-01-17T00:00:00-08:00</updated>
-     <id>http://sakanabderrex.github.io//bad-list-design</id>
-     <content type="html">&lt;p&gt;用列表展现数据，再平常不过了，想想通讯录、微薄、播放列表、博客目录，都是。&lt;/p&gt;
-
-&lt;p&gt;先来看看全宇宙最奇葩、但是自认为全世界最好用的软件iTunes的播放列表：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/8b8af2c8jw1e0wkevnm8yj.jpg&quot; alt=&quot;idiot iTunes&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;你能看出正在播放的是哪一首吗？我选择从蓝色条的《So What》开始播放，顺序播下去到当前首，鲜亮的蓝色条并没有动，动的是小喇叭，真瞧得起我的眼神！&lt;/p&gt;
-
-&lt;p&gt;好了，一般人无法体会我对iTunes恨。&lt;/p&gt;
-
-&lt;p&gt;虾米的播放列表设计有模仿iTunes的嫌疑，每次打开，我要瞅半天看到底播放到哪首了，今天再看，已经改成人类的逻辑了，虾米好样的！&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/8b8af2c8jw1e0wkn980w6j.jpg&quot; alt=&quot;xiami&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;再来看下让我写这篇博客的起因：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/8b8af2c8jw1e0wkr4pg14j.jpg&quot; alt=&quot;jiandan&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;这是&lt;a href=&quot;http://jandan.net/2013/01/17/benzs-museum.html&quot;&gt;煎蛋&lt;/a&gt;评论列表，你能一眼看去就明白那个OOXX的标记属于上一条还是下一条吗？真让人捉急。解决办法很简单，就把那些属于评论的Meta信息放在同一个维度就好了。&lt;/p&gt;
-
-&lt;p&gt;看看正面教材&lt;a href=&quot;http://www.google.com/reader/&quot;&gt;Google Reader&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/8b8af2c8jw1e0wkx96e78j.jpg&quot; alt=&quot;Google Reader&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;未读、已读一目了然，还感叹过为什么把未读扫过就一点不想再多看了呢，仅仅改变背景色和字体就轻松达到这个目标，这就是好的设计。&lt;/p&gt;
-
-&lt;p&gt;哦，顺道吐槽一下傻逼的所谓欧洲时间格式，你能分清02/10/08和03/09/06里面的年月日吗？&lt;/p&gt;
 </content>
    </entry>
    
