@@ -43,60 +43,52 @@
     <div class="entry">
         <h1 class="entry-title"><a href="/jtorrent_blog" title="Jtorrent">Jtorrent</a></h1>
         <p class="entry-date">2012-09-22</p>
-        <h2>introduction</h2>
-
+        <h2 id="introduction">introduction</h2>
 <p>Jtorrent a a P2P download software like BitTorrent, uTorrent.
-This is a final project for course Computer Network in <a href="http://umji.sjtu.edu.cn/">UMJI</a></p>
+This is a final project for course Computer Network in [UMJI][umji_web]
+[umji_web]:http://umji.sjtu.edu.cn/</p>
 
-<h2>A note on compatibility</h2>
-
+<h2 id="a-note-on-compatibility">A note on compatibility</h2>
 <p>This program is developed under Ubuntu Linux.
 It is stable under: Ubuntu 12.04
 both 32-bit and 64-bit are available.</p>
 
-<h2>How to compile and run</h2>
+<h2 id="how-to-compile-and-run">How to compile and run</h2>
 
-<h3>This is a qt project</h3>
+<h3 id="this-is-a-qt-project">This is a qt project</h3>
 
-<p>This project is developed by <a href="http://qt-project.org/">Qt Creator</a> IDE
+<p>This project is developed by [Qt Creator][qt_org] IDE
+[qt_org]:http://qt-project.org/
 If you have this IDE, you can directly import the project and run it.
 When you load the project, you may have problem like <code>Path or permissions wrong?</code>
 In order to avoid this problem, you can delete the <code>.pro.user</code> file and re-open the project, rebuild.</p>
 
-<h3>Run in the terminal</h3>
-
+<h3 id="run-in-the-terminal">Run in the terminal</h3>
 <p>In order to run in the terminal and get input, you need to modify the configuration of the qt creator.(Because Qt creator does not support the terminal console in Ubuntu)</p>
 
 <p>open the qt creator
 change System/Terminal: /usr/bin/xterm -e)
-in run setting, set it to the "runn in terminal" option,
+in run setting, set it to the “runn in terminal” option,
 it will use xterm to open</p>
 
 <p>How to use
----------layout------------------------</p>
+———layout————————
+##server
+Run the project</p>
 
-<h2>server</h2>
-
-<p>Run the project</p>
-
-<h2>client</h2>
-
+<h2 id="client">client</h2>
 <p>First you need to input user name and port, and then just follow the menu(input should be correct, no error checking here)</p>
 
-<h2>Design</h2>
-
+<h2 id="design">Design</h2>
 <p>There is a document in the <code>design</code> folder containing the communication protocal. You can check it in details.</p>
 
-<h2>Algorithm</h2>
-
+<h2 id="algorithm">Algorithm</h2>
 <p>There is a document in the <code>Algorithm</code> folder . You can check it in details.</p>
 
-<h2>Libraries used</h2>
-
+<h2 id="libraries-used">Libraries used</h2>
 <ul>
-<li><code>jsoncpp</code> (32bit and 64 bit)</li>
+  <li><code>jsoncpp</code> (32bit and 64 bit)</li>
 </ul>
-
 
 <p>if you are under the 32-bit, you should copy libjsoncpp.so
     if you are under the 64-bit, you should copy libjson_linux-gcc-4.6_libmt.so

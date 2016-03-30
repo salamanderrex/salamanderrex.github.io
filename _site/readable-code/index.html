@@ -46,14 +46,15 @@
         <p>这是《The Art of Readable Code》的读书笔记，再加一点自己的认识。强烈推荐此书：</p>
 
 <ul>
-<li>英文版：<a href="http://book.douban.com/subject/5442971/" title="The Art Of Readable Code">《The Art of Readable Code》</a></li>
-<li>中文版：<a href="http://book.douban.com/subject/10797189/" title="编写可读代码的艺术">编写可读代码的艺术</a></li>
+  <li>英文版：<a href="http://book.douban.com/subject/5442971/" title="The Art Of Readable Code">《The Art of Readable Code》</a></li>
+  <li>中文版：<a href="http://book.douban.com/subject/10797189/" title="编写可读代码的艺术">编写可读代码的艺术</a></li>
 </ul>
 
+<h2 id="section">代码为什么要易于理解</h2>
 
-<h2>代码为什么要易于理解</h2>
-
-<blockquote><p>"Code should be written to minimize the time it would take for someone else to understand it."</p></blockquote>
+<blockquote>
+  <p>“Code should be written to minimize the time it would take for someone else to understand it.”</p>
+</blockquote>
 
 <p>日常工作的事实是：</p>
 
@@ -65,14 +66,13 @@
 <li>代码的可读性与程序的效率、架构、易于测试一点也不冲突</li>
 </ul>
 
-
 <p>整本书都围绕“如何让代码的可读性更高”这个目标来写。这也是好代码的重要标准之一。</p>
 
-<h2>如何命名</h2>
+<h2 id="section-1">如何命名</h2>
 
-<h3>变量名中应包含更多信息</h3>
+<h3 id="section-2">变量名中应包含更多信息</h3>
 
-<h4>使用含义明确的词，比如用<code>download</code>而不是<code>get</code>，参考以下替换方案：</h4>
+<h4 id="downloadget">使用含义明确的词，比如用<code>download</code>而不是<code>get</code>，参考以下替换方案：</h4>
 
 <pre><code> send -&gt; deliver, dispatch, announce, distribute, route
  find -&gt; search, extract, locate, recover
@@ -80,8 +80,7 @@ start -&gt; lanuch, create, begin, open
  make -&gt; create,set up, build, generate, compose, add, new
 </code></pre>
 
-<h4>避免通用的词</h4>
-
+<h4 id="section-3">避免通用的词</h4>
 <p>像<code>tmp</code>和<code>retval</code>这样词，除了说明是临时变量和返回值之外，没有任何意义。但是给他加一些有意义的词，就会很明确：</p>
 
 <pre><code>tmp_file = tempfile.NamedTemporaryFile() 
@@ -109,14 +108,12 @@ SaveData(tmp_file, ...)
 
 <p>所以，当使用一些通用的词，要有充分的理由才可以。</p>
 
-<h4>使用具体的名字</h4>
-
+<h4 id="section-4">使用具体的名字</h4>
 <p><code>CanListenOnPort</code>就比<code>ServerCanStart</code>好，can start比较含糊，而listen on port确切的说明了这个方法将要做什么。</p>
 
 <p><code>--run_locally</code>就不如<code>--extra_logging</code>来的明确。</p>
 
-<h4>增加重要的细节，比如变量的单位<code>_ms</code>，对原始字符串加<code>_raw</code></h4>
-
+<h4 id="msraw">增加重要的细节，比如变量的单位<code>_ms</code>，对原始字符串加<code>_raw</code></h4>
 <p>如果一个变量很重要，那么在名字上多加一些额外的字就会更加易读，比如将<code>string id; // Example: "af84ef845cd8"</code>换成<code>string hex_id;</code>。</p>
 
 <pre><code>             Start(int delay)  --&gt;  delay → delay_secs
@@ -133,11 +130,10 @@ ThrottleDownload(float limit)  --&gt;  limit → max_kbps
     data  -&gt;  data_urlenc
 </code></pre>
 
-<h4>对于作用域大的变量使用较长的名字</h4>
-
+<h4 id="section-5">对于作用域大的变量使用较长的名字</h4>
 <p>在比较小的作用域内，可以使用较短的变量名，在较大的作用域内使用的变量，最好用长一点的名字，编辑器的自动补全都可以很好的减少键盘输入。对于一些缩写前缀，尽量选择众所周知的(如str)，一个判断标准是，当新成员加入时，是否可以无需他人帮助而明白前缀代表什么。</p>
 
-<h4>合理使用<code>_</code>、<code>-</code>等符号，比如对私有变量加<code>_</code>前缀。</h4>
+<h4 id="section-6">合理使用<code>_</code>、<code>-</code>等符号，比如对私有变量加<code>_</code>前缀。</h4>
 
 <pre><code>var x = new DatePicker(); // DatePicker() 是类的"构造"函数，大写开始
 var y = pageHeight(); // pageHeight() 是一个普通函数
@@ -149,8 +145,7 @@ var height = 250; // height不是
 &lt;div id="middle_column" class="main-content"&gt; ...
 </code></pre>
 
-<h3>命名不能有歧义</h3>
-
+<h3 id="section-7">命名不能有歧义</h3>
 <p>命名的时候可以先想一下，我要用的这个词是否有别的含义。举个例子：</p>
 
 <pre><code>results = Database.all_objects.filter("year &lt;= 2011")
@@ -158,7 +153,7 @@ var height = 250; // height不是
 
 <p>现在的结果到底是包含2011年之前的呢还是不包含呢？</p>
 
-<h4>使用<code>min</code>、<code>max</code>代替<code>limit</code></h4>
+<h4 id="minmaxlimit">使用<code>min</code>、<code>max</code>代替<code>limit</code></h4>
 
 <pre><code>CART_TOO_BIG_LIMIT = 10
     if shopping_cart.num_items() &gt;= CART_TOO_BIG_LIMIT:
@@ -171,7 +166,7 @@ MAX_ITEMS_IN_CART = 10
 
 <p>对比上例中<code>CART_TOO_BIG_LIMIT</code>和<code>MAX_ITEMS_IN_CART</code>，想想哪个更好呢？</p>
 
-<h4>使用<code>first</code>和<code>last</code>来表示闭区间</h4>
+<h4 id="firstlast">使用<code>first</code>和<code>last</code>来表示闭区间</h4>
 
 <pre><code>print integer_range(start=2, stop=4)
 # Does this print [2,3] or [2,3,4] (or something else)?
@@ -181,7 +176,7 @@ set.PrintKeys(first="Bart", last="Maggie")
 
 <p><code>first</code>和<code>last</code>含义明确，适宜表示闭区间。</p>
 
-<h4>使用<code>beigin</code>和<code>end</code>表示前闭后开([2,9))区间</h4>
+<h4 id="beiginend29">使用<code>beigin</code>和<code>end</code>表示前闭后开([2,9))区间</h4>
 
 <pre><code>PrintEventsInRange("OCT 16 12:00am", "OCT 17 12:00am")
 
@@ -190,7 +185,7 @@ PrintEventsInRange("OCT 16 12:00am", "OCT 16 11:59:59.9999pm")
 
 <p>上面一种写法就比下面的舒服多了。</p>
 
-<h4>Boolean型变量命名</h4>
+<h4 id="boolean">Boolean型变量命名</h4>
 
 <pre><code>bool read_password = true;
 </code></pre>
@@ -201,7 +196,7 @@ PrintEventsInRange("OCT 16 12:00am", "OCT 16 11:59:59.9999pm")
 bool disable_ssl = false  --&gt;  bool use_ssl = true
 </code></pre>
 
-<h4>符合预期</h4>
+<h4 id="section-8">符合预期</h4>
 
 <pre><code>public class StatisticsCollector {
     public void addSample(double x) { ... }
@@ -214,8 +209,7 @@ bool disable_ssl = false  --&gt;  bool use_ssl = true
 
 <p>在这个例子中，<code>getMean</code>方法遍历了所有的样本，返回总额，所以并不是普通意义上轻量的<code>get</code>方法，所以应该取名<code>computeMean</code>比较合适。</p>
 
-<h2>漂亮的格式</h2>
-
+<h2 id="section-9">漂亮的格式</h2>
 <p>写出来漂亮的格式，充满美感，读起来自然也会舒服很多，对比下面两个例子：</p>
 
 <pre><code>class StatsKeeper {
@@ -248,8 +242,7 @@ class StatsKeeper {
 };
 </code></pre>
 
-<h3>考虑断行的连续性和简洁</h3>
-
+<h3 id="section-10">考虑断行的连续性和简洁</h3>
 <p>这段代码需要断行，来满足不超过一行80个字符的要求，参数也需要注释说明：</p>
 
 <pre><code>public class PerformanceTester {
@@ -314,7 +307,7 @@ class StatsKeeper {
 }
 </code></pre>
 
-<h3>用函数封装</h3>
+<h3 id="section-11">用函数封装</h3>
 
 <pre><code>// Turn a partial_name like "Doug Adams" into "Mr. Douglas Adams".
 // If not possible, 'error' is filled with an explanation.
@@ -352,8 +345,7 @@ void CheckFullName(string partial_name,
 }
 </code></pre>
 
-<h3>列对齐</h3>
-
+<h3 id="section-12">列对齐</h3>
 <p>列对齐可以让代码段看起来更舒适：</p>
 
 <pre><code>CheckFullName("Doug Adams"   , "Mr. Douglas Adams" , "");
@@ -372,7 +364,7 @@ commands[] = {
 };
 </code></pre>
 
-<h3>代码用块区分</h3>
+<h3 id="section-13">代码用块区分</h3>
 
 <pre><code>class FrontendServer {
     public:
@@ -452,15 +444,12 @@ def suggest_new_friends(user, email_password):
 
 <p>让代码看起来更舒服，需要在写的过程中多注意，培养一些好的习惯，尤其当团队合作的时候，代码风格比如大括号的位置并没有对错，但是不遵循团队规范那就是错的。</p>
 
-<h2>如何写注释</h2>
-
+<h2 id="section-14">如何写注释</h2>
 <p>当你写代码的时候，你会思考很多，但是最终呈现给读者的就只剩代码本身了，额外的信息丢失了，所以注释的目的就是让读者了解更多的信息。</p>
 
-<h3>应该注释什么</h3>
-
-<h4>不应该注释什么</h4>
-
-<p>这样的注释毫无价值：</p>
+<h3 id="section-15">应该注释什么</h3>
+<p>####不应该注释什么
+这样的注释毫无价值：</p>
 
 <pre><code>// The class definition for Account
 class Account {
@@ -474,7 +463,7 @@ class Account {
 };
 </code></pre>
 
-<h4>不要像下面这样为了注释而注释：</h4>
+<h4 id="section-16">不要像下面这样为了注释而注释：</h4>
 
 <pre><code>// Find a Node with the given 'name' or return NULL.
 // If depth &lt;= 0, only 'subtree' is inspected.
@@ -482,7 +471,7 @@ class Account {
 Node* FindNodeInSubtree(Node* subtree, string name, int depth);
 </code></pre>
 
-<h4>不要给烂取名注释</h4>
+<h4 id="section-17">不要给烂取名注释</h4>
 
 <pre><code>// Enforce limits on the Reply as stated in the Request,
 // such as the number of items returned, or total byte size, etc. 
@@ -495,8 +484,7 @@ void CleanReply(Request request, Reply reply);
 void EnforceLimitsFromRequest(Request request, Reply reply);
 </code></pre>
 
-<h4>记录你的想法</h4>
-
+<h4 id="section-18">记录你的想法</h4>
 <p>我们讨论了不该注释什么，那么应该注释什么呢？注释应该记录你思考代码怎么写的结果，比如像下面这些：</p>
 
 <pre><code>// Surprisingly, a binary tree was 40% faster than a hash table for this data.
@@ -527,8 +515,7 @@ HACK  : Adimittedly inelegant solution to a problem
 XXX   : Danger! Major problem here
 </code></pre>
 
-<h4>站在读者的角度去思考</h4>
-
+<h4 id="section-19">站在读者的角度去思考</h4>
 <p>当别人读你的代码时，让他们产生疑问的部分，就是你应该注释的地方。</p>
 
 <pre><code>struct Recorder {
@@ -546,8 +533,7 @@ XXX   : Danger! Major problem here
 vector&lt;float&gt;().swap(data);
 </code></pre>
 
-<h4>说明可能陷阱</h4>
-
+<h4 id="section-20">说明可能陷阱</h4>
 <p>你在写代码的过程中，可能用到一些hack，或者有其他需要读代码的人知道的陷阱，这时候就应该注释：</p>
 
 <pre><code>void SendEmail(string to, string subject, string body);
@@ -559,28 +545,23 @@ vector&lt;float&gt;().swap(data);
 void SendEmail(string to, string subject, string body);
 </code></pre>
 
-<h4>全景的注释</h4>
-
+<h4 id="section-21">全景的注释</h4>
 <p>有时候为了更清楚说明，需要给整个文件加注释，让读者有个总体的概念：</p>
 
 <pre><code>// This file contains helper functions that provide a more convenient interface to our
 // file system. It handles file permissions and other nitty-gritty details.
 </code></pre>
 
-<h4>总结性的注释</h4>
-
+<h4 id="section-22">总结性的注释</h4>
 <p>即使是在函数内部，也可以有类似文件注释那样的说明注释：</p>
 
 <pre><code># Find all the items that customers purchased for themselves.
 for customer_id in all_customers:
     for sale in all_sales[customer_id].sales:
         if sale.recipient == customer_id:
-            ...
-</code></pre>
+            ... 或者按照函数的步进，写一些注释：
 
-<p>或者按照函数的步进，写一些注释：</p>
-
-<pre><code>def GenerateUserReport():
+def GenerateUserReport():
     # Acquire a lock for this user
     ...
     # Read user's info from the database
@@ -592,11 +573,10 @@ for customer_id in all_customers:
 
 <p>很多人不愿意写注释，确实，要写好注释也不是一件简单的事情，也可以在文件专门的地方，留个写注释的区域，可以写下你任何想说的东西。</p>
 
-<h3>注释应简明准确</h3>
-
+<h3 id="section-23">注释应简明准确</h3>
 <p>前一个小节讨论了注释应该写什么，这一节来讨论应该怎么写，因为注释很重要，所以要写的精确，注释也占据屏幕空间，所以要简洁。</p>
 
-<h4>精简注释</h4>
+<h4 id="section-24">精简注释</h4>
 
 <pre><code>// The int is the CategoryType.
 // The first float in the inner pair is the 'score',
@@ -610,7 +590,7 @@ typedef hash_map&lt;int, pair&lt;float, float&gt; &gt; ScoreMap;
 typedef hash_map&lt;int, pair&lt;float, float&gt; &gt; ScoreMap;
 </code></pre>
 
-<h4>避免有歧义的代词</h4>
+<h4 id="section-25">避免有歧义的代词</h4>
 
 <pre><code>// Insert the data into the cache, but check if it's too big first.
 </code></pre>
@@ -625,7 +605,7 @@ typedef hash_map&lt;int, pair&lt;float, float&gt; &gt; ScoreMap;
 <pre><code>// If the data is small enough, insert it into the cache.
 </code></pre>
 
-<h4>语句要精简准确</h4>
+<h4 id="section-26">语句要精简准确</h4>
 
 <pre><code># Depending on whether we've already crawled this URL before, give it a different priority.
 </code></pre>
@@ -635,7 +615,7 @@ typedef hash_map&lt;int, pair&lt;float, float&gt; &gt; ScoreMap;
 <pre><code># Give higher priority to URLs we've never crawled before.
 </code></pre>
 
-<h4>精确描述函数的目的</h4>
+<h4 id="section-27">精确描述函数的目的</h4>
 
 <pre><code>// Return the number of lines in this file.
 int CountLines(string filename) { ... }
@@ -644,13 +624,12 @@ int CountLines(string filename) { ... }
 <p>这样的一个函数，用起来可能会一头雾水，因为他可以有很多歧义：</p>
 
 <ul>
-<li>"" 一个空文件，是0行还是1行？</li>
-<li>"hello" 只有一行，那么返回值是0还是1？</li>
-<li>"hello\n" 这种情况返回1还是2？</li>
-<li>"hello\n world" 返回1还是2？</li>
-<li>"hello\n\r cruel\n world\r" 返回2、3、4哪一个呢？</li>
+  <li>”” 一个空文件，是0行还是1行？</li>
+  <li>“hello” 只有一行，那么返回值是0还是1？</li>
+  <li>“hello\n” 这种情况返回1还是2？</li>
+  <li>“hello\n world” 返回1还是2？</li>
+  <li>“hello\n\r cruel\n world\r” 返回2、3、4哪一个呢？</li>
 </ul>
-
 
 <p>所以注释应该这样写：</p>
 
@@ -658,7 +637,7 @@ int CountLines(string filename) { ... }
 int CountLines(string filename) { ... }
 </code></pre>
 
-<h4>用实例说明边界情况</h4>
+<h4 id="section-28">用实例说明边界情况</h4>
 
 <pre><code>// Rearrange 'v' so that elements &lt; pivot come before those &gt;= pivot;
 // Then return the largest 'i' for which v[i] &lt; pivot (or -1 if none are &lt; pivot)
@@ -672,7 +651,7 @@ int Partition(vector&lt;int&gt;* v, int pivot);
 int Partition(vector&lt;int&gt;* v, int pivot);
 </code></pre>
 
-<h4>说明你的代码的真正目的</h4>
+<h4 id="section-29">说明你的代码的真正目的</h4>
 
 <pre><code>void DisplayProducts(list&lt;Product&gt; products) {
     products.sort(CompareProductByPrice);
@@ -690,8 +669,7 @@ int Partition(vector&lt;int&gt;* v, int pivot);
 for (list&lt;Product&gt;::reverse_iterator it = products.rbegin(); ... )
 </code></pre>
 
-<h4>函数调用时的注释</h4>
-
+<h4 id="section-30">函数调用时的注释</h4>
 <p>看见这样的一个函数调用，肯定会一头雾水：</p>
 
 <pre><code>Connect(10, false);
@@ -705,7 +683,7 @@ for (list&lt;Product&gt;::reverse_iterator it = products.rbegin(); ... )
 Connect(timeout = 10, use_encryption = False)
 </code></pre>
 
-<h4>使用信息含量丰富的词</h4>
+<h4 id="section-31">使用信息含量丰富的词</h4>
 
 <pre><code>// This class contains a number of members that store the same information as in the
 // database, but are stored here for speed. When this class is read from later, those
@@ -718,14 +696,12 @@ Connect(timeout = 10, use_encryption = False)
 <pre><code>// This class acts as a caching layer to the database.
 </code></pre>
 
-<h2>简化循环和逻辑</h2>
+<h2 id="section-32">简化循环和逻辑</h2>
 
-<h3>流程控制要简单</h3>
-
+<h3 id="section-33">流程控制要简单</h3>
 <p>让条件语句、循环以及其他控制流程的代码尽可能自然，让读者在阅读过程中不需要停顿思考或者在回头查找，是这一节的目的。</p>
 
-<h4>条件语句中参数的位置</h4>
-
+<h4 id="section-34">条件语句中参数的位置</h4>
 <p>对比下面两种条件的写法：</p>
 
 <pre><code>if (length &gt;= 10)
@@ -742,11 +718,9 @@ while (bytes_expected &gt; bytes_received)
 <li>运算符右边：通常是被比对的样本，一定程度上的常量</li>
 </ul>
 
-
 <p>这就解释了为什么<code>bytes_received &lt; bytes_expected</code>比反过来更好理解。</p>
 
-<h4>if/else的顺序</h4>
-
+<h4 id="ifelse">if/else的顺序</h4>
 <p>通常，<code>if/else</code>的顺序你可以自由选择，下面这两种都可以：</p>
 
 <pre><code>if (a == b) {
@@ -765,11 +739,10 @@ if (a != b) {
 <p>或许对此你也没有仔细斟酌过，但在有些时候，一种顺序确实好过另一种：</p>
 
 <ul>
-<li>正向的逻辑在前，比如<code>if(debug)</code>就比<code>if(!debug)</code>好</li>
-<li>简单逻辑的在前，这样<code>if</code>和<code>else</code>就可以在一个屏幕显示</li>
-<li>有趣、清晰的逻辑在前</li>
+  <li>正向的逻辑在前，比如<code>if(debug)</code>就比<code>if(!debug)</code>好</li>
+  <li>简单逻辑的在前，这样<code>if</code>和<code>else</code>就可以在一个屏幕显示</li>
+  <li>有趣、清晰的逻辑在前</li>
 </ul>
-
 
 <p>举个例子来看：</p>
 
@@ -797,7 +770,7 @@ if (a != b) {
 }
 </code></pre>
 
-<h4>三目运算符(?:)</h4>
+<h4 id="section-35">三目运算符(?:)</h4>
 
 <pre><code>time_str += (hour &gt;= 12) ? "pm" : "am";
 
@@ -822,7 +795,7 @@ if (exponent &gt;= 0) {
 
 <p>所以只在简单表达式的地方用。</p>
 
-<h4>避免使用do/while表达式</h4>
+<h4 id="dowhile">避免使用do/while表达式</h4>
 
 <pre><code>do {
     continue;
@@ -831,7 +804,7 @@ if (exponent &gt;= 0) {
 
 <p>这段代码会执行几遍呢，需要时间思考一下，<code>do/while</code>完全可以用别的方法代替，所以应避免使用。</p>
 
-<h4>尽早return</h4>
+<h4 id="return">尽早return</h4>
 
 <pre><code>public boolean Contains(String str, String substr) {
     if (str == null || substr == null) return false;
@@ -842,7 +815,7 @@ if (exponent &gt;= 0) {
 
 <p>函数里面尽早的return，可以让逻辑更加清晰。</p>
 
-<h4>减少嵌套</h4>
+<h4 id="section-36">减少嵌套</h4>
 
 <pre><code>if (user_result == SUCCESS) {
     if (permission_result != SUCCESS) {
@@ -898,12 +871,10 @@ reply.Done();
 }
 </code></pre>
 
-<h3>拆分复杂表达式</h3>
-
+<h3 id="section-37">拆分复杂表达式</h3>
 <p>很显然的，越复杂的表达式，读起来越费劲，所以应该把那些复杂而庞大的表达式，拆分成一个个易于理解的小式子。</p>
 
-<h4>用变量</h4>
-
+<h4 id="section-38">用变量</h4>
 <p>将复杂表达式拆分最简单的办法，就是增加一个变量：</p>
 
 <pre><code>if line.split(':')[0].strip() == "root":
@@ -935,13 +906,12 @@ if (!user_owns_document) {
 }
 </code></pre>
 
-<h4>逻辑替换</h4>
+<h4 id="section-39">逻辑替换</h4>
 
 <ul>
-<li>1) not (a or b or c)   <--> (not a) and (not b) and (not c)</li>
-<li>2) not (a and b and c) <--> (not a) or (not b) or (not c)</li>
+  <li>1) not (a or b or c)   &lt;–&gt; (not a) and (not b) and (not c)</li>
+  <li>2) not (a and b and c) &lt;–&gt; (not a) or (not b) or (not c)</li>
 </ul>
-
 
 <p>所以，就可以这样写：</p>
 
@@ -951,7 +921,7 @@ if (!user_owns_document) {
 if (!file_exists || is_protected) Error("Sorry, could not read file.");
 </code></pre>
 
-<h4>不要滥用逻辑表达式</h4>
+<h4 id="section-40">不要滥用逻辑表达式</h4>
 
 <pre><code>assert((!(bucket = FindBucket(key))) || !bucket-&gt;IsOccupied());
 </code></pre>
@@ -967,7 +937,7 @@ if (bucket != NULL) assert(!bucket-&gt;IsOccupied());
 <pre><code>x = a || b || c
 </code></pre>
 
-<h4>拆解大表达式</h4>
+<h4 id="section-41">拆解大表达式</h4>
 
 <pre><code>var update_highlight = function (message_num) {
     if ($("#vote_value" + message_num).html() === "Up") {
@@ -1004,13 +974,12 @@ if (bucket != NULL) assert(!bucket-&gt;IsOccupied());
 }
 </code></pre>
 
-<h3>变量与可读性</h3>
+<h3 id="section-42">变量与可读性</h3>
 
-<h4>消除变量</h4>
-
+<h4 id="section-43">消除变量</h4>
 <p>前一节，讲到利用变量来拆解大表达式，这一节来讨论如何消除多余的变量。</p>
 
-<h4>没用的临时变量</h4>
+<h4 id="section-44">没用的临时变量</h4>
 
 <pre><code>now = datetime.datetime.now()
 root_message.last_view_time = now
@@ -1024,13 +993,12 @@ root_message.last_view_time = now
 <li>只用了一次</li>
 </ul>
 
-
 <p>所以完全可以写作：</p>
 
 <pre><code>root_message.last_view_time = datetime.datetime.now()
 </code></pre>
 
-<h4>消除条件控制变量</h4>
+<h4 id="section-45">消除条件控制变量</h4>
 
 <pre><code>boolean done = false;
 while (/* condition */ &amp;&amp; !done) {
@@ -1054,8 +1022,7 @@ while (/* condition */ &amp;&amp; !done) {
 
 <p>这个例子非常容易修改，如果是比较复杂的嵌套，<code>break</code>可能并不够用，这时候就可以把代码封装到函数中。</p>
 
-<h4>减少变量的作用域</h4>
-
+<h4 id="section-46">减少变量的作用域</h4>
 <p>我们都听过要避免使用全局变量这样的忠告，是的，当变量的作用域越大，就越难追踪，所以要保持变量小的作用域。</p>
 
 <pre><code>class LargeClass {
@@ -1088,7 +1055,7 @@ while (/* condition */ &amp;&amp; !done) {
 
 <p>将<code>str</code>通过变量函数参数传递，减小了作用域，也更易读。同样的道理也可以用在定义类的时候，将大类拆分成一个个小类。</p>
 
-<h4>不要使用嵌套的作用域</h4>
+<h4 id="section-47">不要使用嵌套的作用域</h4>
 
 <pre><code># No use of example_value up to this point.
 if request:
@@ -1127,8 +1094,7 @@ if example_value:
                 break
 </code></pre>
 
-<h4>用到了再声明</h4>
-
+<h4 id="section-48">用到了再声明</h4>
 <p>在C语言中，要求将所有的变量事先声明，这样当用到变量较多时候，读者处理这些信息就会有难度，所以一开始没用到的变量，就暂缓声明：</p>
 
 <pre><code>def ViewFilteredReplies(original_id):
@@ -1163,12 +1129,10 @@ if example_value:
     return filtered_replies
 </code></pre>
 
-<h4>变量最好只写一次</h4>
-
+<h4 id="section-49">变量最好只写一次</h4>
 <p>前面讨论了过多的变量会让读者迷惑，同一个变量，不停的被赋值也会让读者头晕，如果变量变化的次数少一些，代码可读性就更强。</p>
 
-<h4>一个例子</h4>
-
+<h4 id="section-50">一个例子</h4>
 <p>假设有一个页面，如下，需要给第一个空的<code>input</code>赋值：</p>
 
 <pre><code>&lt;input type="text" id="input1" value="Dustin"&gt;
@@ -1225,18 +1189,15 @@ var setFirstEmptyInput = function (new_value) {
 };
 </code></pre>
 
-<h2>重新组织你的代码</h2>
-
-<h3>分离不相关的子问题</h3>
-
-<p>工程师就是将大问题分解为一个个小问题，然后逐个解决，这样也易于保证程序的健壮性、可读性。如何分解子问题，下面给出一些准则：</p>
+<h2 id="section-51">重新组织你的代码</h2>
+<p>###分离不相关的子问题
+工程师就是将大问题分解为一个个小问题，然后逐个解决，这样也易于保证程序的健壮性、可读性。如何分解子问题，下面给出一些准则：</p>
 
 <ul>
 <li>看看这个方法或代码，问问你自己“这段代码的最终目标是什么？”</li>
 <li>对于每一行代码，要问“它与目标直接相关，或者是不相关的子问题？”</li>
 <li>如果有足够多行的代码是处理与目标不直接相关的问题，那么抽离成子函数</li>
 </ul>
-
 
 <p>来看一个例子：</p>
 
@@ -1265,8 +1226,7 @@ var setFirstEmptyInput = function (new_value) {
 };
 </code></pre>
 
-<h4>意外收获</h4>
-
+<h4 id="section-52">意外收获</h4>
 <p>有很多理由将<code>format_pretty</code>抽离出来，这些独立的函数可以很容易的添加feature，增强可靠性，处理边界情况，等等。所以这里，可以将<code>format_pretty</code>增强，就会得到一个更强大的函数：</p>
 
 <pre><code>var format_pretty = function (obj, indent) {
@@ -1304,8 +1264,7 @@ var setFirstEmptyInput = function (new_value) {
 
 <p>多做这样的事情，就是积累代码的过程，这样的代码可以复用，也可以形成自己的代码库，或者分享给别人。</p>
 
-<h4>业务相关的函数</h4>
-
+<h4 id="section-53">业务相关的函数</h4>
 <p>那些与目标不相关函数，抽离出来可以复用，与业务相关的也可以抽出来，保持代码的易读性，例如：</p>
 
 <pre><code>business = Business()
@@ -1339,8 +1298,7 @@ business.date_created = datetime.datetime.utcnow()
 business.save_to_database()
 </code></pre>
 
-<h4>简化现有接口</h4>
-
+<h4 id="section-54">简化现有接口</h4>
 <p>我们来看一个读写cookie的函数：</p>
 
 <pre><code>var max_results;
@@ -1361,7 +1319,7 @@ delete_cookie(name);
 
 <p>对于并不理想的接口，你永远可以用自己的函数做封装，让接口更好用。</p>
 
-<h4>按自己需要写接口</h4>
+<h4 id="section-55">按自己需要写接口</h4>
 
 <pre><code>ser_info = { "username": "...", "password": "..." }
 user_str = json.dumps(user_info)
@@ -1389,8 +1347,7 @@ url = "http://example.com/?user_info=" + url_safe_encrypt(user_info)
 
 <p>分离子函数是好习惯，但是也要适度，过度的分离成多个小函数，也会让查找变得困难。</p>
 
-<h3>单任务</h3>
-
+<h3 id="section-56">单任务</h3>
 <p>代码应该是一次只完成一个任务</p>
 
 <pre><code>var place = location_info["LocalityName"];  // e.g. "Santa Monica"
@@ -1463,8 +1420,7 @@ if (country === "USA") {
 return first_half + ", " + second_half;
 </code></pre>
 
-<h3>把想法转换成代码</h3>
-
+<h3 id="section-57">把想法转换成代码</h3>
 <p>要把一个复杂的东西解释给别人，一些细节很容易就让人产生迷惑，所以想象把你的代码用平实的语言解释给别人听，别人是否能懂，有一些准则可以帮助你让代码更清晰：</p>
 
 <ul>
@@ -1472,7 +1428,6 @@ return first_half + ", " + second_half;
 <li>注意描述中关键的字词</li>
 <li>让你的代码符合你的描述</li>
 </ul>
-
 
 <p>下面这段代码用来校验用户的权限：</p>
 
@@ -1509,8 +1464,7 @@ if ($document) {
 // continue rendering the page ...
 </code></pre>
 
-<h3>写更少的代码</h3>
-
+<h3 id="section-58">写更少的代码</h3>
 <p>最易懂的代码就是没有代码！</p>
 
 <ul>
@@ -1519,14 +1473,12 @@ if ($document) {
 <li>熟悉你常用的库，周期性研究他的API</li>
 </ul>
 
-
-<h2>最后</h2>
-
+<h2 id="section-59">最后</h2>
 <p>还有一些与测试相关的章节，留给你自己去研读吧，再次推荐此书：</p>
 
 <ul>
-<li>英文版：<a href="http://book.douban.com/subject/5442971/" title="The Art Of Readable Code">《The Art of Readable Code》</a></li>
-<li>中文版：<a href="http://book.douban.com/subject/10797189/" title="编写可读代码的艺术">编写可读代码的艺术</a></li>
+  <li>英文版：<a href="http://book.douban.com/subject/5442971/" title="The Art Of Readable Code">《The Art of Readable Code》</a></li>
+  <li>中文版：<a href="http://book.douban.com/subject/10797189/" title="编写可读代码的艺术">编写可读代码的艺术</a></li>
 </ul>
 
 

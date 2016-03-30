@@ -4,7 +4,7 @@
    <title>salamanderrex.github.io/</title>
    <link href="http://salamanderrex.github.io//atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://salamanderrex.github.io/" rel="alternate" type="text/html" />
-   <updated>2016-01-10T10:14:00-08:00</updated>
+   <updated>2016-03-30T16:34:11-07:00</updated>
    <id>http://salamanderrex.github.io/</id>
    <author>
      <name></name>
@@ -17,14 +17,11 @@
      <link href="http://beiyuu.com/dock"/>
      <updated>2015-11-16T00:00:00-08:00</updated>
      <id>http://sakanabderrex.github.io//dock</id>
-     <content type="html">&lt;h2&gt;problem&lt;/h2&gt;
-
+     <content type="html">&lt;h2 id=&quot;problem&quot;&gt;problem&lt;/h2&gt;
 &lt;p&gt;Docker moves between monitor and laptop monitor.
-&lt;img src=&quot;http://i.imgur.com/LhWpiS0.jpg&quot; alt=&quot;desk&quot; /&gt;&lt;/p&gt;
-
-&lt;h2&gt;How to Solve?&lt;/h2&gt;
-
-&lt;p&gt;Move your cursor from the bottom of the screen to the center of the screen.
+&lt;img src=&quot;http://i.imgur.com/LhWpiS0.jpg&quot; alt=&quot;desk&quot; /&gt;
+## How to Solve?
+Move your cursor from the bottom of the screen to the center of the screen.
 Dock will change to current monitor.&lt;/p&gt;
 </content>
    </entry>
@@ -34,35 +31,34 @@ Dock will change to current monitor.&lt;/p&gt;
      <link href="http://beiyuu.com/a-bug-in-java"/>
      <updated>2014-12-05T00:00:00-08:00</updated>
      <id>http://sakanabderrex.github.io//a-bug-in-java</id>
-     <content type="html">&lt;h2&gt;A bug in JAVA&lt;/h2&gt;
+     <content type="html">&lt;h2 id=&quot;a-bug-in-java&quot;&gt;A bug in JAVA&lt;/h2&gt;
 
 &lt;p&gt;Recently I found a bug in JAVA. It rarely happens, but as a development tool, this is unavoidable.
 This bug occurs when you want to delete a file after you write something to it or create it.&lt;/p&gt;
 
-&lt;h4&gt;Example&lt;/h4&gt;
-
+&lt;h4 id=&quot;example&quot;&gt;Example&lt;/h4&gt;
 &lt;p&gt;First, you write to a file, like get a input stream from other file and then close the IOstream.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;    File file=new File(serverLocation);
-    OutputStream  outpuStream = new FileOutputStream(file);;
-    try {
-        int read = 0;
-        byte[] bytes = new byte[1024];
+&lt;pre&gt;&lt;code&gt;	File file=new File(serverLocation);
+	OutputStream  outpuStream = new FileOutputStream(file);;
+	try {
+		int read = 0;
+		byte[] bytes = new byte[1024];
 
-        outpuStream = new FileOutputStream(new File(serverLocation));
-        while ((read = uploadedInputStream.read(bytes)) != -1) {
-            outpuStream.write(bytes, 0, read);
-        }
-        outpuStream.flush();
-        outpuStream.close();
-        uploadedInputStream.close();
+		outpuStream = new FileOutputStream(new File(serverLocation));
+		while ((read = uploadedInputStream.read(bytes)) != -1) {
+			outpuStream.write(bytes, 0, read);
+		}
+		outpuStream.flush();
+		outpuStream.close();
+		uploadedInputStream.close();
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;After some steps, you may want to delete it.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;    public boolean deleteFile(String sPath) throws Exception {
-    boolean flag = false;
-    File  file = new File(sPath);
+&lt;pre&gt;&lt;code&gt;	public boolean deleteFile(String sPath) throws Exception {
+	boolean flag = false;
+	File  file = new File(sPath);
     if (file.isFile() &amp;amp;&amp;amp; file.exists()) {
         file.delete();
         flag = true;
@@ -74,58 +70,57 @@ This bug occurs when you want to delete a file after you write something to it o
 &lt;p&gt;Then the weird thing happens. When you use the deleteFile, it will return &lt;code&gt;Ture&lt;/code&gt; but the file is still on the disk.
 In addition, in JAVA, this is no such thing like &lt;code&gt;file.close()&lt;/code&gt;, and only IO stream can be closed. File is just a description here.&lt;/p&gt;
 
-&lt;h2&gt;How to solve this question&lt;/h2&gt;
-
-&lt;h4&gt;method one (Not recommended)&lt;/h4&gt;
-
-&lt;p&gt;try to cause the Exception and it will close the file stream.&lt;/p&gt;
+&lt;h2 id=&quot;how-to-solve-this-question&quot;&gt;How to solve this question&lt;/h2&gt;
+&lt;p&gt;####method one (Not recommended)
+try to cause the Exception and it will close the file stream.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;try{
-    outpuStream.close();
-    outpuStream.write(bytes,0,1);
+	outpuStream.close();
+	outpuStream.write(bytes,0,1);
 }
 catch (Exception ignore)
 {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;method two&lt;/h4&gt;
-
+&lt;h4 id=&quot;method-two&quot;&gt;method two&lt;/h4&gt;
 &lt;p&gt;Very Simple, just use &lt;code&gt;System.gc()&lt;/code&gt; .
 After you write something,stream can be closed in the &lt;code&gt;finally&lt;/code&gt; part.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;finally{
-    try
-    {
-        in.close();
-        in = null;
-        out.flush();
-        out.close();
-        out = null;
-        System.gc();
-    }
-    catch (IOException e)
-    {
-        logger.error(e.getMessage());
-        e.printStackTrace();
-    }
+	try
+	{
+		in.close();
+		in = null;
+		out.flush();
+		out.close();
+		out = null;
+		System.gc();
+	}
+	catch (IOException e)
+	{
+		logger.error(e.getMessage());
+		e.printStackTrace();
+	}
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2&gt;Is is bug??&lt;/h2&gt;
-
+&lt;h2 id=&quot;is-is-bug&quot;&gt;Is is bug??&lt;/h2&gt;
 &lt;p&gt;Unfortunately, this is a bug of JAVA and this cannot be fixed now. You can check this link:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://bugs.java.com/bugdatabase/view_bug.do?bug_id=4715154&quot;&gt;Bug report @ java.com 2002-07-16&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Here is the final comment:&lt;/p&gt;
 
-&lt;blockquote&gt;&lt;p&gt;We cannot fix this.  Windows does not allow a mapped file to be deleted.  This
+&lt;blockquote&gt;
+  &lt;p&gt;We cannot fix this.  Windows does not allow a mapped file to be deleted.  This
 problem should be ameliorated somewhat once we fix our garbage collectors to
-deallocate direct buffers more promptly (see 4469299), but otherwise there&#39;s
-nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
+deallocate direct buffers more promptly (see 4469299), but otherwise there’s
+nothing we can do about this.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;This is bug reported at 2002. It is 2014 now but the bug is still not fixed. It seems that JAVA still needs a long way to develop itself.&lt;/p&gt;
+
 </content>
    </entry>
    
@@ -430,7 +425,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 						&lt;span class=&quot;date r&quot;&gt;Sept. 2015 &amp;mdash; Dec. 2016&lt;/span&gt;
 							&lt;/h3&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-                            &lt;span class=&quot;school&quot;&gt;University of California, San Diego  GPA: 3.666&lt;/span&gt;
+                            &lt;span class=&quot;school&quot;&gt;University of California, San Diego  GPA: 3.833&lt;/span&gt;
 							&lt;!--  &lt;span class=&quot;info&quot;&gt; First year M.S student, GPA: 3.666 &lt;/span&gt; --&gt;
 							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
                         &lt;/div&gt;
@@ -758,22 +753,23 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
     &lt;li&gt;终于有歌词啦&lt;/li&gt;
 &lt;/ul&gt;
 
-
 &lt;p&gt;使用中总结了一些体会，非常感性、毫无逻辑可言，看看就好：&lt;/p&gt;
 
-&lt;h2&gt;产品定位&lt;/h2&gt;
+&lt;h2 id=&quot;section&quot;&gt;产品定位&lt;/h2&gt;
 
 &lt;p&gt;豆瓣FM的产品定位，摘抄如下：&lt;/p&gt;
 
-&lt;blockquote&gt;&lt;p&gt;它简单、易用，熟悉每个用户的脾气秉性，又能够聚合集体的智慧。无论是在家里、工作场所、咖啡厅还是交通工具上，无论是在休息、等候、娱乐还是工作时，它都能够提供完美、一致的体验。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;它简单、易用，熟悉每个用户的脾气秉性，又能够聚合集体的智慧。无论是在家里、工作场所、咖啡厅还是交通工具上，无论是在休息、等候、娱乐还是工作时，它都能够提供完美、一致的体验。&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;大家对推荐都满意，算法就不说了。简单易用来讲，国内的音乐APP中(虾米、QQ、百度等)，只有豆瓣是打开就播放，确实简单易用。&lt;/p&gt;
 
 &lt;p&gt;这样的打开播放的产品定位下，使用场景就有些变化了。&lt;/p&gt;
 
-&lt;h2&gt;交互框架&lt;/h2&gt;
+&lt;h2 id=&quot;section-1&quot;&gt;交互框架&lt;/h2&gt;
 
-&lt;h3&gt;引导页&lt;/h3&gt;
+&lt;h3 id=&quot;section-2&quot;&gt;引导页&lt;/h3&gt;
 
 &lt;p&gt;从App引导开始，新版FM就想让用户熟悉上下拉动的操作。&lt;/p&gt;
 
@@ -783,7 +779,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/mw1024/8b8af2c8jw1e5eqcvmp9gj20oq0lp408.jpg&quot; alt=&quot;splash&quot; /&gt;&lt;/p&gt;
 
-&lt;h3&gt;上下拉&lt;/h3&gt;
+&lt;h3 id=&quot;section-3&quot;&gt;上下拉&lt;/h3&gt;
 
 &lt;p&gt;自从抽屉式导航普及开来之后，横滑展开设置成为一种默认操作。&lt;/p&gt;
 
@@ -795,7 +791,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/mw1024/8b8af2c8jw1e5eqd2xcj9j20oq0lpjv1.jpg&quot; alt=&quot;slide&quot; /&gt;&lt;/p&gt;
 
-&lt;h2&gt;设计细节&lt;/h2&gt;
+&lt;h2 id=&quot;section-4&quot;&gt;设计细节&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;封面不清晰&lt;/li&gt;
@@ -810,7 +806,6 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;li&gt;也是琢磨了半天才知道，点头像是进入设置。&lt;/li&gt;
 &lt;/ul&gt;
 
-
 &lt;p&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/mw1024/8b8af2c8jw1e5eqd8tkg5j20oq0lpjti.jpg&quot; alt=&quot;slide&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;再重复一下，APP引导太可怕了！ 我说的全是废话，因为这个版本发布后，看起来好评如潮，哎。&lt;/p&gt;
@@ -822,7 +817,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
      <link href="http://beiyuu.com/jobs-interview"/>
      <updated>2013-05-14T00:00:00-07:00</updated>
      <id>http://sakanabderrex.github.io//jobs-interview</id>
-     <content type="html">&lt;h2&gt;1、做公司就是做产品&lt;/h2&gt;
+     <content type="html">&lt;h2 id=&quot;section&quot;&gt;1、做公司就是做产品&lt;/h2&gt;
 
 &lt;p&gt;乔布斯从12岁开始，就捣鼓着好玩有用的产品，在惠普兼职的那些日子，也让他体会到了科技的魅力，原来凭一个人的力量也可以有如此之大的影响力，也是在惠普他认识了沃兹尼亚克。&lt;/p&gt;
 
@@ -834,7 +829,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 
 &lt;p&gt;光靠流程和制度，是不能让公司持续成功的，必须全心全意放在产品上。&lt;/p&gt;
 
-&lt;h2&gt;2、如何使公司良好运转&lt;/h2&gt;
+&lt;h2 id=&quot;section-1&quot;&gt;2、如何使公司良好运转&lt;/h2&gt;
 
 &lt;p&gt;对于传统行业来说，最好和普通之间，差距可能就是百分之几十的样子，但是对科技行业来说，最好的与普通的人才，能力的差距可能达百倍，所以一流的公司需要一流的人才，一流的人才也愿意与一流的人才共事。&lt;/p&gt;
 
@@ -842,7 +837,7 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 
 &lt;p&gt;大约这就是他被谣传暴戾的原因吧，从访谈中可以看的出，他确实不太在乎事实之外的东西，他自己也会犯错，别人也可以说服他，只要基于事实就好。&lt;/p&gt;
 
-&lt;h2&gt;3、品位问题&lt;/h2&gt;
+&lt;h2 id=&quot;section-2&quot;&gt;3、品位问题&lt;/h2&gt;
 
 &lt;p&gt;毫无疑问，乔布斯的品位很好，他认为和在大学时旁听排版课程的关系密不可分，的确，内容永远都是最重要的，并且，字体设计那些细致入微的细节，也对他有很深的影响。&lt;/p&gt;
 
@@ -858,13 +853,9 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 
 &lt;!--&lt;iframe height=&quot;498&quot; width=&quot;510&quot; src=&quot;http://player.youku.com/embed/XNTUxNDY1NDY4&quot; frameborder=&quot;0&quot; style=&quot;margin:0 auto&quot;&gt;&lt;/iframe&gt;--&gt;
 
-
-
-
 &lt;div style=&quot;text-align:center&quot;&gt;
-&lt;embed src=&quot;http://player.youku.com/player.php/sid/XNTUxNDY1NDY4/v.swf&quot; allowFullScreen=&quot;true&quot; quality=&quot;high&quot; width=&quot;480&quot; height=&quot;400&quot; align=&quot;middle&quot; allowScriptAccess=&quot;always&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;/embed&gt;
+&lt;embed src=&quot;http://player.youku.com/player.php/sid/XNTUxNDY1NDY4/v.swf&quot; allowfullscreen=&quot;true&quot; quality=&quot;high&quot; width=&quot;480&quot; height=&quot;400&quot; align=&quot;middle&quot; allowscriptaccess=&quot;always&quot; type=&quot;application/x-shockwave-flash&quot; /&gt;
 &lt;/div&gt;
-
 </content>
    </entry>
    
@@ -873,96 +864,75 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
      <link href="http://beiyuu.com/edongle_blog"/>
      <updated>2013-04-12T00:00:00-07:00</updated>
      <id>http://sakanabderrex.github.io//edongle_blog</id>
-     <content type="html">&lt;h1&gt;Edongle&lt;/h1&gt;
-
+     <content type="html">&lt;h1 id=&quot;edongle&quot;&gt;Edongle&lt;/h1&gt;
 &lt;hr /&gt;
-
-&lt;p&gt; Dongle which enables user to do their own configurations.
- &lt;img src=&quot;http://salamanderrex.github.io/image_for_projects/Edongle/Edongle.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1&gt;Function&lt;/h1&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt; Function:
+&lt;p&gt;Dongle which enables user to do their own configurations.
+ &lt;img src=&quot;http://salamanderrex.github.io/image_for_projects/Edongle/Edongle.jpg&quot; alt=&quot;&quot; /&gt;
+#Function
+ —————————————————
+ Function:
  * 1. A movable pocket device which can store the secret, classified or confidential, different kind of level info (base on s-AES encryption)
- * 2. Provide interface and create secure bridge between user software
+ * 2. Provide interface and create secure bridge between user software 
  * 3. Provide encryption and decryption service (parallel )&lt;/p&gt;
 
-&lt;h1&gt;How to run midware&lt;/h1&gt;
-
+&lt;h1 id=&quot;how-to-run-midware&quot;&gt;How to run midware&lt;/h1&gt;
 &lt;hr /&gt;
-
-&lt;p&gt; make sure you run connect the PIC32
+&lt;p&gt;make sure you run connect the PIC32
  the type in terminal &lt;code&gt;sudo midware&lt;/code&gt;  (need root permission)&lt;/p&gt;
 
-&lt;h1&gt;How to use client communication&lt;/h1&gt;
-
+&lt;h1 id=&quot;how-to-use-client-communication&quot;&gt;How to use client communication&lt;/h1&gt;
 &lt;hr /&gt;
-
-&lt;p&gt; We provide test client in /client
+&lt;p&gt;We provide test client in /client
  run the client &lt;code&gt;client&lt;/code&gt;&lt;/p&gt;
 
-&lt;h1&gt;How to use encryption service&lt;/h1&gt;
-
+&lt;h1 id=&quot;how-to-use-encryption-service&quot;&gt;How to use encryption service&lt;/h1&gt;
 &lt;hr /&gt;
-
-&lt;p&gt; If you want encrypt a file
+&lt;p&gt;If you want encrypt a file
  you should type &lt;code&gt;sudo midware cleartext.txt Encrypted.txt 1&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt; If you want to decrypte a file
- you should type `sudo midware Encrypted.txt outClear.txt 2&#39;&lt;/p&gt;
+&lt;p&gt;If you want to decrypte a file 
+ you should type `sudo midware Encrypted.txt outClear.txt 2’&lt;/p&gt;
 
-&lt;h1&gt;How to use browser extension module&lt;/h1&gt;
-
+&lt;h1 id=&quot;how-to-use-browser-extension-module&quot;&gt;How to use browser extension module&lt;/h1&gt;
 &lt;hr /&gt;
-
-&lt;p&gt; to load the Chrome extension, open the Chrome
- &lt;pre&gt;
- option-&gt;Tool-&gt;extension
+&lt;p&gt;to load the Chrome extension, open the Chrome&lt;/p&gt;
+&lt;pre&gt;
+ option-&amp;gt;Tool-&amp;gt;extension
  Load the developing tools
- &lt;/pre&gt;&lt;/p&gt;
+ &lt;/pre&gt;
 
-&lt;p&gt; to configure or store the web
- &lt;pre&gt;
+&lt;p&gt;to configure or store the web&lt;/p&gt;
+&lt;pre&gt;
  right click the icon on tool bar
- input the info, click save, wait it stores info in PIC32 , then close
- &lt;/pre&gt;&lt;/p&gt;
+ input the info, click save, wait it stores info in PIC32 , then close 
+ &lt;/pre&gt;
 
-&lt;h1&gt;Support&lt;/h1&gt;
-
+&lt;h1 id=&quot;support&quot;&gt;Support&lt;/h1&gt;
 &lt;hr /&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Ubuntu 12.04&lt;/li&gt;
+  &lt;li&gt;Ubuntu 12.04&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;h1&gt;Development tool&lt;/h1&gt;
-
+&lt;h1 id=&quot;development-tool&quot;&gt;Development tool&lt;/h1&gt;
 &lt;hr /&gt;
-
 &lt;ul&gt;
-&lt;li&gt;MPLAB&lt;/li&gt;
-&lt;li&gt;QtCreator&lt;/li&gt;
+  &lt;li&gt;MPLAB&lt;/li&gt;
+  &lt;li&gt;QtCreator&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;h1&gt;library and used open source project&lt;/h1&gt;
-
+&lt;h1 id=&quot;library-and-used-open-source-project&quot;&gt;library and used open source project&lt;/h1&gt;
 &lt;hr /&gt;
-
 &lt;ul&gt;
-&lt;li&gt;salamanderrex/jtorrent&lt;/li&gt;
-&lt;li&gt;openssl/openssl&lt;/li&gt;
-&lt;li&gt;mortzdk/Websocket&lt;/li&gt;
-&lt;li&gt;jiaxiluo/sakai_plus&lt;/li&gt;
-&lt;li&gt;open-source-parsers/jsoncpp&lt;/li&gt;
-&lt;li&gt;SHA-1&lt;/li&gt;
+  &lt;li&gt;salamanderrex/jtorrent&lt;/li&gt;
+  &lt;li&gt;openssl/openssl&lt;/li&gt;
+  &lt;li&gt;mortzdk/Websocket&lt;/li&gt;
+  &lt;li&gt;jiaxiluo/sakai_plus&lt;/li&gt;
+  &lt;li&gt;open-source-parsers/jsoncpp&lt;/li&gt;
+  &lt;li&gt;SHA-1&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h2 id=&quot;category--project-description-ve373-project-in-2014-summer-semester&quot;&gt;`category : project description: VE373 project in 2014 summer semester&lt;/h2&gt;
 
-&lt;h2&gt; `category : project description: VE373 project in 2014 summer semester&lt;/h2&gt;
 </content>
    </entry>
    
@@ -974,14 +944,15 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
      <content type="html">&lt;p&gt;这是《The Art of Readable Code》的读书笔记，再加一点自己的认识。强烈推荐此书：&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;英文版：&lt;a href=&quot;http://book.douban.com/subject/5442971/&quot; title=&quot;The Art Of Readable Code&quot;&gt;《The Art of Readable Code》&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;中文版：&lt;a href=&quot;http://book.douban.com/subject/10797189/&quot; title=&quot;编写可读代码的艺术&quot;&gt;编写可读代码的艺术&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;英文版：&lt;a href=&quot;http://book.douban.com/subject/5442971/&quot; title=&quot;The Art Of Readable Code&quot;&gt;《The Art of Readable Code》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;中文版：&lt;a href=&quot;http://book.douban.com/subject/10797189/&quot; title=&quot;编写可读代码的艺术&quot;&gt;编写可读代码的艺术&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h2 id=&quot;section&quot;&gt;代码为什么要易于理解&lt;/h2&gt;
 
-&lt;h2&gt;代码为什么要易于理解&lt;/h2&gt;
-
-&lt;blockquote&gt;&lt;p&gt;&quot;Code should be written to minimize the time it would take for someone else to understand it.&quot;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;“Code should be written to minimize the time it would take for someone else to understand it.”&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;日常工作的事实是：&lt;/p&gt;
 
@@ -993,14 +964,13 @@ nothing we can do about this.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;li&gt;代码的可读性与程序的效率、架构、易于测试一点也不冲突&lt;/li&gt;
 &lt;/ul&gt;
 
-
 &lt;p&gt;整本书都围绕“如何让代码的可读性更高”这个目标来写。这也是好代码的重要标准之一。&lt;/p&gt;
 
-&lt;h2&gt;如何命名&lt;/h2&gt;
+&lt;h2 id=&quot;section-1&quot;&gt;如何命名&lt;/h2&gt;
 
-&lt;h3&gt;变量名中应包含更多信息&lt;/h3&gt;
+&lt;h3 id=&quot;section-2&quot;&gt;变量名中应包含更多信息&lt;/h3&gt;
 
-&lt;h4&gt;使用含义明确的词，比如用&lt;code&gt;download&lt;/code&gt;而不是&lt;code&gt;get&lt;/code&gt;，参考以下替换方案：&lt;/h4&gt;
+&lt;h4 id=&quot;downloadget&quot;&gt;使用含义明确的词，比如用&lt;code&gt;download&lt;/code&gt;而不是&lt;code&gt;get&lt;/code&gt;，参考以下替换方案：&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt; send -&amp;gt; deliver, dispatch, announce, distribute, route
  find -&amp;gt; search, extract, locate, recover
@@ -1008,8 +978,7 @@ start -&amp;gt; lanuch, create, begin, open
  make -&amp;gt; create,set up, build, generate, compose, add, new
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;避免通用的词&lt;/h4&gt;
-
+&lt;h4 id=&quot;section-3&quot;&gt;避免通用的词&lt;/h4&gt;
 &lt;p&gt;像&lt;code&gt;tmp&lt;/code&gt;和&lt;code&gt;retval&lt;/code&gt;这样词，除了说明是临时变量和返回值之外，没有任何意义。但是给他加一些有意义的词，就会很明确：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;tmp_file = tempfile.NamedTemporaryFile() 
@@ -1037,14 +1006,12 @@ SaveData(tmp_file, ...)
 
 &lt;p&gt;所以，当使用一些通用的词，要有充分的理由才可以。&lt;/p&gt;
 
-&lt;h4&gt;使用具体的名字&lt;/h4&gt;
-
+&lt;h4 id=&quot;section-4&quot;&gt;使用具体的名字&lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;CanListenOnPort&lt;/code&gt;就比&lt;code&gt;ServerCanStart&lt;/code&gt;好，can start比较含糊，而listen on port确切的说明了这个方法将要做什么。&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;--run_locally&lt;/code&gt;就不如&lt;code&gt;--extra_logging&lt;/code&gt;来的明确。&lt;/p&gt;
 
-&lt;h4&gt;增加重要的细节，比如变量的单位&lt;code&gt;_ms&lt;/code&gt;，对原始字符串加&lt;code&gt;_raw&lt;/code&gt;&lt;/h4&gt;
-
+&lt;h4 id=&quot;msraw&quot;&gt;增加重要的细节，比如变量的单位&lt;code&gt;_ms&lt;/code&gt;，对原始字符串加&lt;code&gt;_raw&lt;/code&gt;&lt;/h4&gt;
 &lt;p&gt;如果一个变量很重要，那么在名字上多加一些额外的字就会更加易读，比如将&lt;code&gt;string id; // Example: &quot;af84ef845cd8&quot;&lt;/code&gt;换成&lt;code&gt;string hex_id;&lt;/code&gt;。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;             Start(int delay)  --&amp;gt;  delay → delay_secs
@@ -1061,11 +1028,10 @@ ThrottleDownload(float limit)  --&amp;gt;  limit → max_kbps
     data  -&amp;gt;  data_urlenc
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;对于作用域大的变量使用较长的名字&lt;/h4&gt;
-
+&lt;h4 id=&quot;section-5&quot;&gt;对于作用域大的变量使用较长的名字&lt;/h4&gt;
 &lt;p&gt;在比较小的作用域内，可以使用较短的变量名，在较大的作用域内使用的变量，最好用长一点的名字，编辑器的自动补全都可以很好的减少键盘输入。对于一些缩写前缀，尽量选择众所周知的(如str)，一个判断标准是，当新成员加入时，是否可以无需他人帮助而明白前缀代表什么。&lt;/p&gt;
 
-&lt;h4&gt;合理使用&lt;code&gt;_&lt;/code&gt;、&lt;code&gt;-&lt;/code&gt;等符号，比如对私有变量加&lt;code&gt;_&lt;/code&gt;前缀。&lt;/h4&gt;
+&lt;h4 id=&quot;section-6&quot;&gt;合理使用&lt;code&gt;_&lt;/code&gt;、&lt;code&gt;-&lt;/code&gt;等符号，比如对私有变量加&lt;code&gt;_&lt;/code&gt;前缀。&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;var x = new DatePicker(); // DatePicker() 是类的&quot;构造&quot;函数，大写开始
 var y = pageHeight(); // pageHeight() 是一个普通函数
@@ -1077,8 +1043,7 @@ var height = 250; // height不是
 &amp;lt;div id=&quot;middle_column&quot; class=&quot;main-content&quot;&amp;gt; ...
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3&gt;命名不能有歧义&lt;/h3&gt;
-
+&lt;h3 id=&quot;section-7&quot;&gt;命名不能有歧义&lt;/h3&gt;
 &lt;p&gt;命名的时候可以先想一下，我要用的这个词是否有别的含义。举个例子：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;results = Database.all_objects.filter(&quot;year &amp;lt;= 2011&quot;)
@@ -1086,7 +1051,7 @@ var height = 250; // height不是
 
 &lt;p&gt;现在的结果到底是包含2011年之前的呢还是不包含呢？&lt;/p&gt;
 
-&lt;h4&gt;使用&lt;code&gt;min&lt;/code&gt;、&lt;code&gt;max&lt;/code&gt;代替&lt;code&gt;limit&lt;/code&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;minmaxlimit&quot;&gt;使用&lt;code&gt;min&lt;/code&gt;、&lt;code&gt;max&lt;/code&gt;代替&lt;code&gt;limit&lt;/code&gt;&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;CART_TOO_BIG_LIMIT = 10
     if shopping_cart.num_items() &amp;gt;= CART_TOO_BIG_LIMIT:
@@ -1099,7 +1064,7 @@ MAX_ITEMS_IN_CART = 10
 
 &lt;p&gt;对比上例中&lt;code&gt;CART_TOO_BIG_LIMIT&lt;/code&gt;和&lt;code&gt;MAX_ITEMS_IN_CART&lt;/code&gt;，想想哪个更好呢？&lt;/p&gt;
 
-&lt;h4&gt;使用&lt;code&gt;first&lt;/code&gt;和&lt;code&gt;last&lt;/code&gt;来表示闭区间&lt;/h4&gt;
+&lt;h4 id=&quot;firstlast&quot;&gt;使用&lt;code&gt;first&lt;/code&gt;和&lt;code&gt;last&lt;/code&gt;来表示闭区间&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;print integer_range(start=2, stop=4)
 # Does this print [2,3] or [2,3,4] (or something else)?
@@ -1109,7 +1074,7 @@ set.PrintKeys(first=&quot;Bart&quot;, last=&quot;Maggie&quot;)
 
 &lt;p&gt;&lt;code&gt;first&lt;/code&gt;和&lt;code&gt;last&lt;/code&gt;含义明确，适宜表示闭区间。&lt;/p&gt;
 
-&lt;h4&gt;使用&lt;code&gt;beigin&lt;/code&gt;和&lt;code&gt;end&lt;/code&gt;表示前闭后开([2,9))区间&lt;/h4&gt;
+&lt;h4 id=&quot;beiginend29&quot;&gt;使用&lt;code&gt;beigin&lt;/code&gt;和&lt;code&gt;end&lt;/code&gt;表示前闭后开([2,9))区间&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;PrintEventsInRange(&quot;OCT 16 12:00am&quot;, &quot;OCT 17 12:00am&quot;)
 
@@ -1118,7 +1083,7 @@ PrintEventsInRange(&quot;OCT 16 12:00am&quot;, &quot;OCT 16 11:59:59.9999pm&quot
 
 &lt;p&gt;上面一种写法就比下面的舒服多了。&lt;/p&gt;
 
-&lt;h4&gt;Boolean型变量命名&lt;/h4&gt;
+&lt;h4 id=&quot;boolean&quot;&gt;Boolean型变量命名&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;bool read_password = true;
 &lt;/code&gt;&lt;/pre&gt;
@@ -1129,7 +1094,7 @@ PrintEventsInRange(&quot;OCT 16 12:00am&quot;, &quot;OCT 16 11:59:59.9999pm&quot
 bool disable_ssl = false  --&amp;gt;  bool use_ssl = true
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;符合预期&lt;/h4&gt;
+&lt;h4 id=&quot;section-8&quot;&gt;符合预期&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;public class StatisticsCollector {
     public void addSample(double x) { ... }
@@ -1142,8 +1107,7 @@ bool disable_ssl = false  --&amp;gt;  bool use_ssl = true
 
 &lt;p&gt;在这个例子中，&lt;code&gt;getMean&lt;/code&gt;方法遍历了所有的样本，返回总额，所以并不是普通意义上轻量的&lt;code&gt;get&lt;/code&gt;方法，所以应该取名&lt;code&gt;computeMean&lt;/code&gt;比较合适。&lt;/p&gt;
 
-&lt;h2&gt;漂亮的格式&lt;/h2&gt;
-
+&lt;h2 id=&quot;section-9&quot;&gt;漂亮的格式&lt;/h2&gt;
 &lt;p&gt;写出来漂亮的格式，充满美感，读起来自然也会舒服很多，对比下面两个例子：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;class StatsKeeper {
@@ -1176,8 +1140,7 @@ class StatsKeeper {
 };
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3&gt;考虑断行的连续性和简洁&lt;/h3&gt;
-
+&lt;h3 id=&quot;section-10&quot;&gt;考虑断行的连续性和简洁&lt;/h3&gt;
 &lt;p&gt;这段代码需要断行，来满足不超过一行80个字符的要求，参数也需要注释说明：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;public class PerformanceTester {
@@ -1242,7 +1205,7 @@ class StatsKeeper {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3&gt;用函数封装&lt;/h3&gt;
+&lt;h3 id=&quot;section-11&quot;&gt;用函数封装&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;// Turn a partial_name like &quot;Doug Adams&quot; into &quot;Mr. Douglas Adams&quot;.
 // If not possible, &#39;error&#39; is filled with an explanation.
@@ -1280,8 +1243,7 @@ void CheckFullName(string partial_name,
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3&gt;列对齐&lt;/h3&gt;
-
+&lt;h3 id=&quot;section-12&quot;&gt;列对齐&lt;/h3&gt;
 &lt;p&gt;列对齐可以让代码段看起来更舒适：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;CheckFullName(&quot;Doug Adams&quot;   , &quot;Mr. Douglas Adams&quot; , &quot;&quot;);
@@ -1300,7 +1262,7 @@ commands[] = {
 };
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3&gt;代码用块区分&lt;/h3&gt;
+&lt;h3 id=&quot;section-13&quot;&gt;代码用块区分&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;class FrontendServer {
     public:
@@ -1380,15 +1342,12 @@ def suggest_new_friends(user, email_password):
 
 &lt;p&gt;让代码看起来更舒服，需要在写的过程中多注意，培养一些好的习惯，尤其当团队合作的时候，代码风格比如大括号的位置并没有对错，但是不遵循团队规范那就是错的。&lt;/p&gt;
 
-&lt;h2&gt;如何写注释&lt;/h2&gt;
-
+&lt;h2 id=&quot;section-14&quot;&gt;如何写注释&lt;/h2&gt;
 &lt;p&gt;当你写代码的时候，你会思考很多，但是最终呈现给读者的就只剩代码本身了，额外的信息丢失了，所以注释的目的就是让读者了解更多的信息。&lt;/p&gt;
 
-&lt;h3&gt;应该注释什么&lt;/h3&gt;
-
-&lt;h4&gt;不应该注释什么&lt;/h4&gt;
-
-&lt;p&gt;这样的注释毫无价值：&lt;/p&gt;
+&lt;h3 id=&quot;section-15&quot;&gt;应该注释什么&lt;/h3&gt;
+&lt;p&gt;####不应该注释什么
+这样的注释毫无价值：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;// The class definition for Account
 class Account {
@@ -1402,7 +1361,7 @@ class Account {
 };
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;不要像下面这样为了注释而注释：&lt;/h4&gt;
+&lt;h4 id=&quot;section-16&quot;&gt;不要像下面这样为了注释而注释：&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;// Find a Node with the given &#39;name&#39; or return NULL.
 // If depth &amp;lt;= 0, only &#39;subtree&#39; is inspected.
@@ -1410,7 +1369,7 @@ class Account {
 Node* FindNodeInSubtree(Node* subtree, string name, int depth);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;不要给烂取名注释&lt;/h4&gt;
+&lt;h4 id=&quot;section-17&quot;&gt;不要给烂取名注释&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;// Enforce limits on the Reply as stated in the Request,
 // such as the number of items returned, or total byte size, etc. 
@@ -1423,8 +1382,7 @@ void CleanReply(Request request, Reply reply);
 void EnforceLimitsFromRequest(Request request, Reply reply);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;记录你的想法&lt;/h4&gt;
-
+&lt;h4 id=&quot;section-18&quot;&gt;记录你的想法&lt;/h4&gt;
 &lt;p&gt;我们讨论了不该注释什么，那么应该注释什么呢？注释应该记录你思考代码怎么写的结果，比如像下面这些：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;// Surprisingly, a binary tree was 40% faster than a hash table for this data.
@@ -1455,8 +1413,7 @@ HACK  : Adimittedly inelegant solution to a problem
 XXX   : Danger! Major problem here
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;站在读者的角度去思考&lt;/h4&gt;
-
+&lt;h4 id=&quot;section-19&quot;&gt;站在读者的角度去思考&lt;/h4&gt;
 &lt;p&gt;当别人读你的代码时，让他们产生疑问的部分，就是你应该注释的地方。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;struct Recorder {
@@ -1474,8 +1431,7 @@ XXX   : Danger! Major problem here
 vector&amp;lt;float&amp;gt;().swap(data);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;说明可能陷阱&lt;/h4&gt;
-
+&lt;h4 id=&quot;section-20&quot;&gt;说明可能陷阱&lt;/h4&gt;
 &lt;p&gt;你在写代码的过程中，可能用到一些hack，或者有其他需要读代码的人知道的陷阱，这时候就应该注释：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;void SendEmail(string to, string subject, string body);
@@ -1487,28 +1443,23 @@ vector&amp;lt;float&amp;gt;().swap(data);
 void SendEmail(string to, string subject, string body);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;全景的注释&lt;/h4&gt;
-
+&lt;h4 id=&quot;section-21&quot;&gt;全景的注释&lt;/h4&gt;
 &lt;p&gt;有时候为了更清楚说明，需要给整个文件加注释，让读者有个总体的概念：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;// This file contains helper functions that provide a more convenient interface to our
 // file system. It handles file permissions and other nitty-gritty details.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;总结性的注释&lt;/h4&gt;
-
+&lt;h4 id=&quot;section-22&quot;&gt;总结性的注释&lt;/h4&gt;
 &lt;p&gt;即使是在函数内部，也可以有类似文件注释那样的说明注释：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;# Find all the items that customers purchased for themselves.
 for customer_id in all_customers:
     for sale in all_sales[customer_id].sales:
         if sale.recipient == customer_id:
-            ...
-&lt;/code&gt;&lt;/pre&gt;
+            ... 或者按照函数的步进，写一些注释：
 
-&lt;p&gt;或者按照函数的步进，写一些注释：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;def GenerateUserReport():
+def GenerateUserReport():
     # Acquire a lock for this user
     ...
     # Read user&#39;s info from the database
@@ -1520,11 +1471,10 @@ for customer_id in all_customers:
 
 &lt;p&gt;很多人不愿意写注释，确实，要写好注释也不是一件简单的事情，也可以在文件专门的地方，留个写注释的区域，可以写下你任何想说的东西。&lt;/p&gt;
 
-&lt;h3&gt;注释应简明准确&lt;/h3&gt;
-
+&lt;h3 id=&quot;section-23&quot;&gt;注释应简明准确&lt;/h3&gt;
 &lt;p&gt;前一个小节讨论了注释应该写什么，这一节来讨论应该怎么写，因为注释很重要，所以要写的精确，注释也占据屏幕空间，所以要简洁。&lt;/p&gt;
 
-&lt;h4&gt;精简注释&lt;/h4&gt;
+&lt;h4 id=&quot;section-24&quot;&gt;精简注释&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;// The int is the CategoryType.
 // The first float in the inner pair is the &#39;score&#39;,
@@ -1538,7 +1488,7 @@ typedef hash_map&amp;lt;int, pair&amp;lt;float, float&amp;gt; &amp;gt; ScoreMap;
 typedef hash_map&amp;lt;int, pair&amp;lt;float, float&amp;gt; &amp;gt; ScoreMap;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;避免有歧义的代词&lt;/h4&gt;
+&lt;h4 id=&quot;section-25&quot;&gt;避免有歧义的代词&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;// Insert the data into the cache, but check if it&#39;s too big first.
 &lt;/code&gt;&lt;/pre&gt;
@@ -1553,7 +1503,7 @@ typedef hash_map&amp;lt;int, pair&amp;lt;float, float&amp;gt; &amp;gt; ScoreMap;
 &lt;pre&gt;&lt;code&gt;// If the data is small enough, insert it into the cache.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;语句要精简准确&lt;/h4&gt;
+&lt;h4 id=&quot;section-26&quot;&gt;语句要精简准确&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;# Depending on whether we&#39;ve already crawled this URL before, give it a different priority.
 &lt;/code&gt;&lt;/pre&gt;
@@ -1563,7 +1513,7 @@ typedef hash_map&amp;lt;int, pair&amp;lt;float, float&amp;gt; &amp;gt; ScoreMap;
 &lt;pre&gt;&lt;code&gt;# Give higher priority to URLs we&#39;ve never crawled before.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;精确描述函数的目的&lt;/h4&gt;
+&lt;h4 id=&quot;section-27&quot;&gt;精确描述函数的目的&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;// Return the number of lines in this file.
 int CountLines(string filename) { ... }
@@ -1572,13 +1522,12 @@ int CountLines(string filename) { ... }
 &lt;p&gt;这样的一个函数，用起来可能会一头雾水，因为他可以有很多歧义：&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&quot;&quot; 一个空文件，是0行还是1行？&lt;/li&gt;
-&lt;li&gt;&quot;hello&quot; 只有一行，那么返回值是0还是1？&lt;/li&gt;
-&lt;li&gt;&quot;hello\n&quot; 这种情况返回1还是2？&lt;/li&gt;
-&lt;li&gt;&quot;hello\n world&quot; 返回1还是2？&lt;/li&gt;
-&lt;li&gt;&quot;hello\n\r cruel\n world\r&quot; 返回2、3、4哪一个呢？&lt;/li&gt;
+  &lt;li&gt;”” 一个空文件，是0行还是1行？&lt;/li&gt;
+  &lt;li&gt;“hello” 只有一行，那么返回值是0还是1？&lt;/li&gt;
+  &lt;li&gt;“hello\n” 这种情况返回1还是2？&lt;/li&gt;
+  &lt;li&gt;“hello\n world” 返回1还是2？&lt;/li&gt;
+  &lt;li&gt;“hello\n\r cruel\n world\r” 返回2、3、4哪一个呢？&lt;/li&gt;
 &lt;/ul&gt;
-
 
 &lt;p&gt;所以注释应该这样写：&lt;/p&gt;
 
@@ -1586,7 +1535,7 @@ int CountLines(string filename) { ... }
 int CountLines(string filename) { ... }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;用实例说明边界情况&lt;/h4&gt;
+&lt;h4 id=&quot;section-28&quot;&gt;用实例说明边界情况&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;// Rearrange &#39;v&#39; so that elements &amp;lt; pivot come before those &amp;gt;= pivot;
 // Then return the largest &#39;i&#39; for which v[i] &amp;lt; pivot (or -1 if none are &amp;lt; pivot)
@@ -1600,7 +1549,7 @@ int Partition(vector&amp;lt;int&amp;gt;* v, int pivot);
 int Partition(vector&amp;lt;int&amp;gt;* v, int pivot);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;说明你的代码的真正目的&lt;/h4&gt;
+&lt;h4 id=&quot;section-29&quot;&gt;说明你的代码的真正目的&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;void DisplayProducts(list&amp;lt;Product&amp;gt; products) {
     products.sort(CompareProductByPrice);
@@ -1618,8 +1567,7 @@ int Partition(vector&amp;lt;int&amp;gt;* v, int pivot);
 for (list&amp;lt;Product&amp;gt;::reverse_iterator it = products.rbegin(); ... )
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;函数调用时的注释&lt;/h4&gt;
-
+&lt;h4 id=&quot;section-30&quot;&gt;函数调用时的注释&lt;/h4&gt;
 &lt;p&gt;看见这样的一个函数调用，肯定会一头雾水：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;Connect(10, false);
@@ -1633,7 +1581,7 @@ for (list&amp;lt;Product&amp;gt;::reverse_iterator it = products.rbegin(); ... )
 Connect(timeout = 10, use_encryption = False)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;使用信息含量丰富的词&lt;/h4&gt;
+&lt;h4 id=&quot;section-31&quot;&gt;使用信息含量丰富的词&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;// This class contains a number of members that store the same information as in the
 // database, but are stored here for speed. When this class is read from later, those
@@ -1646,14 +1594,12 @@ Connect(timeout = 10, use_encryption = False)
 &lt;pre&gt;&lt;code&gt;// This class acts as a caching layer to the database.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2&gt;简化循环和逻辑&lt;/h2&gt;
+&lt;h2 id=&quot;section-32&quot;&gt;简化循环和逻辑&lt;/h2&gt;
 
-&lt;h3&gt;流程控制要简单&lt;/h3&gt;
-
+&lt;h3 id=&quot;section-33&quot;&gt;流程控制要简单&lt;/h3&gt;
 &lt;p&gt;让条件语句、循环以及其他控制流程的代码尽可能自然，让读者在阅读过程中不需要停顿思考或者在回头查找，是这一节的目的。&lt;/p&gt;
 
-&lt;h4&gt;条件语句中参数的位置&lt;/h4&gt;
-
+&lt;h4 id=&quot;section-34&quot;&gt;条件语句中参数的位置&lt;/h4&gt;
 &lt;p&gt;对比下面两种条件的写法：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;if (length &amp;gt;= 10)
@@ -1670,11 +1616,9 @@ while (bytes_expected &amp;gt; bytes_received)
 &lt;li&gt;运算符右边：通常是被比对的样本，一定程度上的常量&lt;/li&gt;
 &lt;/ul&gt;
 
-
 &lt;p&gt;这就解释了为什么&lt;code&gt;bytes_received &amp;lt; bytes_expected&lt;/code&gt;比反过来更好理解。&lt;/p&gt;
 
-&lt;h4&gt;if/else的顺序&lt;/h4&gt;
-
+&lt;h4 id=&quot;ifelse&quot;&gt;if/else的顺序&lt;/h4&gt;
 &lt;p&gt;通常，&lt;code&gt;if/else&lt;/code&gt;的顺序你可以自由选择，下面这两种都可以：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;if (a == b) {
@@ -1693,11 +1637,10 @@ if (a != b) {
 &lt;p&gt;或许对此你也没有仔细斟酌过，但在有些时候，一种顺序确实好过另一种：&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;正向的逻辑在前，比如&lt;code&gt;if(debug)&lt;/code&gt;就比&lt;code&gt;if(!debug)&lt;/code&gt;好&lt;/li&gt;
-&lt;li&gt;简单逻辑的在前，这样&lt;code&gt;if&lt;/code&gt;和&lt;code&gt;else&lt;/code&gt;就可以在一个屏幕显示&lt;/li&gt;
-&lt;li&gt;有趣、清晰的逻辑在前&lt;/li&gt;
+  &lt;li&gt;正向的逻辑在前，比如&lt;code&gt;if(debug)&lt;/code&gt;就比&lt;code&gt;if(!debug)&lt;/code&gt;好&lt;/li&gt;
+  &lt;li&gt;简单逻辑的在前，这样&lt;code&gt;if&lt;/code&gt;和&lt;code&gt;else&lt;/code&gt;就可以在一个屏幕显示&lt;/li&gt;
+  &lt;li&gt;有趣、清晰的逻辑在前&lt;/li&gt;
 &lt;/ul&gt;
-
 
 &lt;p&gt;举个例子来看：&lt;/p&gt;
 
@@ -1725,7 +1668,7 @@ if (a != b) {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;三目运算符(?:)&lt;/h4&gt;
+&lt;h4 id=&quot;section-35&quot;&gt;三目运算符(?:)&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;time_str += (hour &amp;gt;= 12) ? &quot;pm&quot; : &quot;am&quot;;
 
@@ -1750,7 +1693,7 @@ if (exponent &amp;gt;= 0) {
 
 &lt;p&gt;所以只在简单表达式的地方用。&lt;/p&gt;
 
-&lt;h4&gt;避免使用do/while表达式&lt;/h4&gt;
+&lt;h4 id=&quot;dowhile&quot;&gt;避免使用do/while表达式&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;do {
     continue;
@@ -1759,7 +1702,7 @@ if (exponent &amp;gt;= 0) {
 
 &lt;p&gt;这段代码会执行几遍呢，需要时间思考一下，&lt;code&gt;do/while&lt;/code&gt;完全可以用别的方法代替，所以应避免使用。&lt;/p&gt;
 
-&lt;h4&gt;尽早return&lt;/h4&gt;
+&lt;h4 id=&quot;return&quot;&gt;尽早return&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;public boolean Contains(String str, String substr) {
     if (str == null || substr == null) return false;
@@ -1770,7 +1713,7 @@ if (exponent &amp;gt;= 0) {
 
 &lt;p&gt;函数里面尽早的return，可以让逻辑更加清晰。&lt;/p&gt;
 
-&lt;h4&gt;减少嵌套&lt;/h4&gt;
+&lt;h4 id=&quot;section-36&quot;&gt;减少嵌套&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;if (user_result == SUCCESS) {
     if (permission_result != SUCCESS) {
@@ -1826,12 +1769,10 @@ reply.Done();
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3&gt;拆分复杂表达式&lt;/h3&gt;
-
+&lt;h3 id=&quot;section-37&quot;&gt;拆分复杂表达式&lt;/h3&gt;
 &lt;p&gt;很显然的，越复杂的表达式，读起来越费劲，所以应该把那些复杂而庞大的表达式，拆分成一个个易于理解的小式子。&lt;/p&gt;
 
-&lt;h4&gt;用变量&lt;/h4&gt;
-
+&lt;h4 id=&quot;section-38&quot;&gt;用变量&lt;/h4&gt;
 &lt;p&gt;将复杂表达式拆分最简单的办法，就是增加一个变量：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;if line.split(&#39;:&#39;)[0].strip() == &quot;root&quot;:
@@ -1863,13 +1804,12 @@ if (!user_owns_document) {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;逻辑替换&lt;/h4&gt;
+&lt;h4 id=&quot;section-39&quot;&gt;逻辑替换&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;1) not (a or b or c)   &lt;--&gt; (not a) and (not b) and (not c)&lt;/li&gt;
-&lt;li&gt;2) not (a and b and c) &lt;--&gt; (not a) or (not b) or (not c)&lt;/li&gt;
+  &lt;li&gt;1) not (a or b or c)   &amp;lt;–&amp;gt; (not a) and (not b) and (not c)&lt;/li&gt;
+  &lt;li&gt;2) not (a and b and c) &amp;lt;–&amp;gt; (not a) or (not b) or (not c)&lt;/li&gt;
 &lt;/ul&gt;
-
 
 &lt;p&gt;所以，就可以这样写：&lt;/p&gt;
 
@@ -1879,7 +1819,7 @@ if (!user_owns_document) {
 if (!file_exists || is_protected) Error(&quot;Sorry, could not read file.&quot;);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;不要滥用逻辑表达式&lt;/h4&gt;
+&lt;h4 id=&quot;section-40&quot;&gt;不要滥用逻辑表达式&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;assert((!(bucket = FindBucket(key))) || !bucket-&amp;gt;IsOccupied());
 &lt;/code&gt;&lt;/pre&gt;
@@ -1895,7 +1835,7 @@ if (bucket != NULL) assert(!bucket-&amp;gt;IsOccupied());
 &lt;pre&gt;&lt;code&gt;x = a || b || c
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;拆解大表达式&lt;/h4&gt;
+&lt;h4 id=&quot;section-41&quot;&gt;拆解大表达式&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;var update_highlight = function (message_num) {
     if ($(&quot;#vote_value&quot; + message_num).html() === &quot;Up&quot;) {
@@ -1932,13 +1872,12 @@ if (bucket != NULL) assert(!bucket-&amp;gt;IsOccupied());
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3&gt;变量与可读性&lt;/h3&gt;
+&lt;h3 id=&quot;section-42&quot;&gt;变量与可读性&lt;/h3&gt;
 
-&lt;h4&gt;消除变量&lt;/h4&gt;
-
+&lt;h4 id=&quot;section-43&quot;&gt;消除变量&lt;/h4&gt;
 &lt;p&gt;前一节，讲到利用变量来拆解大表达式，这一节来讨论如何消除多余的变量。&lt;/p&gt;
 
-&lt;h4&gt;没用的临时变量&lt;/h4&gt;
+&lt;h4 id=&quot;section-44&quot;&gt;没用的临时变量&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;now = datetime.datetime.now()
 root_message.last_view_time = now
@@ -1952,13 +1891,12 @@ root_message.last_view_time = now
 &lt;li&gt;只用了一次&lt;/li&gt;
 &lt;/ul&gt;
 
-
 &lt;p&gt;所以完全可以写作：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;root_message.last_view_time = datetime.datetime.now()
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;消除条件控制变量&lt;/h4&gt;
+&lt;h4 id=&quot;section-45&quot;&gt;消除条件控制变量&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;boolean done = false;
 while (/* condition */ &amp;amp;&amp;amp; !done) {
@@ -1982,8 +1920,7 @@ while (/* condition */ &amp;amp;&amp;amp; !done) {
 
 &lt;p&gt;这个例子非常容易修改，如果是比较复杂的嵌套，&lt;code&gt;break&lt;/code&gt;可能并不够用，这时候就可以把代码封装到函数中。&lt;/p&gt;
 
-&lt;h4&gt;减少变量的作用域&lt;/h4&gt;
-
+&lt;h4 id=&quot;section-46&quot;&gt;减少变量的作用域&lt;/h4&gt;
 &lt;p&gt;我们都听过要避免使用全局变量这样的忠告，是的，当变量的作用域越大，就越难追踪，所以要保持变量小的作用域。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;class LargeClass {
@@ -2016,7 +1953,7 @@ while (/* condition */ &amp;amp;&amp;amp; !done) {
 
 &lt;p&gt;将&lt;code&gt;str&lt;/code&gt;通过变量函数参数传递，减小了作用域，也更易读。同样的道理也可以用在定义类的时候，将大类拆分成一个个小类。&lt;/p&gt;
 
-&lt;h4&gt;不要使用嵌套的作用域&lt;/h4&gt;
+&lt;h4 id=&quot;section-47&quot;&gt;不要使用嵌套的作用域&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;# No use of example_value up to this point.
 if request:
@@ -2055,8 +1992,7 @@ if example_value:
                 break
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;用到了再声明&lt;/h4&gt;
-
+&lt;h4 id=&quot;section-48&quot;&gt;用到了再声明&lt;/h4&gt;
 &lt;p&gt;在C语言中，要求将所有的变量事先声明，这样当用到变量较多时候，读者处理这些信息就会有难度，所以一开始没用到的变量，就暂缓声明：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;def ViewFilteredReplies(original_id):
@@ -2091,12 +2027,10 @@ if example_value:
     return filtered_replies
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;变量最好只写一次&lt;/h4&gt;
-
+&lt;h4 id=&quot;section-49&quot;&gt;变量最好只写一次&lt;/h4&gt;
 &lt;p&gt;前面讨论了过多的变量会让读者迷惑，同一个变量，不停的被赋值也会让读者头晕，如果变量变化的次数少一些，代码可读性就更强。&lt;/p&gt;
 
-&lt;h4&gt;一个例子&lt;/h4&gt;
-
+&lt;h4 id=&quot;section-50&quot;&gt;一个例子&lt;/h4&gt;
 &lt;p&gt;假设有一个页面，如下，需要给第一个空的&lt;code&gt;input&lt;/code&gt;赋值：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;input type=&quot;text&quot; id=&quot;input1&quot; value=&quot;Dustin&quot;&amp;gt;
@@ -2153,18 +2087,15 @@ var setFirstEmptyInput = function (new_value) {
 };
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2&gt;重新组织你的代码&lt;/h2&gt;
-
-&lt;h3&gt;分离不相关的子问题&lt;/h3&gt;
-
-&lt;p&gt;工程师就是将大问题分解为一个个小问题，然后逐个解决，这样也易于保证程序的健壮性、可读性。如何分解子问题，下面给出一些准则：&lt;/p&gt;
+&lt;h2 id=&quot;section-51&quot;&gt;重新组织你的代码&lt;/h2&gt;
+&lt;p&gt;###分离不相关的子问题
+工程师就是将大问题分解为一个个小问题，然后逐个解决，这样也易于保证程序的健壮性、可读性。如何分解子问题，下面给出一些准则：&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;看看这个方法或代码，问问你自己“这段代码的最终目标是什么？”&lt;/li&gt;
 &lt;li&gt;对于每一行代码，要问“它与目标直接相关，或者是不相关的子问题？”&lt;/li&gt;
 &lt;li&gt;如果有足够多行的代码是处理与目标不直接相关的问题，那么抽离成子函数&lt;/li&gt;
 &lt;/ul&gt;
-
 
 &lt;p&gt;来看一个例子：&lt;/p&gt;
 
@@ -2193,8 +2124,7 @@ var setFirstEmptyInput = function (new_value) {
 };
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;意外收获&lt;/h4&gt;
-
+&lt;h4 id=&quot;section-52&quot;&gt;意外收获&lt;/h4&gt;
 &lt;p&gt;有很多理由将&lt;code&gt;format_pretty&lt;/code&gt;抽离出来，这些独立的函数可以很容易的添加feature，增强可靠性，处理边界情况，等等。所以这里，可以将&lt;code&gt;format_pretty&lt;/code&gt;增强，就会得到一个更强大的函数：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;var format_pretty = function (obj, indent) {
@@ -2232,8 +2162,7 @@ var setFirstEmptyInput = function (new_value) {
 
 &lt;p&gt;多做这样的事情，就是积累代码的过程，这样的代码可以复用，也可以形成自己的代码库，或者分享给别人。&lt;/p&gt;
 
-&lt;h4&gt;业务相关的函数&lt;/h4&gt;
-
+&lt;h4 id=&quot;section-53&quot;&gt;业务相关的函数&lt;/h4&gt;
 &lt;p&gt;那些与目标不相关函数，抽离出来可以复用，与业务相关的也可以抽出来，保持代码的易读性，例如：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;business = Business()
@@ -2267,8 +2196,7 @@ business.date_created = datetime.datetime.utcnow()
 business.save_to_database()
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4&gt;简化现有接口&lt;/h4&gt;
-
+&lt;h4 id=&quot;section-54&quot;&gt;简化现有接口&lt;/h4&gt;
 &lt;p&gt;我们来看一个读写cookie的函数：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;var max_results;
@@ -2289,7 +2217,7 @@ delete_cookie(name);
 
 &lt;p&gt;对于并不理想的接口，你永远可以用自己的函数做封装，让接口更好用。&lt;/p&gt;
 
-&lt;h4&gt;按自己需要写接口&lt;/h4&gt;
+&lt;h4 id=&quot;section-55&quot;&gt;按自己需要写接口&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;ser_info = { &quot;username&quot;: &quot;...&quot;, &quot;password&quot;: &quot;...&quot; }
 user_str = json.dumps(user_info)
@@ -2317,8 +2245,7 @@ url = &quot;http://example.com/?user_info=&quot; + url_safe_encrypt(user_info)
 
 &lt;p&gt;分离子函数是好习惯，但是也要适度，过度的分离成多个小函数，也会让查找变得困难。&lt;/p&gt;
 
-&lt;h3&gt;单任务&lt;/h3&gt;
-
+&lt;h3 id=&quot;section-56&quot;&gt;单任务&lt;/h3&gt;
 &lt;p&gt;代码应该是一次只完成一个任务&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;var place = location_info[&quot;LocalityName&quot;];  // e.g. &quot;Santa Monica&quot;
@@ -2391,8 +2318,7 @@ if (country === &quot;USA&quot;) {
 return first_half + &quot;, &quot; + second_half;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3&gt;把想法转换成代码&lt;/h3&gt;
-
+&lt;h3 id=&quot;section-57&quot;&gt;把想法转换成代码&lt;/h3&gt;
 &lt;p&gt;要把一个复杂的东西解释给别人，一些细节很容易就让人产生迷惑，所以想象把你的代码用平实的语言解释给别人听，别人是否能懂，有一些准则可以帮助你让代码更清晰：&lt;/p&gt;
 
 &lt;ul&gt;
@@ -2400,7 +2326,6 @@ return first_half + &quot;, &quot; + second_half;
 &lt;li&gt;注意描述中关键的字词&lt;/li&gt;
 &lt;li&gt;让你的代码符合你的描述&lt;/li&gt;
 &lt;/ul&gt;
-
 
 &lt;p&gt;下面这段代码用来校验用户的权限：&lt;/p&gt;
 
@@ -2437,8 +2362,7 @@ if ($document) {
 // continue rendering the page ...
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3&gt;写更少的代码&lt;/h3&gt;
-
+&lt;h3 id=&quot;section-58&quot;&gt;写更少的代码&lt;/h3&gt;
 &lt;p&gt;最易懂的代码就是没有代码！&lt;/p&gt;
 
 &lt;ul&gt;
@@ -2447,14 +2371,12 @@ if ($document) {
 &lt;li&gt;熟悉你常用的库，周期性研究他的API&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;h2&gt;最后&lt;/h2&gt;
-
+&lt;h2 id=&quot;section-59&quot;&gt;最后&lt;/h2&gt;
 &lt;p&gt;还有一些与测试相关的章节，留给你自己去研读吧，再次推荐此书：&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;英文版：&lt;a href=&quot;http://book.douban.com/subject/5442971/&quot; title=&quot;The Art Of Readable Code&quot;&gt;《The Art of Readable Code》&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;中文版：&lt;a href=&quot;http://book.douban.com/subject/10797189/&quot; title=&quot;编写可读代码的艺术&quot;&gt;编写可读代码的艺术&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;英文版：&lt;a href=&quot;http://book.douban.com/subject/5442971/&quot; title=&quot;The Art Of Readable Code&quot;&gt;《The Art of Readable Code》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;中文版：&lt;a href=&quot;http://book.douban.com/subject/10797189/&quot; title=&quot;编写可读代码的艺术&quot;&gt;编写可读代码的艺术&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </content>
@@ -2465,7 +2387,7 @@ if ($document) {
      <link href="http://beiyuu.com/40-ama-55-grammy"/>
      <updated>2013-02-19T00:00:00-08:00</updated>
      <id>http://sakanabderrex.github.io//40-ama-55-grammy</id>
-     <content type="html">&lt;h2&gt;40届全美音乐奖(Ameican Musican Awards)&lt;/h2&gt;
+     <content type="html">&lt;h2 id=&quot;ameican-musican-awards&quot;&gt;40届全美音乐奖(Ameican Musican Awards)&lt;/h2&gt;
 
 &lt;p&gt;1、少了英伦小清新的全美音乐奖，总体来说还是俗气了些；&lt;/p&gt;
 
@@ -2486,11 +2408,10 @@ if ($document) {
 &lt;p&gt;9、Galaxy Note II强势插入的广告，脑补两年前格莱美的iPad广告；&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center;margin-bottom:50px;&quot;&gt;
-&lt;embed src=&quot;http://player.youku.com/player.php/sid/XNDc3MTQzMjg0/v.swf&quot; quality=&quot;high&quot; width=&quot;480&quot; height=&quot;400&quot; align=&quot;middle&quot; allowScriptAccess=&quot;sameDomain&quot; allowFullscreen=&quot;true&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;/embed&gt;
+&lt;embed src=&quot;http://player.youku.com/player.php/sid/XNDc3MTQzMjg0/v.swf&quot; quality=&quot;high&quot; width=&quot;480&quot; height=&quot;400&quot; align=&quot;middle&quot; allowscriptaccess=&quot;sameDomain&quot; allowfullscreen=&quot;true&quot; type=&quot;application/x-shockwave-flash&quot; /&gt;
 &lt;/div&gt;
 
-
-&lt;h2&gt;55届格莱美(Grammy)颁奖&lt;/h2&gt;
+&lt;h2 id=&quot;grammy&quot;&gt;55届格莱美(Grammy)颁奖&lt;/h2&gt;
 
 &lt;p&gt;1、今年的格莱美，老将大都歇菜了，对新人感情积累不够，没法High起来，平淡的Happy一下吧；&lt;/p&gt;
 
@@ -2523,10 +2444,8 @@ if ($document) {
 &lt;p&gt;15、说起来格莱美这两年都比较low，你说没有Coldplay没有Usher没有Katy Perry没有Lady Gaga没有Justin Bieber没有Black Eyed Peas没有Eminem，连鸟叔都没有，你还让我怎么看，期待明年会更好吧！&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center&quot;&gt;
-&lt;embed src=&quot;http://player.youku.com/player.php/sid/XNTEzNzI1Njcy/v.swf&quot; quality=&quot;high&quot; width=&quot;480&quot; height=&quot;400&quot; align=&quot;middle&quot; allowScriptAccess=&quot;sameDomain&quot; allowFullscreen=&quot;true&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;/embed&gt;
+&lt;embed src=&quot;http://player.youku.com/player.php/sid/XNTEzNzI1Njcy/v.swf&quot; quality=&quot;high&quot; width=&quot;480&quot; height=&quot;400&quot; align=&quot;middle&quot; allowscriptaccess=&quot;sameDomain&quot; allowfullscreen=&quot;true&quot; type=&quot;application/x-shockwave-flash&quot; /&gt;
 &lt;/div&gt;
-
-
 
 </content>
    </entry>
@@ -2553,8 +2472,8 @@ if ($document) {
 &lt;p&gt;多废话一句：在我看来，豆瓣和Facebook有许多的相似之处，或许这只是我一厢情愿吧，哈哈。&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;豆瓣链接：&lt;a href=&quot;http://book.douban.com/subject/20471120/&quot; title=&quot;打造Facebook&quot;&gt;《打造Facebook》&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;在线阅读：&lt;a href=&quot;http://read.douban.com/ebook/500486/?referral_code=myg7ot50&quot;&gt;《打造Facebook》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;豆瓣链接：&lt;a href=&quot;http://book.douban.com/subject/20471120/&quot; title=&quot;打造Facebook&quot;&gt;《打造Facebook》&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;在线阅读：&lt;a href=&quot;http://read.douban.com/ebook/500486/?referral_code=myg7ot50&quot;&gt;《打造Facebook》&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </content>

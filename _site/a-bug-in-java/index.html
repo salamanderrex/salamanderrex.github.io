@@ -43,35 +43,34 @@
     <div class="entry">
         <h1 class="entry-title"><a href="/a-bug-in-java" title="A bug in JAVA">A bug in JAVA</a></h1>
         <p class="entry-date">2014-12-05</p>
-        <h2>A bug in JAVA</h2>
+        <h2 id="a-bug-in-java">A bug in JAVA</h2>
 
 <p>Recently I found a bug in JAVA. It rarely happens, but as a development tool, this is unavoidable.
 This bug occurs when you want to delete a file after you write something to it or create it.</p>
 
-<h4>Example</h4>
-
+<h4 id="example">Example</h4>
 <p>First, you write to a file, like get a input stream from other file and then close the IOstream.</p>
 
-<pre><code>    File file=new File(serverLocation);
-    OutputStream  outpuStream = new FileOutputStream(file);;
-    try {
-        int read = 0;
-        byte[] bytes = new byte[1024];
+<pre><code>	File file=new File(serverLocation);
+	OutputStream  outpuStream = new FileOutputStream(file);;
+	try {
+		int read = 0;
+		byte[] bytes = new byte[1024];
 
-        outpuStream = new FileOutputStream(new File(serverLocation));
-        while ((read = uploadedInputStream.read(bytes)) != -1) {
-            outpuStream.write(bytes, 0, read);
-        }
-        outpuStream.flush();
-        outpuStream.close();
-        uploadedInputStream.close();
+		outpuStream = new FileOutputStream(new File(serverLocation));
+		while ((read = uploadedInputStream.read(bytes)) != -1) {
+			outpuStream.write(bytes, 0, read);
+		}
+		outpuStream.flush();
+		outpuStream.close();
+		uploadedInputStream.close();
 </code></pre>
 
 <p>After some steps, you may want to delete it.</p>
 
-<pre><code>    public boolean deleteFile(String sPath) throws Exception {
-    boolean flag = false;
-    File  file = new File(sPath);
+<pre><code>	public boolean deleteFile(String sPath) throws Exception {
+	boolean flag = false;
+	File  file = new File(sPath);
     if (file.isFile() &amp;&amp; file.exists()) {
         file.delete();
         flag = true;
@@ -83,58 +82,57 @@ This bug occurs when you want to delete a file after you write something to it o
 <p>Then the weird thing happens. When you use the deleteFile, it will return <code>Ture</code> but the file is still on the disk.
 In addition, in JAVA, this is no such thing like <code>file.close()</code>, and only IO stream can be closed. File is just a description here.</p>
 
-<h2>How to solve this question</h2>
-
-<h4>method one (Not recommended)</h4>
-
-<p>try to cause the Exception and it will close the file stream.</p>
+<h2 id="how-to-solve-this-question">How to solve this question</h2>
+<p>####method one (Not recommended)
+try to cause the Exception and it will close the file stream.</p>
 
 <pre><code>try{
-    outpuStream.close();
-    outpuStream.write(bytes,0,1);
+	outpuStream.close();
+	outpuStream.write(bytes,0,1);
 }
 catch (Exception ignore)
 {
 }
 </code></pre>
 
-<h4>method two</h4>
-
+<h4 id="method-two">method two</h4>
 <p>Very Simple, just use <code>System.gc()</code> .
 After you write something,stream can be closed in the <code>finally</code> part.</p>
 
 <pre><code>finally{
-    try
-    {
-        in.close();
-        in = null;
-        out.flush();
-        out.close();
-        out = null;
-        System.gc();
-    }
-    catch (IOException e)
-    {
-        logger.error(e.getMessage());
-        e.printStackTrace();
-    }
+	try
+	{
+		in.close();
+		in = null;
+		out.flush();
+		out.close();
+		out = null;
+		System.gc();
+	}
+	catch (IOException e)
+	{
+		logger.error(e.getMessage());
+		e.printStackTrace();
+	}
 }
 </code></pre>
 
-<h2>Is is bug??</h2>
-
+<h2 id="is-is-bug">Is is bug??</h2>
 <p>Unfortunately, this is a bug of JAVA and this cannot be fixed now. You can check this link:</p>
 
 <p><a href="http://bugs.java.com/bugdatabase/view_bug.do?bug_id=4715154">Bug report @ java.com 2002-07-16</a></p>
 
 <p>Here is the final comment:</p>
 
-<blockquote><p>We cannot fix this.  Windows does not allow a mapped file to be deleted.  This
+<blockquote>
+  <p>We cannot fix this.  Windows does not allow a mapped file to be deleted.  This
 problem should be ameliorated somewhat once we fix our garbage collectors to
-deallocate direct buffers more promptly (see 4469299), but otherwise there's
-nothing we can do about this.</p></blockquote>
+deallocate direct buffers more promptly (see 4469299), but otherwise there’s
+nothing we can do about this.</p>
+</blockquote>
 
 <p>This is bug reported at 2002. It is 2014 now but the bug is still not fixed. It seems that JAVA still needs a long way to develop itself.</p>
+
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
