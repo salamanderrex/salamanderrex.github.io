@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  
    <title>salamanderrex.github.io/</title>
-   <link href="http://salamanderrex.github.io//atom.xml" rel="self" type="application/atom+xml"/>
-   <link href="http://salamanderrex.github.io/" rel="alternate" type="text/html" />
-   <updated>2016-03-30T16:34:11-07:00</updated>
-   <id>http://salamanderrex.github.io/</id>
+   <link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml"/>
+   <link href="http://localhost:4000" rel="alternate" type="text/html" />
+   <updated>2019-01-15T21:15:00-08:00</updated>
+   <id>http://localhost:4000</id>
    <author>
      <name></name>
      <email></email>
@@ -19,9 +19,9 @@
      <id>http://sakanabderrex.github.io//dock</id>
      <content type="html">&lt;h2 id=&quot;problem&quot;&gt;problem&lt;/h2&gt;
 &lt;p&gt;Docker moves between monitor and laptop monitor.
-&lt;img src=&quot;http://i.imgur.com/LhWpiS0.jpg&quot; alt=&quot;desk&quot; /&gt;
-## How to Solve?
-Move your cursor from the bottom of the screen to the center of the screen.
+&lt;img src=&quot;http://i.imgur.com/LhWpiS0.jpg&quot; alt=&quot;desk&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;how-to-solve&quot;&gt;How to Solve?&lt;/h2&gt;
+&lt;p&gt;Move your cursor from the bottom of the screen to the center of the screen.
 Dock will change to current monitor.&lt;/p&gt;
 </content>
    </entry>
@@ -31,15 +31,15 @@ Dock will change to current monitor.&lt;/p&gt;
      <link href="http://beiyuu.com/a-bug-in-java"/>
      <updated>2014-12-05T00:00:00-08:00</updated>
      <id>http://sakanabderrex.github.io//a-bug-in-java</id>
-     <content type="html">&lt;h2 id=&quot;a-bug-in-java&quot;&gt;A bug in JAVA&lt;/h2&gt;
+     <content type="html">&lt;p&gt;##A bug in JAVA&lt;/p&gt;
 
 &lt;p&gt;Recently I found a bug in JAVA. It rarely happens, but as a development tool, this is unavoidable.
 This bug occurs when you want to delete a file after you write something to it or create it.&lt;/p&gt;
 
-&lt;h4 id=&quot;example&quot;&gt;Example&lt;/h4&gt;
-&lt;p&gt;First, you write to a file, like get a input stream from other file and then close the IOstream.&lt;/p&gt;
+&lt;p&gt;####Example
+First, you write to a file, like get a input stream from other file and then close the IOstream.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;	File file=new File(serverLocation);
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	File file=new File(serverLocation);
 	OutputStream  outpuStream = new FileOutputStream(file);;
 	try {
 		int read = 0;
@@ -52,11 +52,11 @@ This bug occurs when you want to delete a file after you write something to it o
 		outpuStream.flush();
 		outpuStream.close();
 		uploadedInputStream.close();
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;After some steps, you may want to delete it.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;	public boolean deleteFile(String sPath) throws Exception {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	public boolean deleteFile(String sPath) throws Exception {
 	boolean flag = false;
 	File  file = new File(sPath);
     if (file.isFile() &amp;amp;&amp;amp; file.exists()) {
@@ -65,29 +65,29 @@ This bug occurs when you want to delete a file after you write something to it o
     }
     return flag;
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Then the weird thing happens. When you use the deleteFile, it will return &lt;code&gt;Ture&lt;/code&gt; but the file is still on the disk.
-In addition, in JAVA, this is no such thing like &lt;code&gt;file.close()&lt;/code&gt;, and only IO stream can be closed. File is just a description here.&lt;/p&gt;
+&lt;p&gt;Then the weird thing happens. When you use the deleteFile, it will return &lt;code class=&quot;highlighter-rouge&quot;&gt;Ture&lt;/code&gt; but the file is still on the disk.
+In addition, in JAVA, this is no such thing like &lt;code class=&quot;highlighter-rouge&quot;&gt;file.close()&lt;/code&gt;, and only IO stream can be closed. File is just a description here.&lt;/p&gt;
 
-&lt;h2 id=&quot;how-to-solve-this-question&quot;&gt;How to solve this question&lt;/h2&gt;
-&lt;p&gt;####method one (Not recommended)
+&lt;p&gt;##How to solve this question
+####method one (Not recommended)
 try to cause the Exception and it will close the file stream.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;try{
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;try{
 	outpuStream.close();
 	outpuStream.write(bytes,0,1);
 }
 catch (Exception ignore)
 {
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;method-two&quot;&gt;method two&lt;/h4&gt;
-&lt;p&gt;Very Simple, just use &lt;code&gt;System.gc()&lt;/code&gt; .
-After you write something,stream can be closed in the &lt;code&gt;finally&lt;/code&gt; part.&lt;/p&gt;
+&lt;p&gt;####method two
+Very Simple, just use &lt;code class=&quot;highlighter-rouge&quot;&gt;System.gc()&lt;/code&gt; .
+After you write something,stream can be closed in the &lt;code class=&quot;highlighter-rouge&quot;&gt;finally&lt;/code&gt; part.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;finally{
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;finally{
 	try
 	{
 		in.close();
@@ -103,10 +103,10 @@ After you write something,stream can be closed in the &lt;code&gt;finally&lt;/co
 		e.printStackTrace();
 	}
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;is-is-bug&quot;&gt;Is is bug??&lt;/h2&gt;
-&lt;p&gt;Unfortunately, this is a bug of JAVA and this cannot be fixed now. You can check this link:&lt;/p&gt;
+&lt;p&gt;##Is is bug??
+Unfortunately, this is a bug of JAVA and this cannot be fixed now. You can check this link:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://bugs.java.com/bugdatabase/view_bug.do?bug_id=4715154&quot;&gt;Bug report @ java.com 2002-07-16&lt;/a&gt;&lt;/p&gt;
 
@@ -384,357 +384,342 @@ nothing we can do about this.&lt;/p&gt;
      <updated>2014-01-25T00:00:00-08:00</updated>
      <id>http://sakanabderrex.github.io//cv</id>
      <content type="html">&lt;div id=&quot;main&quot;&gt;
-	
-	&lt;h1 id=&quot;title&quot;&gt;Qingyu Zhou&lt;/h1&gt;
 
-	&lt;div class=&quot;section section-education&quot;&gt;
-			&lt;h2 class=&quot;title&quot;&gt;Objectve&lt;/h2&gt;
-			&lt;div class=&quot;set&quot;&gt;
-						&lt;div class=&quot;item&quot;&gt;
-                            &lt;h3&gt;&lt;span class=&quot;course &quot;&gt; Looking For A Summer Software Engineer Internship Position &lt;/span&gt; &lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-                        &lt;/div&gt;
-                        
-						&lt;/div&gt;
-			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
-	&lt;/div&gt;
+    &lt;h1 id=&quot;title&quot;&gt;Qingyu Zhou&lt;/h1&gt;
 
-	&lt;div class=&quot;basic-info section&quot;&gt;
-					&lt;h2 class=&quot;title&quot;&gt;Contact&lt;/h2&gt;
-				&lt;div class=&quot;set&quot;&gt;
-							&lt;p class=&quot;address&quot;&gt;
+   &lt;div class=&quot;section section-work&quot;&gt;
+        &lt;h2 class=&quot;title&quot;&gt;Summary&lt;/h2&gt;
+
+        &lt;div class=&quot;set&quot;&gt;
+
+           &lt;div class=&quot;item&quot;&gt;
+                &lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                    &lt;span class=&quot;info&quot;&gt;
+                            &lt;ul&gt;
+                              &lt;li&gt;3+ years of industry experience with back-end, infrastructure and application development&lt;/li&gt;
+                              &lt;li&gt;Excel in Cloud Solutions with hand-on experience based on Amazon Web Service &lt;b&gt;(AWS)&lt;/b&gt; &lt;/li&gt;
+                              &lt;li&gt;Possess a strong knowledge of information retrieval and the design of search infrastructure&lt;/li&gt;
+                              &lt;li&gt;Build, maintain, and scale large infrastructure fleets and distributed clusters&lt;/li&gt;
+                            &lt;/ul&gt;
+                    &lt;/span&gt;
+                    &lt;span class=&quot;clear&quot;&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+
+    &lt;div class=&quot;basic-info section&quot;&gt;
+        &lt;h2 class=&quot;title&quot;&gt;Contact&lt;/h2&gt;
+        &lt;div class=&quot;set&quot;&gt;
+            &lt;p class=&quot;address&quot;&gt;
 					&lt;span class=&quot;value&quot;&gt;
-						9226 Regents Road #I&lt;br /&gt;La Jolla, CA  92037&lt;br /&gt;	&lt;/span&gt;
-				&lt;/p&gt;
-						&lt;div class=&quot;r&quot;&gt;
-									&lt;p class=&quot;email&quot;&gt;&lt;label&gt;E-mail&lt;span class=&quot;colon&quot;&gt;:&lt;/span&gt;&lt;/label&gt; &lt;span class=&quot;value&quot;&gt;qyzhou@eng.ucsd.edu&lt;/span&gt;&lt;/p&gt;
-				
-				
-									&lt;p class=&quot;phone&quot;&gt;&lt;label&gt;Phone&lt;span class=&quot;colon&quot;&gt;:&lt;/span&gt;&lt;/label&gt; &lt;span class=&quot;value&quot;&gt;(858)729-4674&lt;/span&gt;&lt;/p&gt;
-							&lt;/div&gt;
-			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
-		&lt;/div&gt;&lt;!-- set //--&gt;
-		&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
-	&lt;/div&gt;&lt;!-- basic-info //--&gt;
-    
-	    &lt;div class=&quot;section section-education&quot;&gt;
-			&lt;h2 class=&quot;title&quot;&gt;Education&lt;/h2&gt;
-			&lt;div class=&quot;set&quot;&gt;
-						&lt;div class=&quot;item&quot;&gt;
-                            &lt;h3&gt;&lt;span class=&quot;course l&quot;&gt;M.S Computer Science&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Sept. 2015 &amp;mdash; Dec. 2016&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-                            &lt;span class=&quot;school&quot;&gt;University of California, San Diego  GPA: 3.833&lt;/span&gt;
-							&lt;!--  &lt;span class=&quot;info&quot;&gt; First year M.S student, GPA: 3.666 &lt;/span&gt; --&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-                        &lt;/div&gt;
-                        &lt;div class=&quot;item&quot;&gt;
-                               &lt;!--
-							&lt;h3&gt;&lt;span class=&quot;course l&quot;&gt;B.S.E Electrical and Computer Engineering&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Sept. 2011 &amp;mdash; Aug. 2015&lt;/span&gt;
-							&lt;/h3&gt;
-           
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-                            --&gt;
-                            &lt;!-- &lt;span class=&quot;school&quot;&gt;Shanghai Jiao Tong University&lt;/span&gt;--&gt;
-							&lt;!-- &lt;span class=&quot;school&quot;&gt;University of Michigan – Shanghai Jiao Tong University Joint Institute (UMJI) &lt;b&gt;GPA: 3.6224  Major rank:10/93&lt;/b&gt; &lt;/span&gt; --&gt;
-                            &lt;!-- &lt;span class=&quot;info&quot;&gt;Earning the degree with &lt;b&gt;GPA: 3.6224  Major rank:10/93&lt;/b&gt;                                                                                                                      &lt;/span&gt; --&gt;
-                            
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt; 
-							
-						&lt;/div&gt;
-			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
-		&lt;/div&gt;
+						247 Arriba Dr #1 &lt;br/&gt;Sunnyvale, CA 94086&lt;br/&gt;	&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;div class=&quot;r&quot;&gt;
+                &lt;p class=&quot;email&quot;&gt;&lt;label&gt;E-mail&lt;span class=&quot;colon&quot;&gt;:&lt;/span&gt;&lt;/label&gt; &lt;span class=&quot;value&quot;&gt;zhouqingyu.rex@gmail.com&lt;/span&gt;
+                &lt;/p&gt;
 
-        &lt;div class=&quot;section section-work&quot;&gt;
-			&lt;h2 class=&quot;title&quot;&gt;INTERNSHIP&lt;/h2&gt;
 
-			&lt;div class=&quot;set&quot;&gt;
-						&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Cisco Automation Test Engineer Intern&lt;/span&gt;
-								&lt;span class=&quot;date r&quot;&gt;Jan. 2015 &amp;mdash; Aug. 2015&lt;/span&gt;
-								&lt;/h3&gt;
-								&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-								&lt;span class=&quot;job_title&quot;&gt;Cisco, China Research and Development Center &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
+                &lt;p class=&quot;phone&quot;&gt;&lt;label&gt;Phone&lt;span class=&quot;colon&quot;&gt;:&lt;/span&gt;&lt;/label&gt; &lt;span
+                        class=&quot;value&quot;&gt;858-729-4674&lt;/span&gt;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;&lt;!-- set //--&gt;
+        &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;&lt;!-- basic-info //--&gt;
+
+    &lt;div class=&quot;section section-education&quot;&gt;
+        &lt;h2 class=&quot;title&quot;&gt;Education&lt;/h2&gt;
+        &lt;div class=&quot;set&quot;&gt;
+            &lt;div class=&quot;item&quot;&gt;
+                &lt;h3&gt;&lt;span class=&quot;course l&quot;&gt;M.S Computer Science&lt;/span&gt;
+                    &lt;span class=&quot;date r&quot;&gt;Sept. 2015 &amp;mdash; Dec. 2016&lt;/span&gt;
+                &lt;/h3&gt;
+                &lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                &lt;span class=&quot;school&quot;&gt;University of California, San Diego  GPA: 3.833&lt;/span&gt;
+                &lt;!--  &lt;span class=&quot;info&quot;&gt; First year M.S student, GPA: 3.666 &lt;/span&gt; --&gt;
+                &lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;item&quot;&gt;
+
+             &lt;h3&gt;&lt;span class=&quot;course l&quot;&gt;B.S.E  Computer Engineering&lt;/span&gt;
+         &lt;span class=&quot;date r&quot;&gt;Sept. 2011 &amp;mdash; Aug. 2015&lt;/span&gt;
+             &lt;/h3&gt;
+
+             &lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+
+               &lt;span class=&quot;school&quot;&gt;Shanghai Jiao Tong University&lt;/span&gt;
+               &lt;span class=&quot;school&quot;&gt;University of Michigan – Shanghai Jiao Tong University Joint Institute&lt;!--GPA: 3.6224--&gt; Rank:10/93 &lt;/span&gt;
+                &lt;!-- &lt;span class=&quot;info&quot;&gt;Earning the degree with &lt;b&gt;GPA: 3.6224  Major rank:10/93&lt;/b&gt;                                                                                                                      &lt;/span&gt; --&gt;
+
+                &lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+
+            &lt;/div&gt;
+            &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;section section-work&quot;&gt;
+        &lt;h2 class=&quot;title&quot;&gt;POSITION&lt;/h2&gt;
+
+        &lt;div class=&quot;set&quot;&gt;
+
+           &lt;div class=&quot;item&quot;&gt;
+                &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;AWS Software Engineer&lt;/span&gt;
+                    &lt;span class=&quot;date r&quot;&gt;FEB. 2017 &amp;mdash; Current&lt;/span&gt;
+                &lt;/h3&gt;
+                &lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                &lt;span class=&quot;job_title&quot;&gt;Amazon, &lt;b&gt;AWS Search Services&lt;/b&gt;, Palo Alto&lt;/span&gt;
+                    &lt;span class=&quot;info&quot;&gt;
+                            &lt;ul&gt;
+                              &lt;li&gt;Working in AWS Search services team, focusing on AWS &lt;b&gt;CloudSearch&lt;/b&gt; and &lt;b&gt;Elasticsearch&lt;/b&gt; Service&lt;/li&gt;
+                              &lt;li&gt;Migrated Search Services infrastructure to AWS Cloudformation as &lt;b&gt;infrastructure as code&lt;/b&gt; project &lt;/li&gt;
+                              &lt;li&gt;Optimized Amazon &lt;b&gt;Logstash&lt;/b&gt; plugin based on the open-source version and increased transition speed by 40% &lt;/li&gt;
+                              &lt;li&gt;Expanded Elasticsearch Services to new regions, including London, Paris, Beijing, Ningxia, Sweden &lt;/li&gt;
+                              &lt;li&gt;Implemented Elasticsearch &lt;b&gt;Node-to-node Encryption&lt;/b&gt; feature, based on AWS ELB/ACM/KMS and HAProxy&lt;/li&gt;
+                              &lt;li&gt;Leveraged day-to-day experiences to troubleshoot customer issues and maintained 100k+ EC2 instances &lt;/li&gt;
+                            &lt;/ul&gt;
+                    &lt;/span&gt;
+                    &lt;span class=&quot;clear&quot;&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+
+
+
+            &lt;div class=&quot;item&quot;&gt;
+                &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Amazon Summer SDE Intern&lt;/span&gt;
+                    &lt;span class=&quot;date r&quot;&gt;Jun. 2016 &amp;mdash; Sept. 2016&lt;/span&gt;
+                &lt;/h3&gt;
+                &lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                &lt;span class=&quot;job_title&quot;&gt;Amazon, Gloabl Selling, Seattle&lt;/span&gt;
+                    &lt;span class=&quot;info&quot;&gt;
+                            &lt;ul&gt;
+                              &lt;li&gt;Migrated an inventory movement reporting system from oracle DB to AWS dynamoDB in Amazon Seller Central&lt;/li&gt;
+                              &lt;li&gt;Changed the report data source from daily data warehouse ETL job to real-time source by using AWS SQS&lt;/li&gt;
+                            &lt;/ul&gt;
+                    &lt;/span&gt;
+                    &lt;span class=&quot;clear&quot;&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;item&quot;&gt;
+                &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Tusimple Full Stack Engineer Intern&lt;/span&gt;
+                    &lt;span class=&quot;date r&quot;&gt;Apr. 2016 &amp;mdash; May. 2016&lt;/span&gt;
+                &lt;/h3&gt;
+                &lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                &lt;span class=&quot;job_title&quot;&gt;Tusimple, San Diego &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
+									&lt;ul&gt;
+                                        &lt;li&gt;Worked on Hcomp, an angularJS based platform for collecting training data for machine learning&lt;/li&gt;
+                                        &lt;li&gt;Used D3.js to visualize point cloud data collected by Lidar&lt;/li&gt;
+										&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;item&quot;&gt;
+                &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Cisco Automation Test Engineer Intern&lt;/span&gt;
+                    &lt;span class=&quot;date r&quot;&gt;Jan. 2015 &amp;mdash; Aug. 2015&lt;/span&gt;
+                &lt;/h3&gt;
+                &lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                &lt;span class=&quot;job_title&quot;&gt;Cisco, China Research and Development Center &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
 									&lt;ul&gt;
                                         &lt;li&gt;Writed python and TCL
                                         automation scripts on &lt;b&gt;CSR-1000v&lt;/b&gt; (Cloud Service Router) Smart license Feature&lt;/li&gt;
-                                        &lt;li&gt;Developed a web-based &lt;b&gt;UCS&lt;/b&gt; (Unified Computing System) management tool via SNMP, zf &amp;ext3&lt;/li&gt;
-                                        &lt;li&gt;Maintained &lt;b&gt;CSR-1000v&lt;/b&gt; and &lt;b&gt;ISR &lt;/b&gt; (Integrated Services Router) local regression tests&lt;/li&gt; 
-                                        &lt;li&gt;Administrated team lab including testbed setup, implementing test &amp; troubleshooting and hardware updating &lt;/li&gt; 
+                                      &lt;!-- &lt;li&gt;Developed a web-based &lt;b&gt;UCS&lt;/b&gt; (Unified Computing System) management tool via SNMP, zf &amp;ext3&lt;/li&gt; --&gt;
+                                        &lt;!--&lt;li&gt;Maintained &lt;b&gt;CSR-1000v&lt;/b&gt; and &lt;b&gt;ISR &lt;/b&gt; (Integrated Services Router) local regression tests&lt;/li&gt;  --&gt;
+                                        &lt;!--&lt;li&gt;Administrated team lab including testbed setup, implementing test &amp; troubleshooting and hardware updating &lt;/li&gt;  --&gt;
                                         
 										&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-						&lt;/div&gt;
+            &lt;/div&gt;
 
-							
-							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Kavo Software Specialist	&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Jan. 2014 &amp;mdash; Mar. 2014&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;Kavo, Shanghai &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Tested health-care software products including Kavo PACS and Kavo viewer and wrote user documents &lt;/li&gt;&lt;li&gt;Attended the GuangZhou exhibit as technique support &lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-					
-							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Mobile app and web developer&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Nov. 2013 &amp;mdash; Dec. 2013&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;advpower, Shanghai &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Developed Android user-interface app for controlling component on EV based on bluetooth communication&lt;/li&gt;
-                                &lt;li&gt;Participated in development of company business website &lt;u&gt;&lt;a href=&quot;http://www.advpower.cn&quot;&gt;www.advpower.cn&lt;/a&gt;&lt;/u&gt; based on WordPress&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
-		&lt;/div&gt;
+            &lt;div class=&quot;item&quot;&gt;
+                &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Kavo Software Specialist	&lt;/span&gt;
+                    &lt;span class=&quot;date r&quot;&gt;Jan. 2014 &amp;mdash; Mar. 2014&lt;/span&gt;
+                &lt;/h3&gt;
+                &lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                &lt;span class=&quot;job_title&quot;&gt;Kavo, Shanghai &lt;/span&gt;
+                &lt;span class=&quot;info&quot;&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;Tested health-care software products including Kavo PACS and Kavo viewer and wrote user documents &lt;/li&gt;
+                        &lt;/ul&gt;
+                &lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                    &lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;item&quot;&gt;
+                &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Android Mobile app and web developer&lt;/span&gt;
+                    &lt;span class=&quot;date r&quot;&gt;Nov. 2013 &amp;mdash; Dec. 2013&lt;/span&gt;
+                &lt;/h3&gt;
+                &lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+
+                &lt;span class=&quot;job_title&quot;&gt;advpower, Shanghai &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
+                &lt;ul&gt;&lt;li&gt;Developed Android user-interface app for controlling component on EV based on bluetooth communication&lt;/li&gt;
+                    &lt;li&gt;Participated in development of company website based on WordPress&lt;/li&gt;
+            &lt;/ul&gt;&lt;/span&gt;
+
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+
 
 &lt;!--
-				&lt;div class=&quot;section section-work&quot;&gt;
-			&lt;h2 class=&quot;title&quot;&gt;POSITION&lt;/h2&gt;
-			&lt;div class=&quot;set&quot;&gt;
-							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Teaching Assistant of Ve451 &lt;/br&gt;Digital Signal Processing and Analysis&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Sept. 2014 &amp;mdash; Dec. 2014&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, UMJI &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Held recitation class once a week &lt;/li&gt;&lt;li&gt;Graded the homework and exam papers and answered questions in Office Hour and email&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-						
-							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Teaching Assistant of Ve270 &lt;/br&gt;Introduction to Logic Design&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;May 2014 &amp;mdash; Aug. 2014&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, UMJI &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Held the lab session on Xilinx Development and recitation class once a week&lt;/li&gt;&lt;li&gt;Graded the homework and exam paper and answered questions in Office Hour and email&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-						
-							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Leader of UMJI Network Department &lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;June 2013 &amp;mdash; June 2014&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                &lt;div class=&quot;section section-work&quot;&gt;
+            &lt;h2 class=&quot;title&quot;&gt;POSITION&lt;/h2&gt;
+            &lt;div class=&quot;set&quot;&gt;
+                            &lt;div class=&quot;item&quot;&gt;
+                                &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Teaching Assistant of Ve451 &lt;/br&gt;Digital Signal Processing and Analysis&lt;/span&gt;
+                        &lt;span class=&quot;date r&quot;&gt;Sept. 2014 &amp;mdash; Dec. 2014&lt;/span&gt;
+                            &lt;/h3&gt;
+                            &lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                            &lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, UMJI &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Held recitation class once a week &lt;/li&gt;&lt;li&gt;Graded the homework and exam papers and answered questions in Office Hour and email&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class=&quot;item&quot;&gt;
+                                &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Teaching Assistant of Ve270 &lt;/br&gt;Introduction to Logic Design&lt;/span&gt;
+                        &lt;span class=&quot;date r&quot;&gt;May 2014 &amp;mdash; Aug. 2014&lt;/span&gt;
+                            &lt;/h3&gt;
+                            &lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                            &lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, UMJI &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;&lt;ul&gt;&lt;li&gt;Held the lab session on Xilinx Development and recitation class once a week&lt;/li&gt;&lt;li&gt;Graded the homework and exam paper and answered questions in Office Hour and email&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class=&quot;item&quot;&gt;
+                                &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Leader of UMJI Network Department &lt;/span&gt;
+                        &lt;span class=&quot;date r&quot;&gt;June 2013 &amp;mdash; June 2014&lt;/span&gt;
+                            &lt;/h3&gt;
+                            &lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
                             &lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, UMJI &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
                             &lt;ul&gt;
                             &lt;li&gt;Constructed and maintained web sites and web service for the institute and Students’ Union  &lt;a href=&quot;http://umji.sjtu.edu.cn/fxjscholarship&quot; class=&quot;glyphicon glyphicon-link&quot;&gt; &lt;/a&gt;
                             &lt;/li&gt;
                             &lt;/ul&gt;
                             &lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-		
-						&lt;/div&gt;
-			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
-		&lt;/div&gt;
+                            &lt;/div&gt;
+
+                        &lt;/div&gt;
+            &lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
+        &lt;/div&gt;
 
 --&gt;
-					&lt;div class=&quot;section section-work&quot;&gt;
-			&lt;h2 class=&quot;title&quot;&gt;experience&lt;/h2&gt;
-			&lt;div class=&quot;set&quot;&gt;
-                
-                                
-                            &lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Home Harmony &lt;a href=&quot;https://github.com/mrburninator/Home-Harmony&quot; class=&quot;glyphicon glyphicon-link&quot;&gt;&lt;/a&gt; &lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Sept. 2015 &amp;mdash; Dec. 2015&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-                            &lt;!-- &lt;span class=&quot;job_title&quot;&gt;SJTU Course Project&lt;/span&gt; --&gt;
-                             &lt;span class=&quot;info&quot;&gt;
-                                &lt;ul&gt;
-                                 &lt;li&gt;Developed an app based on Cordova to help build roommate relationship and apartment management&lt;/li&gt;
-                                 &lt;li&gt;Used AngularJs and Firebase to develop and Mocha Chai to test the application&lt;/li&gt;
-                             &lt;/ul&gt;
-                         &lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-                
-                            &lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;LLVM Optimization and Analysis  &lt;a href=&quot;http://salamanderrex.github.io/LLVM_231/&quot; class=&quot;glyphicon glyphicon-link&quot;&gt;&lt;/a&gt; &lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Sept. 2015 &amp;mdash; Dec. 2015&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-                            &lt;!-- &lt;span class=&quot;job_title&quot;&gt;SJTU Course Project&lt;/span&gt; --&gt;
-                             &lt;span class=&quot;info&quot;&gt;
-                                &lt;ul&gt;
-                                 &lt;li&gt;Designed a three-layer mechanism to analyse and optimize the program based on LLVM &lt;/li&gt;
-                                 &lt;li&gt;Tested on Constant Propagation, Available Expression, Range Analysis and Pointer Analysis&lt;/li&gt;
-                             &lt;/ul&gt;
-                         &lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-                            
-                            &lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Reference Book System&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Sept. 2014 &amp;mdash; Jan. 2015&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-                            &lt;!-- &lt;span class=&quot;job_title&quot;&gt;SJTU Course Project&lt;/span&gt; --&gt; &lt;span class=&quot;info&quot;&gt;&lt;ul&gt;
-                                 &lt;li&gt;Developed University course reference book Web Service and the web application based on WS API&lt;/li&gt;
-                                 &lt;li&gt;Based on RESTful framework &lt;a href=&quot;https://jersey.java.net/&quot;&gt;Jersey&lt;/a&gt; and user authetication based on &lt;a href=&quot;http://oauth.net/&quot;&gt; oAuth &lt;/a&gt;to realize single-login in all apps&lt;/li&gt;&lt;/ul&gt;
-                         &lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-							&lt;div class=&quot;item&quot;&gt;
-                                &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Jtorrent: A P2P download software  &lt;a href=&quot;http://salamanderrex.github.io/jtorrent&quot; class=&quot;glyphicon glyphicon-link&quot;&gt;&lt;/a&gt;&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;May 2014 &amp;mdash; Aug. 2014&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-                            &lt;!-- &lt;span class=&quot;job_title&quot;&gt;UMJI Course Project  &lt;a href=&quot;http://salamanderrex.github.io/jtorrent&quot; class=&quot;glyphicon glyphicon-link&quot;&gt;&lt;/a&gt; --&gt; 
-                        &lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
-							&lt;ul&gt;
-							&lt;li&gt;Developed a P2P software based on socket programming in C++ and implemented peer selection algorithm&lt;/li&gt;
-                            &lt;li&gt;Tested the torrent server, tracker and clients in different network topologies&lt;/li&gt;
-							&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-						
-							&lt;div class=&quot;item&quot;&gt;
-                                &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;EDongle: A portable encryption device &lt;a href=&quot;http://salamanderrex.github.io/Edongle/&quot; class=&quot;glyphicon glyphicon-link&quot;&gt;&lt;/a&gt;
-&lt;/span&gt; 
-                                    &lt;span class=&quot;date r&quot;&gt;May 2014 &amp;mdash; Aug. 2014&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-                            &lt;!-- &lt;span class=&quot;job_title&quot;&gt;UMJI Course Project  &lt;a href=&quot;http://salamanderrex.github.io/Edongle/&quot; class=&quot;glyphicon glyphicon-link&quot;&gt;&lt;/a&gt;&lt;/span&gt; --&gt;
-                            &lt;span class=&quot;info&quot;&gt; 
-								&lt;ul&gt;
-									&lt;li&gt;Built a portable hardware encryption device on pic32 by s-AES (Advanced Encryption Standard) &lt;/li&gt;
-                                    &lt;li&gt;Implemented the communication between PC and pic32 by USB and Websocket&lt;/li&gt;
-								&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; 
-							&lt;/span&gt;
-							&lt;/div&gt;
-						
-						&lt;!--	&lt;div class=&quot;item&quot;&gt;
-                                &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Vg100 Intro to Engineering&lt;/a&gt;&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Sept.2011 &amp;mdash; Dec.2011&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;span class=&quot;job_title&quot;&gt;UMJI Course Project  &lt;a href=&quot;http://salamanderrex.github.io/vg100&quot; class=&quot;glyphicon glyphicon-link&quot;&gt; &lt;/a&gt;&lt;/span&gt;&lt;span class=&quot;info&quot;&gt;
-								&lt;ul&gt;
-									&lt;li&gt;Designed an automatic display shelf which changes its revolution speed by gestures based on Infrared Detector Sensors NBBBBBBBB &lt;/li&gt;
-								&lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-						--&gt;
-							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Unmanned Quadcopter Controlling Panel&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Mar. 2014 &amp;mdash; Apr. 2014&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-                            &lt;!--	&lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University&lt;/span&gt; --&gt; 
-                            &lt;span class=&quot;info&quot;&gt;&lt;ul&gt;
-                                    &lt;li&gt;Constructed a quadcopter voice control panel on mobile phone based on CMU Sphinx &lt;/li&gt;
-                                    &lt;li&gt;Installed the OpenWrt on wireless module and wrote code on quadcopter to enable wireless communication &lt;/li&gt;
-                            &lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+&lt;!--
+&lt;div class=&quot;section section-work&quot;&gt;
+    &lt;br&gt;
+    &lt;/br&gt;
+    &lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+    &lt;h2 class=&quot;title&quot;&gt;experience&lt;/h2&gt;
 
-							&lt;/div&gt;
-						
-						&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Android application - JPing&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;May 2013 &amp;mdash; May 2013&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-                            &lt;!-- &lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, UMJI&lt;/span&gt; --&gt; 
-                            &lt;span class=&quot;info&quot;&gt;&lt;ul&gt;
-                                    &lt;li&gt;Developed an android application which can retrieve announcements and assignments from SAKAI &lt;/li&gt;
-                                    &lt;li&gt;Retrieved data from website by using BeautifulSoup to do web-scraping automatically&lt;/li&gt;
-                            &lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-						&lt;/div&gt;
+    &lt;div class=&quot;set&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 
-							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;An Intelligent Display and Control Terminal System for EVs&lt;/span&gt;&lt;span class=&quot;date r&quot;&gt;Mar. 2013 &amp;mdash; Mar.2014&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-                            &lt;!-- &lt;span class=&quot;job_title&quot;&gt;Shanghai Jiao Tong University, Innovation project&lt;/span&gt; --&gt;
-                            &lt;span class=&quot;info&quot;&gt;
-                                &lt;span class=&quot;info&quot;&gt; 
-                                    &lt;ul&gt;
-                                    &lt;li&gt;Developed a displaying and controlling system based on the Android tablet for electric vehicles &lt;/li&gt;
-                                    &lt;li&gt;Installed sensors on EV to gather environmental data and internal status &lt;/li&gt;
-                            &lt;/ul&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-						
-		
-						&lt;/div&gt;
-			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
-		&lt;/div&gt;
 
-				
-	&lt;!--	
-		&lt;div class=&quot;section section-work&quot;&gt;
-			&lt;h2 class=&quot;title&quot;&gt;AWARDS&lt;/h2&gt;
-			&lt;div class=&quot;set&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+--&gt;
 
-							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Academic Excellence Scholarship &lt;/br&gt;&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Nov. 2014&lt;/span&gt;
-							&lt;/h3&gt;
-							
-							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-							
-							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;&quot;General Motor Cup&quot;, National First Prize &lt;/br&gt;&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Dec. 2013&lt;/span&gt;
-							&lt;/h3&gt;
-						
-							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-							&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Dean’s List &lt;/br&gt;&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Dec. 2013&lt;/span&gt;
-							&lt;/h3&gt;
-						
-							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;		
-						&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Dean’s List &lt;/br&gt;&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Oct. 2013&lt;/span&gt;
-							&lt;/h3&gt;
-							
-							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;	
-							
-						&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Academic Excellence Scholarship  &lt;/br&gt;&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Nov. 2012&lt;/span&gt;
-							&lt;/h3&gt;
-						
-							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;
-							
-						&lt;div class=&quot;item&quot;&gt;
-								&lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Dean’s List  &lt;/br&gt;&lt;/span&gt;
-						&lt;span class=&quot;date r&quot;&gt;Sept. 2011&lt;/span&gt;
-							&lt;/h3&gt;
-							&lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
-							&lt;/div&gt;	
-						
-			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
-		&lt;/div&gt;
-        --&gt;
-			&lt;div class=&quot;section section-qualifications&quot;&gt;
-			&lt;h2 class=&quot;title&quot;&gt;SKILLS&lt;/h2&gt;
-			&lt;div class=&quot;set&quot;&gt;
-						&lt;div class=&quot;item&quot;&gt;
+
+&lt;!--
+    &lt;div class=&quot;section section-work&quot;&gt;
+        &lt;h2 class=&quot;title&quot;&gt;AWARDS&lt;/h2&gt;
+        &lt;div class=&quot;set&quot;&gt;
+                        &lt;div class=&quot;item&quot;&gt;
+                            &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Academic Excellence Scholarship &lt;/br&gt;&lt;/span&gt;
+                    &lt;span class=&quot;date r&quot;&gt;Nov. 2014&lt;/span&gt;
+                        &lt;/h3&gt;
+
+                        &lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class=&quot;item&quot;&gt;
+                            &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;&quot;General Motor Cup&quot; App Contest, National First Prize &lt;/br&gt;&lt;/span&gt;
+                    &lt;span class=&quot;date r&quot;&gt;Dec. 2013&lt;/span&gt;
+                        &lt;/h3&gt;
+
+                        &lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class=&quot;item&quot;&gt;
+                            &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Dean’s List &lt;/br&gt;&lt;/span&gt;
+                    &lt;span class=&quot;date r&quot;&gt;Dec. 2013&lt;/span&gt;
+                        &lt;/h3&gt;
+
+                        &lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;div class=&quot;item&quot;&gt;
+                            &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Dean’s List &lt;/br&gt;&lt;/span&gt;
+                    &lt;span class=&quot;date r&quot;&gt;Oct. 2013&lt;/span&gt;
+                        &lt;/h3&gt;
+
+                        &lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                        &lt;/div&gt;
+
+                    &lt;div class=&quot;item&quot;&gt;
+                            &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Academic Excellence Scholarship  &lt;/br&gt;&lt;/span&gt;
+                    &lt;span class=&quot;date r&quot;&gt;Nov. 2012&lt;/span&gt;
+                        &lt;/h3&gt;
+
+                        &lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                        &lt;/div&gt;
+
+                    &lt;div class=&quot;item&quot;&gt;
+                            &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Dean’s List  &lt;/br&gt;&lt;/span&gt;
+                    &lt;span class=&quot;date r&quot;&gt;Sept. 2011&lt;/span&gt;
+                        &lt;/h3&gt;
+                        &lt;span class=&quot;job_title&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                        &lt;/div&gt;
+
+
+            &lt;/div&gt;
+        &lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
+    &lt;/div&gt;
+    --&gt;
+&lt;div class=&quot;section section-qualifications&quot;&gt;
+    &lt;h2 class=&quot;title&quot;&gt;SKILLS&lt;/h2&gt;
+    &lt;div class=&quot;set&quot;&gt;
+        &lt;div class=&quot;item&quot;&gt;
 							&lt;span class=&quot;info&quot;&gt;
-                            &lt;ul class=&quot;ul_s&quot;&gt;&lt;li&gt;JAVA; C/C++; PHP; Python; HTML; JS; TCL;  MySQL; Assembly language (on MIPS) HDL: Verilog &lt;/li&gt;&lt;li&gt;MVC Frameworks: Zend, Laravel, J2EE ssh; jekyll; web services; JSON, XML&lt;/li&gt;
-							&lt;!-- &lt;li&gt;Version Control: SVN, GIT&lt;/li&gt; --&gt;
-							&lt;!-- &lt;li&gt;Hardware: MicroChip PIC32 (MPLAB) and Xilinx&lt;/li&gt; --&gt;
-							&lt;li&gt; IDE: Eclipse, Visual Studio, pyCharm, Matlab,vim  &lt;/li&gt;
-							&lt;li&gt;Network and mobile network development knowledge(LAMP, J2EE, Python flask, Android) &lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
-		&lt;/div&gt;
-        &lt;!--
-			&lt;div class=&quot;section section-interests&quot;&gt;
-			&lt;h2 class=&quot;title&quot;&gt;activities&lt;/h2&gt;
-			&lt;div class=&quot;set&quot;&gt;
-						&lt;div class=&quot;item&quot;&gt;
-							&lt;span class=&quot;info &quot;  &gt;&lt;span style=&quot;float:left; width=200px&quot;&gt;&lt;ul&gt;&lt;li&gt;Microsoft MSmart-Youth Career Fair&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;float:right;	width:200px;text-align: right;&quot;&gt;June 3,2013 &lt;/span&gt;
-							&lt;/br&gt;
-							&lt;span class=&quot;info &quot;  &gt;&lt;span style=&quot;float:left; width=200px&quot;&gt;&lt;ul&gt;&lt;li&gt;Intel (ZiZhu) visiting  &lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;float:right;	width:200px;text-align: right;&quot;&gt;May 9,2013&lt;/span&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-			&lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
-            !--&gt;
-		&lt;/div&gt;
-			
-		&lt;/div&gt;
-		
+                            &lt;ul class=&quot;ul_s&quot;&gt;
+                                &lt;li&gt;Program Language: Python, JAVA, C/C++, Ruby, PHP, HTML, JS, TCL&lt;/li&gt;
+                                &lt;!-- &lt;li&gt;HDL: Assembly language (on MIPS) , Verilog&lt;/li&gt; --&gt;
+                                &lt;li&gt;Web Frameworks: AngularJs, React, Bootstrap&lt;/li&gt;
+                                &lt;!-- &lt;li&gt;Version Control: GIT, SVN&lt;/li&gt; --&gt;
+                                &lt;!-- &lt;li&gt;IDE: Vim, Eclipse, IntelJ, Visual Studio, pyCharm, Matlab, RubyMine&lt;/li&gt; --&gt;
+                                &lt;li&gt;Mobile network development: Android, phoneGap &lt;/li&gt;
+                                &lt;li&gt;DevOps: Jenkins&lt;/li&gt;
+                                &lt;li&gt;AWS: Elasticsearch, SQS, EC2, EBS, ELB, SWF, EMR, DynamoDB, S3, Cloudformation, cloudwatch&lt;/li&gt;
+                                &lt;li&gt;Version Control: git&lt;/li&gt;
+                                &lt;li&gt;IDE: Vim&lt;/li&gt;
+                                &lt;!-- &lt;li&gt;Big Data: Spark, Hadoop&lt;/li&gt; --&gt;
+                            &lt;/ul&gt;
+                            &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+&lt;!--
+    &lt;div class=&quot;section section-interests&quot;&gt;
+    &lt;h2 class=&quot;title&quot;&gt;activities&lt;/h2&gt;
+    &lt;div class=&quot;set&quot;&gt;
+                &lt;div class=&quot;item&quot;&gt;
+                    &lt;span class=&quot;info &quot;  &gt;&lt;span style=&quot;float:left; width=200px&quot;&gt;&lt;ul&gt;&lt;li&gt;Microsoft MSmart-Youth Career Fair&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;float:right;	width:200px;text-align: right;&quot;&gt;June 3,2013 &lt;/span&gt;
+                    &lt;/br&gt;
+                    &lt;span class=&quot;info &quot;  &gt;&lt;span style=&quot;float:left; width=200px&quot;&gt;&lt;ul&gt;&lt;li&gt;Intel (ZiZhu) visiting  &lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;float:right;	width:200px;text-align: right;&quot;&gt;May 9,2013&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+    &lt;div class=&quot;clear&quot;&gt; &lt;/div&gt;
+    !--&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
 &lt;/div&gt;
 
 </content>
@@ -755,7 +740,7 @@ nothing we can do about this.&lt;/p&gt;
 
 &lt;p&gt;使用中总结了一些体会，非常感性、毫无逻辑可言，看看就好：&lt;/p&gt;
 
-&lt;h2 id=&quot;section&quot;&gt;产品定位&lt;/h2&gt;
+&lt;p&gt;##产品定位&lt;/p&gt;
 
 &lt;p&gt;豆瓣FM的产品定位，摘抄如下：&lt;/p&gt;
 
@@ -767,9 +752,9 @@ nothing we can do about this.&lt;/p&gt;
 
 &lt;p&gt;这样的打开播放的产品定位下，使用场景就有些变化了。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-1&quot;&gt;交互框架&lt;/h2&gt;
+&lt;p&gt;##交互框架&lt;/p&gt;
 
-&lt;h3 id=&quot;section-2&quot;&gt;引导页&lt;/h3&gt;
+&lt;p&gt;###引导页&lt;/p&gt;
 
 &lt;p&gt;从App引导开始，新版FM就想让用户熟悉上下拉动的操作。&lt;/p&gt;
 
@@ -779,7 +764,7 @@ nothing we can do about this.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/mw1024/8b8af2c8jw1e5eqcvmp9gj20oq0lp408.jpg&quot; alt=&quot;splash&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;section-3&quot;&gt;上下拉&lt;/h3&gt;
+&lt;p&gt;###上下拉&lt;/p&gt;
 
 &lt;p&gt;自从抽屉式导航普及开来之后，横滑展开设置成为一种默认操作。&lt;/p&gt;
 
@@ -791,7 +776,7 @@ nothing we can do about this.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/mw1024/8b8af2c8jw1e5eqd2xcj9j20oq0lpjv1.jpg&quot; alt=&quot;slide&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;section-4&quot;&gt;设计细节&lt;/h2&gt;
+&lt;p&gt;##设计细节&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;封面不清晰&lt;/li&gt;
@@ -817,7 +802,7 @@ nothing we can do about this.&lt;/p&gt;
      <link href="http://beiyuu.com/jobs-interview"/>
      <updated>2013-05-14T00:00:00-07:00</updated>
      <id>http://sakanabderrex.github.io//jobs-interview</id>
-     <content type="html">&lt;h2 id=&quot;section&quot;&gt;1、做公司就是做产品&lt;/h2&gt;
+     <content type="html">&lt;p&gt;##1、做公司就是做产品&lt;/p&gt;
 
 &lt;p&gt;乔布斯从12岁开始，就捣鼓着好玩有用的产品，在惠普兼职的那些日子，也让他体会到了科技的魅力，原来凭一个人的力量也可以有如此之大的影响力，也是在惠普他认识了沃兹尼亚克。&lt;/p&gt;
 
@@ -829,7 +814,7 @@ nothing we can do about this.&lt;/p&gt;
 
 &lt;p&gt;光靠流程和制度，是不能让公司持续成功的，必须全心全意放在产品上。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-1&quot;&gt;2、如何使公司良好运转&lt;/h2&gt;
+&lt;p&gt;##2、如何使公司良好运转&lt;/p&gt;
 
 &lt;p&gt;对于传统行业来说，最好和普通之间，差距可能就是百分之几十的样子，但是对科技行业来说，最好的与普通的人才，能力的差距可能达百倍，所以一流的公司需要一流的人才，一流的人才也愿意与一流的人才共事。&lt;/p&gt;
 
@@ -837,7 +822,7 @@ nothing we can do about this.&lt;/p&gt;
 
 &lt;p&gt;大约这就是他被谣传暴戾的原因吧，从访谈中可以看的出，他确实不太在乎事实之外的东西，他自己也会犯错，别人也可以说服他，只要基于事实就好。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-2&quot;&gt;3、品位问题&lt;/h2&gt;
+&lt;p&gt;##3、品位问题&lt;/p&gt;
 
 &lt;p&gt;毫无疑问，乔布斯的品位很好，他认为和在大学时旁听排版课程的关系密不可分，的确，内容永远都是最重要的，并且，字体设计那些细致入微的细节，也对他有很深的影响。&lt;/p&gt;
 
@@ -854,7 +839,7 @@ nothing we can do about this.&lt;/p&gt;
 &lt;!--&lt;iframe height=&quot;498&quot; width=&quot;510&quot; src=&quot;http://player.youku.com/embed/XNTUxNDY1NDY4&quot; frameborder=&quot;0&quot; style=&quot;margin:0 auto&quot;&gt;&lt;/iframe&gt;--&gt;
 
 &lt;div style=&quot;text-align:center&quot;&gt;
-&lt;embed src=&quot;http://player.youku.com/player.php/sid/XNTUxNDY1NDY4/v.swf&quot; allowfullscreen=&quot;true&quot; quality=&quot;high&quot; width=&quot;480&quot; height=&quot;400&quot; align=&quot;middle&quot; allowscriptaccess=&quot;always&quot; type=&quot;application/x-shockwave-flash&quot; /&gt;
+&lt;embed src=&quot;http://player.youku.com/player.php/sid/XNTUxNDY1NDY4/v.swf&quot; allowfullscreen=&quot;true&quot; quality=&quot;high&quot; width=&quot;480&quot; height=&quot;400&quot; align=&quot;middle&quot; allowscriptaccess=&quot;always&quot; type=&quot;application/x-shockwave-flash&quot; /&gt;&amp;lt;/embed&amp;gt;
 &lt;/div&gt;
 </content>
    </entry>
@@ -864,31 +849,45 @@ nothing we can do about this.&lt;/p&gt;
      <link href="http://beiyuu.com/edongle_blog"/>
      <updated>2013-04-12T00:00:00-07:00</updated>
      <id>http://sakanabderrex.github.io//edongle_blog</id>
-     <content type="html">&lt;h1 id=&quot;edongle&quot;&gt;Edongle&lt;/h1&gt;
-&lt;hr /&gt;
-&lt;p&gt;Dongle which enables user to do their own configurations.
+     <content type="html">&lt;p&gt;#Edongle
+ ————————————————-
+ Dongle which enables user to do their own configurations.
  &lt;img src=&quot;http://salamanderrex.github.io/image_for_projects/Edongle/Edongle.jpg&quot; alt=&quot;&quot; /&gt;
 #Function
  —————————————————
- Function:
- * 1. A movable pocket device which can store the secret, classified or confidential, different kind of level info (base on s-AES encryption)
- * 2. Provide interface and create secure bridge between user software 
- * 3. Provide encryption and decryption service (parallel )&lt;/p&gt;
+ Function:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;ol&gt;
+      &lt;li&gt;A movable pocket device which can store the secret, classified or confidential, different kind of level info (base on s-AES encryption)&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Provide interface and create secure bridge between user software&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Provide encryption and decryption service (parallel )&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&quot;how-to-run-midware&quot;&gt;How to run midware&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;p&gt;make sure you run connect the PIC32
- the type in terminal &lt;code&gt;sudo midware&lt;/code&gt;  (need root permission)&lt;/p&gt;
+ the type in terminal &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo midware&lt;/code&gt;  (need root permission)&lt;/p&gt;
 
 &lt;h1 id=&quot;how-to-use-client-communication&quot;&gt;How to use client communication&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;p&gt;We provide test client in /client
- run the client &lt;code&gt;client&lt;/code&gt;&lt;/p&gt;
+ run the client &lt;code class=&quot;highlighter-rouge&quot;&gt;client&lt;/code&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;how-to-use-encryption-service&quot;&gt;How to use encryption service&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;p&gt;If you want encrypt a file
- you should type &lt;code&gt;sudo midware cleartext.txt Encrypted.txt 1&lt;/code&gt;&lt;/p&gt;
+ you should type &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo midware cleartext.txt Encrypted.txt 1&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;If you want to decrypte a file 
  you should type `sudo midware Encrypted.txt outClear.txt 2’&lt;/p&gt;
@@ -907,21 +906,21 @@ nothing we can do about this.&lt;/p&gt;
  input the info, click save, wait it stores info in PIC32 , then close 
  &lt;/pre&gt;
 
-&lt;h1 id=&quot;support&quot;&gt;Support&lt;/h1&gt;
-&lt;hr /&gt;
+&lt;p&gt;#Support 
+ ——————————————-&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Ubuntu 12.04&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;development-tool&quot;&gt;Development tool&lt;/h1&gt;
-&lt;hr /&gt;
+&lt;p&gt;#Development tool 
+ ————————————-&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;MPLAB&lt;/li&gt;
   &lt;li&gt;QtCreator&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;library-and-used-open-source-project&quot;&gt;library and used open source project&lt;/h1&gt;
-&lt;hr /&gt;
+&lt;p&gt;#library and used open source project
+ ——————&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;salamanderrex/jtorrent&lt;/li&gt;
   &lt;li&gt;openssl/openssl&lt;/li&gt;
@@ -948,7 +947,7 @@ nothing we can do about this.&lt;/p&gt;
   &lt;li&gt;中文版：&lt;a href=&quot;http://book.douban.com/subject/10797189/&quot; title=&quot;编写可读代码的艺术&quot;&gt;编写可读代码的艺术&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;section&quot;&gt;代码为什么要易于理解&lt;/h2&gt;
+&lt;p&gt;##代码为什么要易于理解&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;“Code should be written to minimize the time it would take for someone else to understand it.”&lt;/p&gt;
@@ -966,74 +965,74 @@ nothing we can do about this.&lt;/p&gt;
 
 &lt;p&gt;整本书都围绕“如何让代码的可读性更高”这个目标来写。这也是好代码的重要标准之一。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-1&quot;&gt;如何命名&lt;/h2&gt;
+&lt;p&gt;##如何命名&lt;/p&gt;
 
-&lt;h3 id=&quot;section-2&quot;&gt;变量名中应包含更多信息&lt;/h3&gt;
+&lt;p&gt;###变量名中应包含更多信息&lt;/p&gt;
 
-&lt;h4 id=&quot;downloadget&quot;&gt;使用含义明确的词，比如用&lt;code&gt;download&lt;/code&gt;而不是&lt;code&gt;get&lt;/code&gt;，参考以下替换方案：&lt;/h4&gt;
+&lt;p&gt;####使用含义明确的词，比如用&lt;code class=&quot;highlighter-rouge&quot;&gt;download&lt;/code&gt;而不是&lt;code class=&quot;highlighter-rouge&quot;&gt;get&lt;/code&gt;，参考以下替换方案：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt; send -&amp;gt; deliver, dispatch, announce, distribute, route
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; send -&amp;gt; deliver, dispatch, announce, distribute, route
  find -&amp;gt; search, extract, locate, recover
 start -&amp;gt; lanuch, create, begin, open
  make -&amp;gt; create,set up, build, generate, compose, add, new
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-3&quot;&gt;避免通用的词&lt;/h4&gt;
-&lt;p&gt;像&lt;code&gt;tmp&lt;/code&gt;和&lt;code&gt;retval&lt;/code&gt;这样词，除了说明是临时变量和返回值之外，没有任何意义。但是给他加一些有意义的词，就会很明确：&lt;/p&gt;
+&lt;p&gt;####避免通用的词
+像&lt;code class=&quot;highlighter-rouge&quot;&gt;tmp&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;retval&lt;/code&gt;这样词，除了说明是临时变量和返回值之外，没有任何意义。但是给他加一些有意义的词，就会很明确：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;tmp_file = tempfile.NamedTemporaryFile() 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tmp_file = tempfile.NamedTemporaryFile() 
 ...
 SaveData(tmp_file, ...)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;不使用retval而使用变量真正代表的意义：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sum_squares += v[i]; // Where&#39;s the &quot;square&quot; that we&#39;re summing? Bug!
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sum_squares += v[i]; // Where's the &quot;square&quot; that we're summing? Bug!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;嵌套的for循环中,&lt;code&gt;i&lt;/code&gt;、&lt;code&gt;j&lt;/code&gt;也有同样让人困惑的时候：&lt;/p&gt;
+&lt;p&gt;嵌套的for循环中,&lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;j&lt;/code&gt;也有同样让人困惑的时候：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;for (int i = 0; i &amp;lt; clubs.size(); i++)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for (int i = 0; i &amp;lt; clubs.size(); i++)
     for (int j = 0; j &amp;lt; clubs[i].members.size(); j++)
         for (int k = 0; k &amp;lt; users.size(); k++) if (clubs[i].members[k] == users[j])
             cout &amp;lt;&amp;lt; &quot;user[&quot; &amp;lt;&amp;lt; j &amp;lt;&amp;lt; &quot;] is in club[&quot; &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &quot;]&quot; &amp;lt;&amp;lt; endl;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;换一种写法就会清晰很多：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt; if (clubs[ci].members[mi] == users[ui])  # OK. First letters match.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; if (clubs[ci].members[mi] == users[ui])  # OK. First letters match.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;所以，当使用一些通用的词，要有充分的理由才可以。&lt;/p&gt;
 
-&lt;h4 id=&quot;section-4&quot;&gt;使用具体的名字&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;CanListenOnPort&lt;/code&gt;就比&lt;code&gt;ServerCanStart&lt;/code&gt;好，can start比较含糊，而listen on port确切的说明了这个方法将要做什么。&lt;/p&gt;
+&lt;p&gt;####使用具体的名字
+&lt;code class=&quot;highlighter-rouge&quot;&gt;CanListenOnPort&lt;/code&gt;就比&lt;code class=&quot;highlighter-rouge&quot;&gt;ServerCanStart&lt;/code&gt;好，can start比较含糊，而listen on port确切的说明了这个方法将要做什么。&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;--run_locally&lt;/code&gt;就不如&lt;code&gt;--extra_logging&lt;/code&gt;来的明确。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--run_locally&lt;/code&gt;就不如&lt;code class=&quot;highlighter-rouge&quot;&gt;--extra_logging&lt;/code&gt;来的明确。&lt;/p&gt;
 
-&lt;h4 id=&quot;msraw&quot;&gt;增加重要的细节，比如变量的单位&lt;code&gt;_ms&lt;/code&gt;，对原始字符串加&lt;code&gt;_raw&lt;/code&gt;&lt;/h4&gt;
-&lt;p&gt;如果一个变量很重要，那么在名字上多加一些额外的字就会更加易读，比如将&lt;code&gt;string id; // Example: &quot;af84ef845cd8&quot;&lt;/code&gt;换成&lt;code&gt;string hex_id;&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;####增加重要的细节，比如变量的单位&lt;code class=&quot;highlighter-rouge&quot;&gt;_ms&lt;/code&gt;，对原始字符串加&lt;code class=&quot;highlighter-rouge&quot;&gt;_raw&lt;/code&gt;
+如果一个变量很重要，那么在名字上多加一些额外的字就会更加易读，比如将&lt;code class=&quot;highlighter-rouge&quot;&gt;string id; // Example: &quot;af84ef845cd8&quot;&lt;/code&gt;换成&lt;code class=&quot;highlighter-rouge&quot;&gt;string hex_id;&lt;/code&gt;。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;             Start(int delay)  --&amp;gt;  delay → delay_secs
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;             Start(int delay)  --&amp;gt;  delay → delay_secs
         CreateCache(int size)  --&amp;gt;  size → size_mb
 ThrottleDownload(float limit)  --&amp;gt;  limit → max_kbps
           Rotate(float angle)  --&amp;gt;  angle → degrees_cw
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;更多例子：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;password  -&amp;gt;  plaintext_password
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;password  -&amp;gt;  plaintext_password
  comment  -&amp;gt;  unescaped_comment
     html  -&amp;gt;  html_utf8
     data  -&amp;gt;  data_urlenc
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-5&quot;&gt;对于作用域大的变量使用较长的名字&lt;/h4&gt;
-&lt;p&gt;在比较小的作用域内，可以使用较短的变量名，在较大的作用域内使用的变量，最好用长一点的名字，编辑器的自动补全都可以很好的减少键盘输入。对于一些缩写前缀，尽量选择众所周知的(如str)，一个判断标准是，当新成员加入时，是否可以无需他人帮助而明白前缀代表什么。&lt;/p&gt;
+&lt;p&gt;####对于作用域大的变量使用较长的名字
+在比较小的作用域内，可以使用较短的变量名，在较大的作用域内使用的变量，最好用长一点的名字，编辑器的自动补全都可以很好的减少键盘输入。对于一些缩写前缀，尽量选择众所周知的(如str)，一个判断标准是，当新成员加入时，是否可以无需他人帮助而明白前缀代表什么。&lt;/p&gt;
 
-&lt;h4 id=&quot;section-6&quot;&gt;合理使用&lt;code&gt;_&lt;/code&gt;、&lt;code&gt;-&lt;/code&gt;等符号，比如对私有变量加&lt;code&gt;_&lt;/code&gt;前缀。&lt;/h4&gt;
+&lt;p&gt;####合理使用&lt;code class=&quot;highlighter-rouge&quot;&gt;_&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;等符号，比如对私有变量加&lt;code class=&quot;highlighter-rouge&quot;&gt;_&lt;/code&gt;前缀。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var x = new DatePicker(); // DatePicker() 是类的&quot;构造&quot;函数，大写开始
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var x = new DatePicker(); // DatePicker() 是类的&quot;构造&quot;函数，大写开始
 var y = pageHeight(); // pageHeight() 是一个普通函数
 
 var $all_images = $(&quot;img&quot;); // $all_images 是jQuery对象
@@ -1041,76 +1040,76 @@ var height = 250; // height不是
 
 //id和class的写法分开
 &amp;lt;div id=&quot;middle_column&quot; class=&quot;main-content&quot;&amp;gt; ...
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;section-7&quot;&gt;命名不能有歧义&lt;/h3&gt;
-&lt;p&gt;命名的时候可以先想一下，我要用的这个词是否有别的含义。举个例子：&lt;/p&gt;
+&lt;p&gt;###命名不能有歧义
+命名的时候可以先想一下，我要用的这个词是否有别的含义。举个例子：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;results = Database.all_objects.filter(&quot;year &amp;lt;= 2011&quot;)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;results = Database.all_objects.filter(&quot;year &amp;lt;= 2011&quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;现在的结果到底是包含2011年之前的呢还是不包含呢？&lt;/p&gt;
 
-&lt;h4 id=&quot;minmaxlimit&quot;&gt;使用&lt;code&gt;min&lt;/code&gt;、&lt;code&gt;max&lt;/code&gt;代替&lt;code&gt;limit&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;####使用&lt;code class=&quot;highlighter-rouge&quot;&gt;min&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;max&lt;/code&gt;代替&lt;code class=&quot;highlighter-rouge&quot;&gt;limit&lt;/code&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;CART_TOO_BIG_LIMIT = 10
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CART_TOO_BIG_LIMIT = 10
     if shopping_cart.num_items() &amp;gt;= CART_TOO_BIG_LIMIT:
         Error(&quot;Too many items in cart.&quot;)
 
 MAX_ITEMS_IN_CART = 10
     if shopping_cart.num_items() &amp;gt; MAX_ITEMS_IN_CART:
      Error(&quot;Too many items in cart.&quot;)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;对比上例中&lt;code&gt;CART_TOO_BIG_LIMIT&lt;/code&gt;和&lt;code&gt;MAX_ITEMS_IN_CART&lt;/code&gt;，想想哪个更好呢？&lt;/p&gt;
+&lt;p&gt;对比上例中&lt;code class=&quot;highlighter-rouge&quot;&gt;CART_TOO_BIG_LIMIT&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;MAX_ITEMS_IN_CART&lt;/code&gt;，想想哪个更好呢？&lt;/p&gt;
 
-&lt;h4 id=&quot;firstlast&quot;&gt;使用&lt;code&gt;first&lt;/code&gt;和&lt;code&gt;last&lt;/code&gt;来表示闭区间&lt;/h4&gt;
+&lt;p&gt;####使用&lt;code class=&quot;highlighter-rouge&quot;&gt;first&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;last&lt;/code&gt;来表示闭区间&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;print integer_range(start=2, stop=4)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;print integer_range(start=2, stop=4)
 # Does this print [2,3] or [2,3,4] (or something else)?
 
 set.PrintKeys(first=&quot;Bart&quot;, last=&quot;Maggie&quot;)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;code&gt;first&lt;/code&gt;和&lt;code&gt;last&lt;/code&gt;含义明确，适宜表示闭区间。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;first&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;last&lt;/code&gt;含义明确，适宜表示闭区间。&lt;/p&gt;
 
-&lt;h4 id=&quot;beiginend29&quot;&gt;使用&lt;code&gt;beigin&lt;/code&gt;和&lt;code&gt;end&lt;/code&gt;表示前闭后开([2,9))区间&lt;/h4&gt;
+&lt;p&gt;####使用&lt;code class=&quot;highlighter-rouge&quot;&gt;beigin&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;end&lt;/code&gt;表示前闭后开([2,9))区间&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;PrintEventsInRange(&quot;OCT 16 12:00am&quot;, &quot;OCT 17 12:00am&quot;)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PrintEventsInRange(&quot;OCT 16 12:00am&quot;, &quot;OCT 17 12:00am&quot;)
 
 PrintEventsInRange(&quot;OCT 16 12:00am&quot;, &quot;OCT 16 11:59:59.9999pm&quot;)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;上面一种写法就比下面的舒服多了。&lt;/p&gt;
 
-&lt;h4 id=&quot;boolean&quot;&gt;Boolean型变量命名&lt;/h4&gt;
+&lt;p&gt;####Boolean型变量命名&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;bool read_password = true;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bool read_password = true;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;这是一个很危险的命名，到底是需要读取密码呢，还是密码已经被读取呢，不知道，所以这个变量可以使用&lt;code&gt;user_is_authenticated&lt;/code&gt;代替。通常，给Boolean型变量添加&lt;code&gt;is&lt;/code&gt;、&lt;code&gt;has&lt;/code&gt;、&lt;code&gt;can&lt;/code&gt;、&lt;code&gt;should&lt;/code&gt;可以让含义更清晰，比如：&lt;/p&gt;
+&lt;p&gt;这是一个很危险的命名，到底是需要读取密码呢，还是密码已经被读取呢，不知道，所以这个变量可以使用&lt;code class=&quot;highlighter-rouge&quot;&gt;user_is_authenticated&lt;/code&gt;代替。通常，给Boolean型变量添加&lt;code class=&quot;highlighter-rouge&quot;&gt;is&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;has&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;can&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;should&lt;/code&gt;可以让含义更清晰，比如：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;             SpaceLeft()  --&amp;gt;  hasSpaceLeft()
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;             SpaceLeft()  --&amp;gt;  hasSpaceLeft()
 bool disable_ssl = false  --&amp;gt;  bool use_ssl = true
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-8&quot;&gt;符合预期&lt;/h4&gt;
+&lt;p&gt;####符合预期&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;public class StatisticsCollector {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public class StatisticsCollector {
     public void addSample(double x) { ... }
     public double getMean() {
         // Iterate through all samples and return total / num_samples
     }
     ...
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;在这个例子中，&lt;code&gt;getMean&lt;/code&gt;方法遍历了所有的样本，返回总额，所以并不是普通意义上轻量的&lt;code&gt;get&lt;/code&gt;方法，所以应该取名&lt;code&gt;computeMean&lt;/code&gt;比较合适。&lt;/p&gt;
+&lt;p&gt;在这个例子中，&lt;code class=&quot;highlighter-rouge&quot;&gt;getMean&lt;/code&gt;方法遍历了所有的样本，返回总额，所以并不是普通意义上轻量的&lt;code class=&quot;highlighter-rouge&quot;&gt;get&lt;/code&gt;方法，所以应该取名&lt;code class=&quot;highlighter-rouge&quot;&gt;computeMean&lt;/code&gt;比较合适。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-9&quot;&gt;漂亮的格式&lt;/h2&gt;
-&lt;p&gt;写出来漂亮的格式，充满美感，读起来自然也会舒服很多，对比下面两个例子：&lt;/p&gt;
+&lt;p&gt;##漂亮的格式
+写出来漂亮的格式，充满美感，读起来自然也会舒服很多，对比下面两个例子：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;class StatsKeeper {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class StatsKeeper {
    public:
    // A class for keeping track of a series of doubles
       void Add(double d);  // and methods for quick statistics about them
@@ -1122,11 +1121,11 @@ bool disable_ssl = false  --&amp;gt;  bool use_ssl = true
      past_items
          ;double maximum;
 };
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;什么是充满美感的呢：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// A class for keeping track of a series of doubles
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// A class for keeping track of a series of doubles
 // and methods for quick statistics about them.
 class StatsKeeper {
   public:
@@ -1138,12 +1137,12 @@ class StatsKeeper {
     double minimum;
     double maximum;
 };
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;section-10&quot;&gt;考虑断行的连续性和简洁&lt;/h3&gt;
-&lt;p&gt;这段代码需要断行，来满足不超过一行80个字符的要求，参数也需要注释说明：&lt;/p&gt;
+&lt;p&gt;###考虑断行的连续性和简洁
+这段代码需要断行，来满足不超过一行80个字符的要求，参数也需要注释说明：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;public class PerformanceTester {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public class PerformanceTester {
     public static final TcpConnectionSimulator wifi = new TcpConnectionSimulator(
         500, /* Kbps */
         80, /* millisecs latency */
@@ -1162,11 +1161,11 @@ class StatsKeeper {
         250, /* jitter */
         5 /* packet loss % */);
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;考虑到代码的连贯性，先优化成这样：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;public class PerformanceTester {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public class PerformanceTester {
     public static final TcpConnectionSimulator wifi =
         new TcpConnectionSimulator(
             500, /* Kbps */
@@ -1187,11 +1186,11 @@ class StatsKeeper {
             250,   /* jitter */
             5      /* packet loss % */);
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;连贯性好一点，但还是太罗嗦，额外占用很多空间：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;public class PerformanceTester {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public class PerformanceTester {
     // TcpConnectionSimulator(throughput, latency, jitter, packet_loss)
     //                            [Kbps]   [ms]    [ms]    [percent]
     public static final TcpConnectionSimulator wifi =
@@ -1203,12 +1202,12 @@ class StatsKeeper {
     public static final TcpConnectionSimulator cell =
         new TcpConnectionSimulator(100,    400,    250,     5);
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;section-11&quot;&gt;用函数封装&lt;/h3&gt;
+&lt;p&gt;###用函数封装&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// Turn a partial_name like &quot;Doug Adams&quot; into &quot;Mr. Douglas Adams&quot;.
-// If not possible, &#39;error&#39; is filled with an explanation.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Turn a partial_name like &quot;Doug Adams&quot; into &quot;Mr. Douglas Adams&quot;.
+// If not possible, 'error' is filled with an explanation.
 string ExpandFullName(DatabaseConnection dc, string partial_name, string* error);
 
 DatabaseConnection database_connection;
@@ -1223,11 +1222,11 @@ assert(ExpandFullName(database_connection, &quot;No Such Guy&quot;, &amp;amp;err
 assert(error == &quot;no match found&quot;);
 assert(ExpandFullName(database_connection, &quot;John&quot;, &amp;amp;error) == &quot;&quot;);
 assert(error == &quot;more than one result&quot;);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;上面这段代码看起来很脏乱，很多重复性的东西，可以用函数封装：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;CheckFullName(&quot;Doug Adams&quot;, &quot;Mr. Douglas Adams&quot;, &quot;&quot;);
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CheckFullName(&quot;Doug Adams&quot;, &quot;Mr. Douglas Adams&quot;, &quot;&quot;);
 CheckFullName(&quot; Jake Brown &quot;, &quot;Mr. Jake Brown III&quot;, &quot;&quot;);
 CheckFullName(&quot;No Such Guy&quot;, &quot;&quot;, &quot;no match found&quot;);
 CheckFullName(&quot;John&quot;, &quot;&quot;, &quot;more than one result&quot;);
@@ -1241,12 +1240,12 @@ void CheckFullName(string partial_name,
     assert(error == expected_error);
     assert(full_name == expected_full_name);
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;section-12&quot;&gt;列对齐&lt;/h3&gt;
-&lt;p&gt;列对齐可以让代码段看起来更舒适：&lt;/p&gt;
+&lt;p&gt;###列对齐
+列对齐可以让代码段看起来更舒适：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;CheckFullName(&quot;Doug Adams&quot;   , &quot;Mr. Douglas Adams&quot; , &quot;&quot;);
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CheckFullName(&quot;Doug Adams&quot;   , &quot;Mr. Douglas Adams&quot; , &quot;&quot;);
 CheckFullName(&quot; Jake  Brown &quot;, &quot;Mr. Jake Brown III&quot;, &quot;&quot;);
 CheckFullName(&quot;No Such Guy&quot;  , &quot;&quot;                  , &quot;no match found&quot;);
 CheckFullName(&quot;John&quot;         , &quot;&quot;                  , &quot;more than one result&quot;);
@@ -1260,11 +1259,11 @@ commands[] = {
     { &quot;useragent&quot;    , NULL              , cmd_spec_useragent},
     ...
 };
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;section-13&quot;&gt;代码用块区分&lt;/h3&gt;
+&lt;p&gt;###代码用块区分&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;class FrontendServer {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class FrontendServer {
     public:
         FrontendServer();
         void ViewProfile(HttpRequest* request);
@@ -1277,11 +1276,11 @@ commands[] = {
         void CloseDatabase(string location);
         ~FrontendServer();
 };
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;上面这一段虽然能看，不过还有优化空间：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;class FrontendServer {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class FrontendServer {
     public:
         FrontendServer();
         ~FrontendServer();
@@ -1299,12 +1298,12 @@ commands[] = {
         void OpenDatabase(string location, string user);
         void CloseDatabase(string location);
 };
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;再来看一段代码：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;# Import the user&#39;s email contacts, and match them to users in our system.
-# Then display a list of those users that he/she isn&#39;t already friends with.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Import the user's email contacts, and match them to users in our system.
+# Then display a list of those users that he/she isn't already friends with.
 def suggest_new_friends(user, email_password):
     friends = user.friends()
     friend_emails = set(f.email for f in friends)
@@ -1312,44 +1311,44 @@ def suggest_new_friends(user, email_password):
     contact_emails = set(c.email for c in contacts)
     non_friend_emails = contact_emails - friend_emails
     suggested_friends = User.objects.select(email__in=non_friend_emails)
-    display[&#39;user&#39;] = user
-    display[&#39;friends&#39;] = friends
-    display[&#39;suggested_friends&#39;] = suggested_friends
+    display['user'] = user
+    display['friends'] = friends
+    display['suggested_friends'] = suggested_friends
     return render(&quot;suggested_friends.html&quot;, display)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;全都混在一起，视觉压力相当大，按功能化块：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;def suggest_new_friends(user, email_password):
-    # Get the user&#39;s friends&#39; email addresses.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def suggest_new_friends(user, email_password):
+    # Get the user's friends' email addresses.
     friends = user.friends()
     friend_emails = set(f.email for f in friends)
 
-    # Import all email addresses from this user&#39;s email account.
+    # Import all email addresses from this user's email account.
     contacts = import_contacts(user.email, email_password)
     contact_emails = set(c.email for c in contacts)
 
-    # Find matching users that they aren&#39;t already friends with.
+    # Find matching users that they aren't already friends with.
     non_friend_emails = contact_emails - friend_emails
     suggested_friends = User.objects.select(email__in=non_friend_emails)
 
-    # Display these lists on the page. display[&#39;user&#39;] = user
-    display[&#39;friends&#39;] = friends
-    display[&#39;suggested_friends&#39;] = suggested_friends
+    # Display these lists on the page. display['user'] = user
+    display['friends'] = friends
+    display['suggested_friends'] = suggested_friends
 
     return render(&quot;suggested_friends.html&quot;, display)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;让代码看起来更舒服，需要在写的过程中多注意，培养一些好的习惯，尤其当团队合作的时候，代码风格比如大括号的位置并没有对错，但是不遵循团队规范那就是错的。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-14&quot;&gt;如何写注释&lt;/h2&gt;
-&lt;p&gt;当你写代码的时候，你会思考很多，但是最终呈现给读者的就只剩代码本身了，额外的信息丢失了，所以注释的目的就是让读者了解更多的信息。&lt;/p&gt;
+&lt;p&gt;##如何写注释
+当你写代码的时候，你会思考很多，但是最终呈现给读者的就只剩代码本身了，额外的信息丢失了，所以注释的目的就是让读者了解更多的信息。&lt;/p&gt;
 
-&lt;h3 id=&quot;section-15&quot;&gt;应该注释什么&lt;/h3&gt;
-&lt;p&gt;####不应该注释什么
+&lt;p&gt;###应该注释什么
+####不应该注释什么
 这样的注释毫无价值：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// The class definition for Account
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// The class definition for Account
 class Account {
     public:
         // Constructor
@@ -1359,101 +1358,101 @@ class Account {
         // Return the profit from this Account
         double GetProfit();
 };
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-16&quot;&gt;不要像下面这样为了注释而注释：&lt;/h4&gt;
+&lt;p&gt;####不要像下面这样为了注释而注释：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// Find a Node with the given &#39;name&#39; or return NULL.
-// If depth &amp;lt;= 0, only &#39;subtree&#39; is inspected.
-// If depth == N, only &#39;subtree&#39; and N levels below are inspected.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Find a Node with the given 'name' or return NULL.
+// If depth &amp;lt;= 0, only 'subtree' is inspected.
+// If depth == N, only 'subtree' and N levels below are inspected.
 Node* FindNodeInSubtree(Node* subtree, string name, int depth);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-17&quot;&gt;不要给烂取名注释&lt;/h4&gt;
+&lt;p&gt;####不要给烂取名注释&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// Enforce limits on the Reply as stated in the Request,
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Enforce limits on the Reply as stated in the Request,
 // such as the number of items returned, or total byte size, etc. 
 void CleanReply(Request request, Reply reply);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;注释的大部分都在解释clean是什么意思，那不如换个正确的名字：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// Make sure &#39;reply&#39; meets the count/byte/etc. limits from the &#39;request&#39; 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Make sure 'reply' meets the count/byte/etc. limits from the 'request' 
 void EnforceLimitsFromRequest(Request request, Reply reply);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-18&quot;&gt;记录你的想法&lt;/h4&gt;
-&lt;p&gt;我们讨论了不该注释什么，那么应该注释什么呢？注释应该记录你思考代码怎么写的结果，比如像下面这些：&lt;/p&gt;
+&lt;p&gt;####记录你的想法
+我们讨论了不该注释什么，那么应该注释什么呢？注释应该记录你思考代码怎么写的结果，比如像下面这些：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// Surprisingly, a binary tree was 40% faster than a hash table for this data.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Surprisingly, a binary tree was 40% faster than a hash table for this data.
 // The cost of computing a hash was more than the left/right comparisons.
 
-// This heuristic might miss a few words. That&#39;s OK; solving this 100% is hard.
+// This heuristic might miss a few words. That's OK; solving this 100% is hard.
 
-// This class is getting messy. Maybe we should create a &#39;ResourceNode&#39; subclass to
+// This class is getting messy. Maybe we should create a 'ResourceNode' subclass to
 // help organize things.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;也可以用来记录流程和常量：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// TODO: use a faster algorithm
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// TODO: use a faster algorithm
 // TODO(dustin): handle other image formats besides JPEG
 
-NUM_THREADS = 8 # as long as it&#39;s &amp;gt;= 2 * num_processors, that&#39;s good enough.
+NUM_THREADS = 8 # as long as it's &amp;gt;= 2 * num_processors, that's good enough.
 
 // Impose a reasonable limit - no human can read that much anyway.
 const int MAX_RSS_SUBSCRIPTIONS = 1000;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;可用的词有：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;TODO  : Stuff I haven&#39;t gotten around to yet
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TODO  : Stuff I haven't gotten around to yet
 FIXME : Known-broken code here
 HACK  : Adimittedly inelegant solution to a problem
 XXX   : Danger! Major problem here
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-19&quot;&gt;站在读者的角度去思考&lt;/h4&gt;
-&lt;p&gt;当别人读你的代码时，让他们产生疑问的部分，就是你应该注释的地方。&lt;/p&gt;
+&lt;p&gt;####站在读者的角度去思考
+当别人读你的代码时，让他们产生疑问的部分，就是你应该注释的地方。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;struct Recorder {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;struct Recorder {
     vector&amp;lt;float&amp;gt; data;
     ...
     void Clear() {
         vector&amp;lt;float&amp;gt;().swap(data); // Huh? Why not just data.clear()? 
     }
 };
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;很多C++的程序员啊看到这里，可能会想为什么不用&lt;code&gt;data.clear()&lt;/code&gt;来代替&lt;code&gt;vector.swap&lt;/code&gt;，所以那个地方应该加上注释：&lt;/p&gt;
+&lt;p&gt;很多C++的程序员啊看到这里，可能会想为什么不用&lt;code class=&quot;highlighter-rouge&quot;&gt;data.clear()&lt;/code&gt;来代替&lt;code class=&quot;highlighter-rouge&quot;&gt;vector.swap&lt;/code&gt;，所以那个地方应该加上注释：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// Force vector to relinquish its memory (look up &quot;STL swap trick&quot;)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Force vector to relinquish its memory (look up &quot;STL swap trick&quot;)
 vector&amp;lt;float&amp;gt;().swap(data);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-20&quot;&gt;说明可能陷阱&lt;/h4&gt;
-&lt;p&gt;你在写代码的过程中，可能用到一些hack，或者有其他需要读代码的人知道的陷阱，这时候就应该注释：&lt;/p&gt;
+&lt;p&gt;####说明可能陷阱
+你在写代码的过程中，可能用到一些hack，或者有其他需要读代码的人知道的陷阱，这时候就应该注释：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;void SendEmail(string to, string subject, string body);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void SendEmail(string to, string subject, string body);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;而实际上这个发送邮件的函数是调用别的服务，有超时设置，所以需要注释：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// Calls an external service to deliver email.  (Times out after 1 minute.)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Calls an external service to deliver email.  (Times out after 1 minute.)
 void SendEmail(string to, string subject, string body);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-21&quot;&gt;全景的注释&lt;/h4&gt;
-&lt;p&gt;有时候为了更清楚说明，需要给整个文件加注释，让读者有个总体的概念：&lt;/p&gt;
+&lt;p&gt;####全景的注释
+有时候为了更清楚说明，需要给整个文件加注释，让读者有个总体的概念：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// This file contains helper functions that provide a more convenient interface to our
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// This file contains helper functions that provide a more convenient interface to our
 // file system. It handles file permissions and other nitty-gritty details.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-22&quot;&gt;总结性的注释&lt;/h4&gt;
-&lt;p&gt;即使是在函数内部，也可以有类似文件注释那样的说明注释：&lt;/p&gt;
+&lt;p&gt;####总结性的注释
+即使是在函数内部，也可以有类似文件注释那样的说明注释：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;# Find all the items that customers purchased for themselves.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Find all the items that customers purchased for themselves.
 for customer_id in all_customers:
     for sale in all_sales[customer_id].sales:
         if sale.recipient == customer_id:
@@ -1462,62 +1461,62 @@ for customer_id in all_customers:
 def GenerateUserReport():
     # Acquire a lock for this user
     ...
-    # Read user&#39;s info from the database
+    # Read user's info from the database
     ...
     # Write info to a file
     ...
     # Release the lock for this user
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;很多人不愿意写注释，确实，要写好注释也不是一件简单的事情，也可以在文件专门的地方，留个写注释的区域，可以写下你任何想说的东西。&lt;/p&gt;
 
-&lt;h3 id=&quot;section-23&quot;&gt;注释应简明准确&lt;/h3&gt;
-&lt;p&gt;前一个小节讨论了注释应该写什么，这一节来讨论应该怎么写，因为注释很重要，所以要写的精确，注释也占据屏幕空间，所以要简洁。&lt;/p&gt;
+&lt;p&gt;###注释应简明准确
+前一个小节讨论了注释应该写什么，这一节来讨论应该怎么写，因为注释很重要，所以要写的精确，注释也占据屏幕空间，所以要简洁。&lt;/p&gt;
 
-&lt;h4 id=&quot;section-24&quot;&gt;精简注释&lt;/h4&gt;
+&lt;p&gt;####精简注释&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// The int is the CategoryType.
-// The first float in the inner pair is the &#39;score&#39;,
-// the second is the &#39;weight&#39;.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// The int is the CategoryType.
+// The first float in the inner pair is the 'score',
+// the second is the 'weight'.
 typedef hash_map&amp;lt;int, pair&amp;lt;float, float&amp;gt; &amp;gt; ScoreMap;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;这样写太罗嗦了，尽量精简压缩成这样：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// CategoryType -&amp;gt; (score, weight)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// CategoryType -&amp;gt; (score, weight)
 typedef hash_map&amp;lt;int, pair&amp;lt;float, float&amp;gt; &amp;gt; ScoreMap;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-25&quot;&gt;避免有歧义的代词&lt;/h4&gt;
+&lt;p&gt;####避免有歧义的代词&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// Insert the data into the cache, but check if it&#39;s too big first.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Insert the data into the cache, but check if it's too big first.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;这里的&lt;code&gt;it&#39;s&lt;/code&gt;有歧义，不知道所指的是&lt;code&gt;data&lt;/code&gt;还是&lt;code&gt;cache&lt;/code&gt;，改成如下：&lt;/p&gt;
+&lt;p&gt;这里的&lt;code class=&quot;highlighter-rouge&quot;&gt;it's&lt;/code&gt;有歧义，不知道所指的是&lt;code class=&quot;highlighter-rouge&quot;&gt;data&lt;/code&gt;还是&lt;code class=&quot;highlighter-rouge&quot;&gt;cache&lt;/code&gt;，改成如下：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// Insert the data into the cache, but check if the data is too big first.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Insert the data into the cache, but check if the data is too big first.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;还有更好的解决办法，这里的&lt;code&gt;it&lt;/code&gt;就有明确所指：&lt;/p&gt;
+&lt;p&gt;还有更好的解决办法，这里的&lt;code class=&quot;highlighter-rouge&quot;&gt;it&lt;/code&gt;就有明确所指：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// If the data is small enough, insert it into the cache.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// If the data is small enough, insert it into the cache.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-26&quot;&gt;语句要精简准确&lt;/h4&gt;
+&lt;p&gt;####语句要精简准确&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;# Depending on whether we&#39;ve already crawled this URL before, give it a different priority.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Depending on whether we've already crawled this URL before, give it a different priority.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;这句话理解起来太费劲，改成如下就好理解很多：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;# Give higher priority to URLs we&#39;ve never crawled before.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Give higher priority to URLs we've never crawled before.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-27&quot;&gt;精确描述函数的目的&lt;/h4&gt;
+&lt;p&gt;####精确描述函数的目的&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// Return the number of lines in this file.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Return the number of lines in this file.
 int CountLines(string filename) { ... }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;这样的一个函数，用起来可能会一头雾水，因为他可以有很多歧义：&lt;/p&gt;
 
@@ -1531,27 +1530,27 @@ int CountLines(string filename) { ... }
 
 &lt;p&gt;所以注释应该这样写：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// Count how many newline bytes (&#39;\n&#39;) are in the file.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Count how many newline bytes ('\n') are in the file.
 int CountLines(string filename) { ... }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-28&quot;&gt;用实例说明边界情况&lt;/h4&gt;
+&lt;p&gt;####用实例说明边界情况&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// Rearrange &#39;v&#39; so that elements &amp;lt; pivot come before those &amp;gt;= pivot;
-// Then return the largest &#39;i&#39; for which v[i] &amp;lt; pivot (or -1 if none are &amp;lt; pivot)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Rearrange 'v' so that elements &amp;lt; pivot come before those &amp;gt;= pivot;
+// Then return the largest 'i' for which v[i] &amp;lt; pivot (or -1 if none are &amp;lt; pivot)
 int Partition(vector&amp;lt;int&amp;gt;* v, int pivot);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;这个描述很精确，但是如果再加入一个例子，就更好了：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// ...
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// ...
 // Example: Partition([8 5 9 8 2], 8) might result in [5 2 | 8 9 8] and return 1
 int Partition(vector&amp;lt;int&amp;gt;* v, int pivot);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-29&quot;&gt;说明你的代码的真正目的&lt;/h4&gt;
+&lt;p&gt;####说明你的代码的真正目的&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;void DisplayProducts(list&amp;lt;Product&amp;gt; products) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void DisplayProducts(list&amp;lt;Product&amp;gt; products) {
     products.sort(CompareProductByPrice);
     // Iterate through the list in reverse order
     for (list&amp;lt;Product&amp;gt;::reverse_iterator it = products.rbegin(); it != products.rend();
@@ -1559,55 +1558,55 @@ int Partition(vector&amp;lt;int&amp;gt;* v, int pivot);
         DisplayPrice(it-&amp;gt;price);
     ... 
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;这里的注释说明了倒序排列，单还不够准确，应该改成这样：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// Display each price, from highest to lowest
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Display each price, from highest to lowest
 for (list&amp;lt;Product&amp;gt;::reverse_iterator it = products.rbegin(); ... )
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-30&quot;&gt;函数调用时的注释&lt;/h4&gt;
-&lt;p&gt;看见这样的一个函数调用，肯定会一头雾水：&lt;/p&gt;
+&lt;p&gt;####函数调用时的注释
+看见这样的一个函数调用，肯定会一头雾水：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Connect(10, false);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Connect(10, false);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;如果加上这样的注释，读起来就清楚多了：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;def Connect(timeout, use_encryption):  ...
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def Connect(timeout, use_encryption):  ...
 
 # Call the function using named parameters
 Connect(timeout = 10, use_encryption = False)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-31&quot;&gt;使用信息含量丰富的词&lt;/h4&gt;
+&lt;p&gt;####使用信息含量丰富的词&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// This class contains a number of members that store the same information as in the
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// This class contains a number of members that store the same information as in the
 // database, but are stored here for speed. When this class is read from later, those
 // members are checked first to see if they exist, and if so are returned; otherwise the
 // database is read from and that data stored in those fields for next time.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;上面这一大段注释，解释的很清楚，如果换一个词来代替，也不会有什么疑惑：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// This class acts as a caching layer to the database.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// This class acts as a caching layer to the database.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;section-32&quot;&gt;简化循环和逻辑&lt;/h2&gt;
+&lt;p&gt;##简化循环和逻辑&lt;/p&gt;
 
-&lt;h3 id=&quot;section-33&quot;&gt;流程控制要简单&lt;/h3&gt;
-&lt;p&gt;让条件语句、循环以及其他控制流程的代码尽可能自然，让读者在阅读过程中不需要停顿思考或者在回头查找，是这一节的目的。&lt;/p&gt;
+&lt;p&gt;###流程控制要简单
+让条件语句、循环以及其他控制流程的代码尽可能自然，让读者在阅读过程中不需要停顿思考或者在回头查找，是这一节的目的。&lt;/p&gt;
 
-&lt;h4 id=&quot;section-34&quot;&gt;条件语句中参数的位置&lt;/h4&gt;
-&lt;p&gt;对比下面两种条件的写法：&lt;/p&gt;
+&lt;p&gt;####条件语句中参数的位置
+对比下面两种条件的写法：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;if (length &amp;gt;= 10)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (length &amp;gt;= 10)
 while (bytes_received &amp;lt; bytes_expected)
 
 if (10 &amp;lt;= length)
 while (bytes_expected &amp;gt; bytes_received)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;到底是应该按照大于小于的顺序来呢，还是有其他的准则？是的，应该按照参数的意义来&lt;/p&gt;
 
@@ -1616,12 +1615,12 @@ while (bytes_expected &amp;gt; bytes_received)
 &lt;li&gt;运算符右边：通常是被比对的样本，一定程度上的常量&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;这就解释了为什么&lt;code&gt;bytes_received &amp;lt; bytes_expected&lt;/code&gt;比反过来更好理解。&lt;/p&gt;
+&lt;p&gt;这就解释了为什么&lt;code class=&quot;highlighter-rouge&quot;&gt;bytes_received &amp;lt; bytes_expected&lt;/code&gt;比反过来更好理解。&lt;/p&gt;
 
-&lt;h4 id=&quot;ifelse&quot;&gt;if/else的顺序&lt;/h4&gt;
-&lt;p&gt;通常，&lt;code&gt;if/else&lt;/code&gt;的顺序你可以自由选择，下面这两种都可以：&lt;/p&gt;
+&lt;p&gt;####if/else的顺序
+通常，&lt;code class=&quot;highlighter-rouge&quot;&gt;if/else&lt;/code&gt;的顺序你可以自由选择，下面这两种都可以：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;if (a == b) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (a == b) {
     // Case One ...
 } else {
     // Case Two ...
@@ -1632,19 +1631,19 @@ if (a != b) {
 } else {
     // Case One ...
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;或许对此你也没有仔细斟酌过，但在有些时候，一种顺序确实好过另一种：&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;正向的逻辑在前，比如&lt;code&gt;if(debug)&lt;/code&gt;就比&lt;code&gt;if(!debug)&lt;/code&gt;好&lt;/li&gt;
-  &lt;li&gt;简单逻辑的在前，这样&lt;code&gt;if&lt;/code&gt;和&lt;code&gt;else&lt;/code&gt;就可以在一个屏幕显示&lt;/li&gt;
+  &lt;li&gt;正向的逻辑在前，比如&lt;code class=&quot;highlighter-rouge&quot;&gt;if(debug)&lt;/code&gt;就比&lt;code class=&quot;highlighter-rouge&quot;&gt;if(!debug)&lt;/code&gt;好&lt;/li&gt;
+  &lt;li&gt;简单逻辑的在前，这样&lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;else&lt;/code&gt;就可以在一个屏幕显示&lt;/li&gt;
   &lt;li&gt;有趣、清晰的逻辑在前&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;举个例子来看：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;if (!url.HasQueryParameter(&quot;expand_all&quot;)) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (!url.HasQueryParameter(&quot;expand_all&quot;)) {
     response.Render(items);
     ...
 } else {
@@ -1653,11 +1652,11 @@ if (a != b) {
     }
     ... 
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;看到&lt;code&gt;if&lt;/code&gt;你首先想到的是&lt;code&gt;expand_all&lt;/code&gt;，就好像告诉你“不要想大象”，你会忍不住去想它，所以产生了一点点迷惑，最好写成：&lt;/p&gt;
+&lt;p&gt;看到&lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt;你首先想到的是&lt;code class=&quot;highlighter-rouge&quot;&gt;expand_all&lt;/code&gt;，就好像告诉你“不要想大象”，你会忍不住去想它，所以产生了一点点迷惑，最好写成：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;if (url.HasQueryParameter(&quot;expand_all&quot;)) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (url.HasQueryParameter(&quot;expand_all&quot;)) {
     for (int i = 0; i &amp;lt; items.size(); i++) {
         items[i].Expand();
     }
@@ -1666,11 +1665,11 @@ if (a != b) {
     response.Render(items);
     ... 
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-35&quot;&gt;三目运算符(?:)&lt;/h4&gt;
+&lt;p&gt;####三目运算符(?:)&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;time_str += (hour &amp;gt;= 12) ? &quot;pm&quot; : &quot;am&quot;;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;time_str += (hour &amp;gt;= 12) ? &quot;pm&quot; : &quot;am&quot;;
 
 Avoiding the ternary operator, you might write:
     if (hour &amp;gt;= 12) {
@@ -1678,44 +1677,44 @@ Avoiding the ternary operator, you might write:
     } else {
         time_str += &quot;am&quot;;
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;使用三目运算符可以减少代码行数，上例就是一个很好的例证，但是我们的真正目的是减少读代码的时间，所以下面的情况并不适合用三目运算符：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;return exponent &amp;gt;= 0 ? mantissa * (1 &amp;lt;&amp;lt; exponent) : mantissa / (1 &amp;lt;&amp;lt; -exponent);
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;return exponent &amp;gt;= 0 ? mantissa * (1 &amp;lt;&amp;lt; exponent) : mantissa / (1 &amp;lt;&amp;lt; -exponent);
 
 if (exponent &amp;gt;= 0) {
     return mantissa * (1 &amp;lt;&amp;lt; exponent);
 } else {
     return mantissa / (1 &amp;lt;&amp;lt; -exponent);
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;所以只在简单表达式的地方用。&lt;/p&gt;
 
-&lt;h4 id=&quot;dowhile&quot;&gt;避免使用do/while表达式&lt;/h4&gt;
+&lt;p&gt;####避免使用do/while表达式&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;do {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;do {
     continue;
 } while (false);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;这段代码会执行几遍呢，需要时间思考一下，&lt;code&gt;do/while&lt;/code&gt;完全可以用别的方法代替，所以应避免使用。&lt;/p&gt;
+&lt;p&gt;这段代码会执行几遍呢，需要时间思考一下，&lt;code class=&quot;highlighter-rouge&quot;&gt;do/while&lt;/code&gt;完全可以用别的方法代替，所以应避免使用。&lt;/p&gt;
 
-&lt;h4 id=&quot;return&quot;&gt;尽早return&lt;/h4&gt;
+&lt;p&gt;####尽早return&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;public boolean Contains(String str, String substr) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public boolean Contains(String str, String substr) {
     if (str == null || substr == null) return false;
     if (substr.equals(&quot;&quot;)) return true;
     ...
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;函数里面尽早的return，可以让逻辑更加清晰。&lt;/p&gt;
 
-&lt;h4 id=&quot;section-36&quot;&gt;减少嵌套&lt;/h4&gt;
+&lt;p&gt;####减少嵌套&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;if (user_result == SUCCESS) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (user_result == SUCCESS) {
     if (permission_result != SUCCESS) {
         reply.WriteErrors(&quot;error reading permissions&quot;);
         reply.Done();
@@ -1726,11 +1725,11 @@ if (exponent &amp;gt;= 0) {
     reply.WriteErrors(user_result);
 }
 reply.Done();
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;这样一段代码，有一层的嵌套，但是看起来也会稍有迷惑，想想自己的代码，有没有类似的情况呢？可以换个思路去考虑这段代码，并且用尽早return的原则修改，看起来就舒服很多：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;if (user_result != SUCCESS) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (user_result != SUCCESS) {
     reply.WriteErrors(user_result);
     reply.Done();
     return;
@@ -1742,11 +1741,11 @@ if (permission_result != SUCCESS) {
 }
 reply.WriteErrors(&quot;&quot;);
 reply.Done();
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;同样的，对于有嵌套的循环，可以采用同样的办法：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;for (int i = 0; i &amp;lt; results.size(); i++) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for (int i = 0; i &amp;lt; results.size(); i++) {
     if (results[i] != NULL) {
         non_null_count++;
         if (results[i]-&amp;gt;name != &quot;&quot;) {
@@ -1755,11 +1754,11 @@ reply.Done();
         }
     }
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;换一种写法，尽早return，在循环中就用continue：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;for (int i = 0; i &amp;lt; results.size(); i++) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for (int i = 0; i &amp;lt; results.size(); i++) {
     if (results[i] == NULL) continue;
     non_null_count++;
 
@@ -1767,25 +1766,25 @@ reply.Done();
     cout &amp;lt;&amp;lt; &quot;Considering candidate...&quot; &amp;lt;&amp;lt; endl;
     ... 
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;section-37&quot;&gt;拆分复杂表达式&lt;/h3&gt;
-&lt;p&gt;很显然的，越复杂的表达式，读起来越费劲，所以应该把那些复杂而庞大的表达式，拆分成一个个易于理解的小式子。&lt;/p&gt;
+&lt;p&gt;###拆分复杂表达式
+很显然的，越复杂的表达式，读起来越费劲，所以应该把那些复杂而庞大的表达式，拆分成一个个易于理解的小式子。&lt;/p&gt;
 
-&lt;h4 id=&quot;section-38&quot;&gt;用变量&lt;/h4&gt;
-&lt;p&gt;将复杂表达式拆分最简单的办法，就是增加一个变量：&lt;/p&gt;
+&lt;p&gt;####用变量
+将复杂表达式拆分最简单的办法，就是增加一个变量：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;if line.split(&#39;:&#39;)[0].strip() == &quot;root&quot;:
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if line.split(':')[0].strip() == &quot;root&quot;:
 
 //用变量替换
-username = line.split(&#39;:&#39;)[0].strip() 
+username = line.split(':')[0].strip() 
 if username == &quot;root&quot;:
     ...
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;或者这个例子：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;if (request.user.id == document.owner_id) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (request.user.id == document.owner_id) {
     // user can edit this document...
 }
 ...
@@ -1802,9 +1801,9 @@ if (user_owns_document) {
 if (!user_owns_document) {
     // document is read-only...
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-39&quot;&gt;逻辑替换&lt;/h4&gt;
+&lt;p&gt;####逻辑替换&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;1) not (a or b or c)   &amp;lt;–&amp;gt; (not a) and (not b) and (not c)&lt;/li&gt;
@@ -1813,31 +1812,31 @@ if (!user_owns_document) {
 
 &lt;p&gt;所以，就可以这样写：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;if (!(file_exists &amp;amp;&amp;amp; !is_protected)) Error(&quot;Sorry, could not read file.&quot;);
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (!(file_exists &amp;amp;&amp;amp; !is_protected)) Error(&quot;Sorry, could not read file.&quot;);
 
 //替换
 if (!file_exists || is_protected) Error(&quot;Sorry, could not read file.&quot;);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-40&quot;&gt;不要滥用逻辑表达式&lt;/h4&gt;
+&lt;p&gt;####不要滥用逻辑表达式&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;assert((!(bucket = FindBucket(key))) || !bucket-&amp;gt;IsOccupied());
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;assert((!(bucket = FindBucket(key))) || !bucket-&amp;gt;IsOccupied());
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;这样的代码完全可以用下面这个替换，虽然有两行，但是更易懂：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;bucket = FindBucket(key);
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bucket = FindBucket(key);
 if (bucket != NULL) assert(!bucket-&amp;gt;IsOccupied());
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;像下面这样的表达式，最好也不要写，因为在有些语言中，x会被赋予第一个为&lt;code&gt;true&lt;/code&gt;的变量的值：&lt;/p&gt;
+&lt;p&gt;像下面这样的表达式，最好也不要写，因为在有些语言中，x会被赋予第一个为&lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;的变量的值：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;x = a || b || c
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;x = a || b || c
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-41&quot;&gt;拆解大表达式&lt;/h4&gt;
+&lt;p&gt;####拆解大表达式&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var update_highlight = function (message_num) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var update_highlight = function (message_num) {
     if ($(&quot;#vote_value&quot; + message_num).html() === &quot;Up&quot;) {
         $(&quot;#thumbs_up&quot; + message_num).addClass(&quot;highlighted&quot;);
         $(&quot;#thumbs_down&quot; + message_num).removeClass(&quot;highlighted&quot;);
@@ -1849,11 +1848,11 @@ if (bucket != NULL) assert(!bucket-&amp;gt;IsOccupied());
         $(&quot;#thumbs_down&quot; + message_num).removeClass(&quot;highlighted&quot;);
     }
 };
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;这里面有很多重复的语句，我们可以用变量还替换简化：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var update_highlight = function (message_num) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var update_highlight = function (message_num) {
     var thumbs_up = $(&quot;#thumbs_up&quot; + message_num);
     var thumbs_down = $(&quot;#thumbs_down&quot; + message_num);
     var vote_value = $(&quot;#vote_value&quot; + message_num).html();
@@ -1870,20 +1869,20 @@ if (bucket != NULL) assert(!bucket-&amp;gt;IsOccupied());
         thumbs_down.removeClass(hi);
     }
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;section-42&quot;&gt;变量与可读性&lt;/h3&gt;
+&lt;p&gt;###变量与可读性&lt;/p&gt;
 
-&lt;h4 id=&quot;section-43&quot;&gt;消除变量&lt;/h4&gt;
-&lt;p&gt;前一节，讲到利用变量来拆解大表达式，这一节来讨论如何消除多余的变量。&lt;/p&gt;
+&lt;p&gt;####消除变量
+前一节，讲到利用变量来拆解大表达式，这一节来讨论如何消除多余的变量。&lt;/p&gt;
 
-&lt;h4 id=&quot;section-44&quot;&gt;没用的临时变量&lt;/h4&gt;
+&lt;p&gt;####没用的临时变量&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;now = datetime.datetime.now()
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;now = datetime.datetime.now()
 root_message.last_view_time = now
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;这里的&lt;code&gt;now&lt;/code&gt;可以去掉，因为：&lt;/p&gt;
+&lt;p&gt;这里的&lt;code class=&quot;highlighter-rouge&quot;&gt;now&lt;/code&gt;可以去掉，因为：&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;并非用来拆分复杂的表达式&lt;/li&gt;
@@ -1893,12 +1892,12 @@ root_message.last_view_time = now
 
 &lt;p&gt;所以完全可以写作：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;root_message.last_view_time = datetime.datetime.now()
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;root_message.last_view_time = datetime.datetime.now()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-45&quot;&gt;消除条件控制变量&lt;/h4&gt;
+&lt;p&gt;####消除条件控制变量&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;boolean done = false;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;boolean done = false;
 while (/* condition */ &amp;amp;&amp;amp; !done) {
     ...
     if (...) {
@@ -1906,24 +1905,24 @@ while (/* condition */ &amp;amp;&amp;amp; !done) {
         continue; 
     }
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;这里的&lt;code&gt;done&lt;/code&gt;可以用别的方式更好的完成：&lt;/p&gt;
+&lt;p&gt;这里的&lt;code class=&quot;highlighter-rouge&quot;&gt;done&lt;/code&gt;可以用别的方式更好的完成：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;while (/* condition */) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;while (/* condition */) {
     ...
     if (...) {
         break;
     } 
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;这个例子非常容易修改，如果是比较复杂的嵌套，&lt;code&gt;break&lt;/code&gt;可能并不够用，这时候就可以把代码封装到函数中。&lt;/p&gt;
+&lt;p&gt;这个例子非常容易修改，如果是比较复杂的嵌套，&lt;code class=&quot;highlighter-rouge&quot;&gt;break&lt;/code&gt;可能并不够用，这时候就可以把代码封装到函数中。&lt;/p&gt;
 
-&lt;h4 id=&quot;section-46&quot;&gt;减少变量的作用域&lt;/h4&gt;
-&lt;p&gt;我们都听过要避免使用全局变量这样的忠告，是的，当变量的作用域越大，就越难追踪，所以要保持变量小的作用域。&lt;/p&gt;
+&lt;p&gt;####减少变量的作用域
+我们都听过要避免使用全局变量这样的忠告，是的，当变量的作用域越大，就越难追踪，所以要保持变量小的作用域。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;class LargeClass {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class LargeClass {
     string str_;
     void Method1() {
         str_ = ...;
@@ -1932,14 +1931,14 @@ while (/* condition */ &amp;amp;&amp;amp; !done) {
     void Method2() {
         // Uses str_
     }
-    // Lots of other methods that don&#39;t use str_ 
+    // Lots of other methods that don't use str_ 
     ... ;
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;这里的&lt;code&gt;str_&lt;/code&gt;的作用域有些大，完全可以换一种方式：&lt;/p&gt;
+&lt;p&gt;这里的&lt;code class=&quot;highlighter-rouge&quot;&gt;str_&lt;/code&gt;的作用域有些大，完全可以换一种方式：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;class LargeClass {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class LargeClass {
     void Method1() {
         string str = ...;
         Method2(str); 
@@ -1947,15 +1946,15 @@ while (/* condition */ &amp;amp;&amp;amp; !done) {
     void Method2(string str) {
         // Uses str
     }
-    // Now other methods can&#39;t see str.
+    // Now other methods can't see str.
 };
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;将&lt;code&gt;str&lt;/code&gt;通过变量函数参数传递，减小了作用域，也更易读。同样的道理也可以用在定义类的时候，将大类拆分成一个个小类。&lt;/p&gt;
+&lt;p&gt;将&lt;code class=&quot;highlighter-rouge&quot;&gt;str&lt;/code&gt;通过变量函数参数传递，减小了作用域，也更易读。同样的道理也可以用在定义类的时候，将大类拆分成一个个小类。&lt;/p&gt;
 
-&lt;h4 id=&quot;section-47&quot;&gt;不要使用嵌套的作用域&lt;/h4&gt;
+&lt;p&gt;####不要使用嵌套的作用域&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;# No use of example_value up to this point.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# No use of example_value up to this point.
 if request:
     for value in request.values:
     if value &amp;gt; 0:
@@ -1964,11 +1963,11 @@ if request:
 
 for logger in debug.loggers:
     logger.log(&quot;Example:&quot;, example_value)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;这个例子在运行时候会报&lt;code&gt;example_value is undefined&lt;/code&gt;的错，修改起来不算难：&lt;/p&gt;
+&lt;p&gt;这个例子在运行时候会报&lt;code class=&quot;highlighter-rouge&quot;&gt;example_value is undefined&lt;/code&gt;的错，修改起来不算难：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;example_value = None
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;example_value = None
 if request:
     for value in request.values:
         if value &amp;gt; 0: example_value = value 
@@ -1977,25 +1976,25 @@ if request:
 if example_value:
     for logger in debug.loggers:
     logger.log(&quot;Example:&quot;, example_value)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;但是参考前面的&lt;strong&gt;消除中间变量&lt;/strong&gt;准则，还有更好的办法：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;def LogExample(value):
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def LogExample(value):
     for logger in debug.loggers:
         logger.log(&quot;Example:&quot;, value)
 
     if request:
         for value in request.values:
             if value &amp;gt; 0:
-                LogExample(value)  # deal with &#39;value&#39; immediately
+                LogExample(value)  # deal with 'value' immediately
                 break
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-48&quot;&gt;用到了再声明&lt;/h4&gt;
-&lt;p&gt;在C语言中，要求将所有的变量事先声明，这样当用到变量较多时候，读者处理这些信息就会有难度，所以一开始没用到的变量，就暂缓声明：&lt;/p&gt;
+&lt;p&gt;####用到了再声明
+在C语言中，要求将所有的变量事先声明，这样当用到变量较多时候，读者处理这些信息就会有难度，所以一开始没用到的变量，就暂缓声明：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;def ViewFilteredReplies(original_id):
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def ViewFilteredReplies(original_id):
     filtered_replies = []
     root_message = Messages.objects.get(original_id) 
     all_replies = Messages.objects.select(root_id=original_id)
@@ -2008,11 +2007,11 @@ if example_value:
             filtered_replies.append(reply)
 
     return filtered_replies
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;读者一次处理变量太多，可以暂缓声明：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;def ViewFilteredReplies(original_id):
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def ViewFilteredReplies(original_id):
     root_message = Messages.objects.get(original_id)
     root_message.view_count += 1
     root_message.last_view_time = datetime.datetime.now()
@@ -2025,15 +2024,15 @@ if example_value:
             filtered_replies.append(reply)
 
     return filtered_replies
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-49&quot;&gt;变量最好只写一次&lt;/h4&gt;
-&lt;p&gt;前面讨论了过多的变量会让读者迷惑，同一个变量，不停的被赋值也会让读者头晕，如果变量变化的次数少一些，代码可读性就更强。&lt;/p&gt;
+&lt;p&gt;####变量最好只写一次
+前面讨论了过多的变量会让读者迷惑，同一个变量，不停的被赋值也会让读者头晕，如果变量变化的次数少一些，代码可读性就更强。&lt;/p&gt;
 
-&lt;h4 id=&quot;section-50&quot;&gt;一个例子&lt;/h4&gt;
-&lt;p&gt;假设有一个页面，如下，需要给第一个空的&lt;code&gt;input&lt;/code&gt;赋值：&lt;/p&gt;
+&lt;p&gt;####一个例子
+假设有一个页面，如下，需要给第一个空的&lt;code class=&quot;highlighter-rouge&quot;&gt;input&lt;/code&gt;赋值：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&quot;text&quot; id=&quot;input1&quot; value=&quot;Dustin&quot;&amp;gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;input type=&quot;text&quot; id=&quot;input1&quot; value=&quot;Dustin&quot;&amp;gt;
 &amp;lt;input type=&quot;text&quot; id=&quot;input2&quot; value=&quot;Trevor&quot;&amp;gt;
 &amp;lt;input type=&quot;text&quot; id=&quot;input3&quot; value=&quot;&quot;&amp;gt;
 &amp;lt;input type=&quot;text&quot; id=&quot;input4&quot; value=&quot;Melissa&quot;&amp;gt;
@@ -2041,54 +2040,54 @@ if example_value:
 var setFirstEmptyInput = function (new_value) {
     var found = false;
     var i = 1;
-    var elem = document.getElementById(&#39;input&#39; + i);
+    var elem = document.getElementById('input' + i);
     while (elem !== null) {
-        if (elem.value === &#39;&#39;) {
+        if (elem.value === '') {
             found = true;
             break; 
         }
         i++;
-        elem = document.getElementById(&#39;input&#39; + i);
+        elem = document.getElementById('input' + i);
     }
     if (found) elem.value = new_value;
     return elem;
 };
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;这段代码能工作，有三个变量，我们逐一去看如何优化，&lt;code&gt;found&lt;/code&gt;作为中间变量，完全可以消除：&lt;/p&gt;
+&lt;p&gt;这段代码能工作，有三个变量，我们逐一去看如何优化，&lt;code class=&quot;highlighter-rouge&quot;&gt;found&lt;/code&gt;作为中间变量，完全可以消除：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var setFirstEmptyInput = function (new_value) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var setFirstEmptyInput = function (new_value) {
     var i = 1;
-    var elem = document.getElementById(&#39;input&#39; + i);
+    var elem = document.getElementById('input' + i);
     while (elem !== null) {
-        if (elem.value === &#39;&#39;) {
+        if (elem.value === '') {
             elem.value = new_value;
             return elem;
         }
         i++;
-        elem = document.getElementById(&#39;input&#39; + i);
+        elem = document.getElementById('input' + i);
     }
     return null;
 };
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;再来看&lt;code&gt;elem&lt;/code&gt;变量，只用来做循环，调用了很多次，所以很难跟踪他的值，&lt;code&gt;i&lt;/code&gt;也可以用&lt;code&gt;for&lt;/code&gt;来修改：&lt;/p&gt;
+&lt;p&gt;再来看&lt;code class=&quot;highlighter-rouge&quot;&gt;elem&lt;/code&gt;变量，只用来做循环，调用了很多次，所以很难跟踪他的值，&lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt;也可以用&lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt;来修改：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var setFirstEmptyInput = function (new_value) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var setFirstEmptyInput = function (new_value) {
     for (var i = 1; true; i++) {
-        var elem = document.getElementById(&#39;input&#39; + i);
+        var elem = document.getElementById('input' + i);
         if (elem === null)
             return null;  // Search Failed. No empty input found.
-        if (elem.value === &#39;&#39;) {
+        if (elem.value === '') {
             elem.value = new_value;
             return elem;
         }
     }
 };
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;section-51&quot;&gt;重新组织你的代码&lt;/h2&gt;
-&lt;p&gt;###分离不相关的子问题
+&lt;p&gt;##重新组织你的代码
+###分离不相关的子问题
 工程师就是将大问题分解为一个个小问题，然后逐个解决，这样也易于保证程序的健壮性、可读性。如何分解子问题，下面给出一些准则：&lt;/p&gt;
 
 &lt;ul&gt;
@@ -2099,8 +2098,8 @@ var setFirstEmptyInput = function (new_value) {
 
 &lt;p&gt;来看一个例子：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;ajax_post({
-    url: &#39;http://example.com/submit&#39;,
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ajax_post({
+    url: 'http://example.com/submit',
     data: data,
     on_success: function (response_data) {
         var str = &quot;{\n&quot;;
@@ -2108,30 +2107,30 @@ var setFirstEmptyInput = function (new_value) {
             str += &quot;  &quot; + key + &quot; = &quot; + response_data[key] + &quot;\n&quot;;
         }
         alert(str + &quot;}&quot;);
-        // Continue handling &#39;response_data&#39; ...
+        // Continue handling 'response_data' ...
     }
 });
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;这段代码的目标是发送一个&lt;code&gt;ajax&lt;/code&gt;请求，所以其中字符串处理的部分就可以抽离出来：&lt;/p&gt;
+&lt;p&gt;这段代码的目标是发送一个&lt;code class=&quot;highlighter-rouge&quot;&gt;ajax&lt;/code&gt;请求，所以其中字符串处理的部分就可以抽离出来：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var format_pretty = function (obj) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var format_pretty = function (obj) {
     var str = &quot;{\n&quot;;
     for (var key in obj) {
         str += &quot;  &quot; + key + &quot; = &quot; + obj[key] + &quot;\n&quot;;
     }
     return str + &quot;}&quot;;
 };
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-52&quot;&gt;意外收获&lt;/h4&gt;
-&lt;p&gt;有很多理由将&lt;code&gt;format_pretty&lt;/code&gt;抽离出来，这些独立的函数可以很容易的添加feature，增强可靠性，处理边界情况，等等。所以这里，可以将&lt;code&gt;format_pretty&lt;/code&gt;增强，就会得到一个更强大的函数：&lt;/p&gt;
+&lt;p&gt;####意外收获
+有很多理由将&lt;code class=&quot;highlighter-rouge&quot;&gt;format_pretty&lt;/code&gt;抽离出来，这些独立的函数可以很容易的添加feature，增强可靠性，处理边界情况，等等。所以这里，可以将&lt;code class=&quot;highlighter-rouge&quot;&gt;format_pretty&lt;/code&gt;增强，就会得到一个更强大的函数：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var format_pretty = function (obj, indent) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var format_pretty = function (obj, indent) {
     // Handle null, undefined, strings, and non-objects.
     if (obj === null) return &quot;null&quot;;
     if (obj === undefined) return &quot;undefined&quot;;
-    if (typeof obj === &quot;string&quot;) return &#39;&quot;&#39; + obj + &#39;&quot;&#39;;
+    if (typeof obj === &quot;string&quot;) return '&quot;' + obj + '&quot;';
     if (typeof obj !== &quot;object&quot;) return String(obj);
     if (indent === undefined) indent = &quot;&quot;;
 
@@ -2143,11 +2142,11 @@ var setFirstEmptyInput = function (new_value) {
         str += format_pretty(obj[key], indent + &quot; &quot;) + &quot;\n&quot;; }
     return str + indent + &quot;}&quot;;
 };
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;这个函数输出：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;{
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
     key1 = 1
     key2 = true
     key3 = undefined
@@ -2158,35 +2157,35 @@ var setFirstEmptyInput = function (new_value) {
         }
     }
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;多做这样的事情，就是积累代码的过程，这样的代码可以复用，也可以形成自己的代码库，或者分享给别人。&lt;/p&gt;
 
-&lt;h4 id=&quot;section-53&quot;&gt;业务相关的函数&lt;/h4&gt;
-&lt;p&gt;那些与目标不相关函数，抽离出来可以复用，与业务相关的也可以抽出来，保持代码的易读性，例如：&lt;/p&gt;
+&lt;p&gt;####业务相关的函数
+那些与目标不相关函数，抽离出来可以复用，与业务相关的也可以抽出来，保持代码的易读性，例如：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;business = Business()
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;business = Business()
 business.name = request.POST[&quot;name&quot;]
 
 url_path_name = business.name.lower()
-url_path_name = re.sub(r&quot;[&#39;\.]&quot;, &quot;&quot;, url_path_name) 
+url_path_name = re.sub(r&quot;['\.]&quot;, &quot;&quot;, url_path_name) 
 url_path_name = re.sub(r&quot;[^a-z0-9]+&quot;, &quot;-&quot;, url_path_name) 
 url_path_name = url_path_name.strip(&quot;-&quot;)
 business.url = &quot;/biz/&quot; + url_path_name
 
 business.date_created = datetime.datetime.utcnow() 
 business.save_to_database()
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;抽离出来，就好看很多：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;CHARS_TO_REMOVE = re.compile(r&quot;[&#39;\.&#39;]+&quot;)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CHARS_TO_REMOVE = re.compile(r&quot;['\.']+&quot;)
 CHARS_TO_DASH = re.compile(r&quot;[^a-z0-9]+&quot;)
 
 def make_url_friendly(text):
     text = text.lower()
-    text = CHARS_TO_REMOVE.sub(&#39;&#39;, text) 
-    text = CHARS_TO_DASH.sub(&#39;-&#39;, text) 
+    text = CHARS_TO_REMOVE.sub('', text) 
+    text = CHARS_TO_DASH.sub('-', text) 
     return text.strip(&quot;-&quot;)
 
 business = Business()
@@ -2194,61 +2193,61 @@ business.name = request.POST[&quot;name&quot;]
 business.url = &quot;/biz/&quot; + make_url_friendly(business.name) 
 business.date_created = datetime.datetime.utcnow() 
 business.save_to_database()
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;section-54&quot;&gt;简化现有接口&lt;/h4&gt;
-&lt;p&gt;我们来看一个读写cookie的函数：&lt;/p&gt;
+&lt;p&gt;####简化现有接口
+我们来看一个读写cookie的函数：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var max_results;
-var cookies = document.cookie.split(&#39;;&#39;);
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var max_results;
+var cookies = document.cookie.split(';');
 for (var i = 0; i &amp;lt; cookies.length; i++) {
     var c = cookies[i];
-    c = c.replace(/^[ ]+/, &#39;&#39;);  // remove leading spaces
+    c = c.replace(/^[ ]+/, '');  // remove leading spaces
     if (c.indexOf(&quot;max_results=&quot;) === 0)
         max_results = Number(c.substring(12, c.length));
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;这段代码实在太丑了，理想的接口应该是这样的：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;set_cookie(name, value, days_to_expire);
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;set_cookie(name, value, days_to_expire);
 delete_cookie(name);
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;对于并不理想的接口，你永远可以用自己的函数做封装，让接口更好用。&lt;/p&gt;
 
-&lt;h4 id=&quot;section-55&quot;&gt;按自己需要写接口&lt;/h4&gt;
+&lt;p&gt;####按自己需要写接口&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;ser_info = { &quot;username&quot;: &quot;...&quot;, &quot;password&quot;: &quot;...&quot; }
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ser_info = { &quot;username&quot;: &quot;...&quot;, &quot;password&quot;: &quot;...&quot; }
 user_str = json.dumps(user_info)
 cipher = Cipher(&quot;aes_128_cbc&quot;, key=PRIVATE_KEY, init_vector=INIT_VECTOR, op=ENCODE)
 encrypted_bytes = cipher.update(user_str)
 encrypted_bytes += cipher.final() # flush out the current 128 bit block
 url = &quot;http://example.com/?user_info=&quot; + base64.urlsafe_b64encode(encrypted_bytes)
 ...
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;虽然终极目的是拼接用户信息的字符，但是代码大部分做的事情是解析python的object，所以：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;def url_safe_encrypt(obj):
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def url_safe_encrypt(obj):
     obj_str = json.dumps(obj)
     cipher = Cipher(&quot;aes_128_cbc&quot;, key=PRIVATE_KEY, init_vector=INIT_VECTOR, op=ENCODE) encrypted_bytes = cipher.update(obj_str)
     encrypted_bytes += cipher.final() # flush out the current 128 bit block
     return base64.urlsafe_b64encode(encrypted_bytes)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;这样在其他地方也可以调用：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;user_info = { &quot;username&quot;: &quot;...&quot;, &quot;password&quot;: &quot;...&quot; }
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;user_info = { &quot;username&quot;: &quot;...&quot;, &quot;password&quot;: &quot;...&quot; }
 url = &quot;http://example.com/?user_info=&quot; + url_safe_encrypt(user_info)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;分离子函数是好习惯，但是也要适度，过度的分离成多个小函数，也会让查找变得困难。&lt;/p&gt;
 
-&lt;h3 id=&quot;section-56&quot;&gt;单任务&lt;/h3&gt;
-&lt;p&gt;代码应该是一次只完成一个任务&lt;/p&gt;
+&lt;p&gt;###单任务
+代码应该是一次只完成一个任务&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var place = location_info[&quot;LocalityName&quot;];  // e.g. &quot;Santa Monica&quot;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var place = location_info[&quot;LocalityName&quot;];  // e.g. &quot;Santa Monica&quot;
 if (!place) {
     place = location_info[&quot;SubAdministrativeAreaName&quot;];  // e.g. &quot;Los Angeles&quot;
 }
@@ -2265,30 +2264,30 @@ if (location_info[&quot;CountryName&quot;]) {
 }
 
 return place;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;这是一个用来拼地名的函数，有很多的条件判断，读起来非常吃力，有没有办法拆解任务呢？&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var town    = location_info[&quot;LocalityName&quot;];               // e.g. &quot;Santa Monica&quot;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var town    = location_info[&quot;LocalityName&quot;];               // e.g. &quot;Santa Monica&quot;
 var city    = location_info[&quot;SubAdministrativeAreaName&quot;];  // e.g. &quot;Los Angeles&quot;
 var state   = location_info[&quot;AdministrativeAreaName&quot;];     // e.g. &quot;CA&quot;
 var country = location_info[&quot;CountryName&quot;];                // e.g. &quot;USA&quot;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;先拆解第一个任务，将各变量分别保存，这样在后面使用中不需要去记忆那些繁长的key值了，第二个任务，解决地址拼接的后半部分：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// Start with the default, and keep overwriting with the most specific value. var second_half = &quot;Planet Earth&quot;;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Start with the default, and keep overwriting with the most specific value. var second_half = &quot;Planet Earth&quot;;
 if (country) {
     second_half = country; 
 }
 if (state &amp;amp;&amp;amp; country === &quot;USA&quot;) {
     second_half = state; 
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;再来解决前半部分：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var first_half = &quot;Middle-of-Nowhere&quot;;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var first_half = &quot;Middle-of-Nowhere&quot;;
 if (state &amp;amp;&amp;amp; country !== &quot;USA&quot;) {
     first_half = state; 
 }
@@ -2298,16 +2297,16 @@ if (city) {
 if (town) {
     first_half = town; 
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;大功告成：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;return first_half + &quot;, &quot; + second_half;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;return first_half + &quot;, &quot; + second_half;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;如果注意到有&lt;code&gt;USA&lt;/code&gt;这个变量的判断的话，也可以这样写：&lt;/p&gt;
+&lt;p&gt;如果注意到有&lt;code class=&quot;highlighter-rouge&quot;&gt;USA&lt;/code&gt;这个变量的判断的话，也可以这样写：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var first_half, second_half;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var first_half, second_half;
 if (country === &quot;USA&quot;) {
     first_half = town || city || &quot;Middle-of-Nowhere&quot;;
     second_half = state || &quot;USA&quot;;
@@ -2316,10 +2315,10 @@ if (country === &quot;USA&quot;) {
     second_half = country || &quot;Planet Earth&quot;;
 }
 return first_half + &quot;, &quot; + second_half;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;section-57&quot;&gt;把想法转换成代码&lt;/h3&gt;
-&lt;p&gt;要把一个复杂的东西解释给别人，一些细节很容易就让人产生迷惑，所以想象把你的代码用平实的语言解释给别人听，别人是否能懂，有一些准则可以帮助你让代码更清晰：&lt;/p&gt;
+&lt;p&gt;###把想法转换成代码
+要把一个复杂的东西解释给别人，一些细节很容易就让人产生迷惑，所以想象把你的代码用平实的语言解释给别人听，别人是否能懂，有一些准则可以帮助你让代码更清晰：&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;用最平实的语言描述代码的目的，就像给读者讲述一样&lt;/li&gt;
@@ -2329,9 +2328,9 @@ return first_half + &quot;, &quot; + second_half;
 
 &lt;p&gt;下面这段代码用来校验用户的权限：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$is_admin = is_admin_request();
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$is_admin = is_admin_request();
 if ($document) {
-    if (!$is_admin &amp;amp;&amp;amp; ($document[&#39;username&#39;] != $_SESSION[&#39;username&#39;])) {
+    if (!$is_admin &amp;amp;&amp;amp; ($document['username'] != $_SESSION['username'])) {
         return not_authorized();
     }
 } else {
@@ -2340,30 +2339,30 @@ if ($document) {
     } 
 }
 // continue rendering the page ...
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;这一段代码不长，里面的逻辑嵌套倒是复杂，参考前面章节所述，嵌套太多非常影响阅读理解，将这个逻辑用语言描述就是：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;有两种情况有权限：
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;有两种情况有权限：
 1、你是管理员(admin)
 2、你拥有这个文档
 否则就没有权限
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;根据描述来写代码：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;if (is_admin_request()) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (is_admin_request()) {
     // authorized
-} elseif ($document &amp;amp;&amp;amp; ($document[&#39;username&#39;] == $_SESSION[&#39;username&#39;])) {
+} elseif ($document &amp;amp;&amp;amp; ($document['username'] == $_SESSION['username'])) {
     // authorized
 } else {
     return not_authorized();
 }
 // continue rendering the page ...
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;section-58&quot;&gt;写更少的代码&lt;/h3&gt;
-&lt;p&gt;最易懂的代码就是没有代码！&lt;/p&gt;
+&lt;p&gt;###写更少的代码
+最易懂的代码就是没有代码！&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;去掉那些没意义的feature，也不要过度设计&lt;/li&gt;
@@ -2371,8 +2370,8 @@ if ($document) {
 &lt;li&gt;熟悉你常用的库，周期性研究他的API&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;section-59&quot;&gt;最后&lt;/h2&gt;
-&lt;p&gt;还有一些与测试相关的章节，留给你自己去研读吧，再次推荐此书：&lt;/p&gt;
+&lt;p&gt;##最后
+还有一些与测试相关的章节，留给你自己去研读吧，再次推荐此书：&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;英文版：&lt;a href=&quot;http://book.douban.com/subject/5442971/&quot; title=&quot;The Art Of Readable Code&quot;&gt;《The Art of Readable Code》&lt;/a&gt;&lt;/li&gt;
@@ -2387,7 +2386,7 @@ if ($document) {
      <link href="http://beiyuu.com/40-ama-55-grammy"/>
      <updated>2013-02-19T00:00:00-08:00</updated>
      <id>http://sakanabderrex.github.io//40-ama-55-grammy</id>
-     <content type="html">&lt;h2 id=&quot;ameican-musican-awards&quot;&gt;40届全美音乐奖(Ameican Musican Awards)&lt;/h2&gt;
+     <content type="html">&lt;p&gt;##40届全美音乐奖(Ameican Musican Awards)&lt;/p&gt;
 
 &lt;p&gt;1、少了英伦小清新的全美音乐奖，总体来说还是俗气了些；&lt;/p&gt;
 
@@ -2408,10 +2407,10 @@ if ($document) {
 &lt;p&gt;9、Galaxy Note II强势插入的广告，脑补两年前格莱美的iPad广告；&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center;margin-bottom:50px;&quot;&gt;
-&lt;embed src=&quot;http://player.youku.com/player.php/sid/XNDc3MTQzMjg0/v.swf&quot; quality=&quot;high&quot; width=&quot;480&quot; height=&quot;400&quot; align=&quot;middle&quot; allowscriptaccess=&quot;sameDomain&quot; allowfullscreen=&quot;true&quot; type=&quot;application/x-shockwave-flash&quot; /&gt;
+&lt;embed src=&quot;http://player.youku.com/player.php/sid/XNDc3MTQzMjg0/v.swf&quot; quality=&quot;high&quot; width=&quot;480&quot; height=&quot;400&quot; align=&quot;middle&quot; allowscriptaccess=&quot;sameDomain&quot; allowfullscreen=&quot;true&quot; type=&quot;application/x-shockwave-flash&quot; /&gt;&amp;lt;/embed&amp;gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;grammy&quot;&gt;55届格莱美(Grammy)颁奖&lt;/h2&gt;
+&lt;p&gt;##55届格莱美(Grammy)颁奖&lt;/p&gt;
 
 &lt;p&gt;1、今年的格莱美，老将大都歇菜了，对新人感情积累不够，没法High起来，平淡的Happy一下吧；&lt;/p&gt;
 
@@ -2444,7 +2443,7 @@ if ($document) {
 &lt;p&gt;15、说起来格莱美这两年都比较low，你说没有Coldplay没有Usher没有Katy Perry没有Lady Gaga没有Justin Bieber没有Black Eyed Peas没有Eminem，连鸟叔都没有，你还让我怎么看，期待明年会更好吧！&lt;/p&gt;
 
 &lt;div style=&quot;text-align:center&quot;&gt;
-&lt;embed src=&quot;http://player.youku.com/player.php/sid/XNTEzNzI1Njcy/v.swf&quot; quality=&quot;high&quot; width=&quot;480&quot; height=&quot;400&quot; align=&quot;middle&quot; allowscriptaccess=&quot;sameDomain&quot; allowfullscreen=&quot;true&quot; type=&quot;application/x-shockwave-flash&quot; /&gt;
+&lt;embed src=&quot;http://player.youku.com/player.php/sid/XNTEzNzI1Njcy/v.swf&quot; quality=&quot;high&quot; width=&quot;480&quot; height=&quot;400&quot; align=&quot;middle&quot; allowscriptaccess=&quot;sameDomain&quot; allowfullscreen=&quot;true&quot; type=&quot;application/x-shockwave-flash&quot; /&gt;&amp;lt;/embed&amp;gt;
 &lt;/div&gt;
 
 </content>
