@@ -4,7 +4,7 @@
    <title>salamanderrex.github.io/</title>
    <link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://localhost:4000" rel="alternate" type="text/html" />
-   <updated>2019-01-15T21:15:00-08:00</updated>
+   <updated>2020-04-29T00:25:15-04:00</updated>
    <id>http://localhost:4000</id>
    <author>
      <name></name>
@@ -15,7 +15,7 @@
    <entry>
      <title>Dock in apple system</title>
      <link href="http://beiyuu.com/dock"/>
-     <updated>2015-11-16T00:00:00-08:00</updated>
+     <updated>2015-11-16T00:00:00-05:00</updated>
      <id>http://sakanabderrex.github.io//dock</id>
      <content type="html">&lt;h2 id=&quot;problem&quot;&gt;problem&lt;/h2&gt;
 &lt;p&gt;Docker moves between monitor and laptop monitor.
@@ -29,7 +29,7 @@ Dock will change to current monitor.&lt;/p&gt;
    <entry>
      <title>A bug in JAVA</title>
      <link href="http://beiyuu.com/a-bug-in-java"/>
-     <updated>2014-12-05T00:00:00-08:00</updated>
+     <updated>2014-12-05T00:00:00-05:00</updated>
      <id>http://sakanabderrex.github.io//a-bug-in-java</id>
      <content type="html">&lt;p&gt;##A bug in JAVA&lt;/p&gt;
 
@@ -127,7 +127,7 @@ nothing we can do about this.&lt;/p&gt;
    <entry>
      <title>cv</title>
      <link href="http://beiyuu.com/cv_ch"/>
-     <updated>2014-01-25T00:00:00-08:00</updated>
+     <updated>2014-01-25T00:00:00-05:00</updated>
      <id>http://sakanabderrex.github.io//cv_ch</id>
      <content type="html">&lt;div id=&quot;main&quot;&gt;
 	
@@ -381,7 +381,7 @@ nothing we can do about this.&lt;/p&gt;
    <entry>
      <title>cv</title>
      <link href="http://beiyuu.com/cv"/>
-     <updated>2014-01-25T00:00:00-08:00</updated>
+     <updated>2014-01-25T00:00:00-05:00</updated>
      <id>http://sakanabderrex.github.io//cv</id>
      <content type="html">&lt;div id=&quot;main&quot;&gt;
 
@@ -398,7 +398,7 @@ nothing we can do about this.&lt;/p&gt;
                             &lt;ul&gt;
                               &lt;li&gt;3+ years of industry experience with back-end, infrastructure and application development&lt;/li&gt;
                               &lt;li&gt;Excel in Cloud Solutions with hand-on experience based on Amazon Web Service &lt;b&gt;(AWS)&lt;/b&gt; &lt;/li&gt;
-                              &lt;li&gt;Possess a strong knowledge of information retrieval and the design of search infrastructure&lt;/li&gt;
+                              &lt;li&gt;Possess a strong knowledge of information retrieval and search &amp; observability infrastructure&lt;/li&gt;
                               &lt;li&gt;Build, maintain, and scale large infrastructure fleets and distributed clusters&lt;/li&gt;
                             &lt;/ul&gt;
                     &lt;/span&gt;
@@ -413,7 +413,7 @@ nothing we can do about this.&lt;/p&gt;
         &lt;div class=&quot;set&quot;&gt;
             &lt;p class=&quot;address&quot;&gt;
 					&lt;span class=&quot;value&quot;&gt;
-						247 Arriba Dr #1 &lt;br/&gt;Sunnyvale, CA 94086&lt;br/&gt;	&lt;/span&gt;
+						4325 HUNTER ST APT 1147E &lt;br/&gt;LONG ISLAND CITY, NY 11101&lt;br/&gt;	&lt;/span&gt;
             &lt;/p&gt;
             &lt;div class=&quot;r&quot;&gt;
                 &lt;p class=&quot;email&quot;&gt;&lt;label&gt;E-mail&lt;span class=&quot;colon&quot;&gt;:&lt;/span&gt;&lt;/label&gt; &lt;span class=&quot;value&quot;&gt;zhouqingyu.rex@gmail.com&lt;/span&gt;
@@ -449,7 +449,7 @@ nothing we can do about this.&lt;/p&gt;
              &lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
 
                &lt;span class=&quot;school&quot;&gt;Shanghai Jiao Tong University&lt;/span&gt;
-               &lt;span class=&quot;school&quot;&gt;University of Michigan – Shanghai Jiao Tong University Joint Institute&lt;!--GPA: 3.6224--&gt; Rank:10/93 &lt;/span&gt;
+               &lt;span class=&quot;school&quot;&gt;University of Michigan – Shanghai Jiao Tong University Joint Institute&lt;!--GPA: 3.6224--&gt; &lt;/span&gt;
                 &lt;!-- &lt;span class=&quot;info&quot;&gt;Earning the degree with &lt;b&gt;GPA: 3.6224  Major rank:10/93&lt;/b&gt;                                                                                                                      &lt;/span&gt; --&gt;
 
                 &lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
@@ -465,14 +465,30 @@ nothing we can do about this.&lt;/p&gt;
         &lt;div class=&quot;set&quot;&gt;
 
            &lt;div class=&quot;item&quot;&gt;
+             &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;Uber Software Engineer&lt;/span&gt;
+                    &lt;span class=&quot;date r&quot;&gt;April. 2019&amp;mdash; Current&lt;/span&gt;
+                &lt;/h3&gt;
+                &lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
+                &lt;span class=&quot;job_title&quot;&gt;Uber, &lt;b&gt;Observability Log Search Team&lt;/b&gt;, Palo Alto &amp; NYC&lt;/span&gt;
+                    &lt;span class=&quot;info&quot;&gt;
+                            &lt;ul&gt;
+                              &lt;li&gt;Built the query layer, Lucene translator, for the next generation logging platform&lt;/li&gt;
+                              &lt;li&gt;Working on the storage layer of the new platform based on Clickhouse, etcd, zookeeper&lt;/li&gt;
+                              &lt;li&gt;Operating the existing &lt;b&gt;ELK&lt;/b&gt; logging (storage &amp; ingestion) stack&lt;/li&gt;
+                              &lt;li&gt;Improved the ingestion performance of Logstash pipelines&lt;/li&gt;
+                            &lt;/ul&gt;
+                    &lt;/span&gt;
+                    &lt;span class=&quot;clear&quot;&gt;
+                &lt;/span&gt;
+
                 &lt;h3&gt;&lt;span class=&quot;company l&quot;&gt;AWS Software Engineer&lt;/span&gt;
-                    &lt;span class=&quot;date r&quot;&gt;FEB. 2017 &amp;mdash; Current&lt;/span&gt;
+                    &lt;span class=&quot;date r&quot;&gt;FEB. 2017 &amp;mdash; April.2019&lt;/span&gt;
                 &lt;/h3&gt;
                 &lt;span class=&quot;clear&quot;&gt; &lt;/span&gt;
                 &lt;span class=&quot;job_title&quot;&gt;Amazon, &lt;b&gt;AWS Search Services&lt;/b&gt;, Palo Alto&lt;/span&gt;
                     &lt;span class=&quot;info&quot;&gt;
                             &lt;ul&gt;
-                              &lt;li&gt;Working in AWS Search services team, focusing on AWS &lt;b&gt;CloudSearch&lt;/b&gt; and &lt;b&gt;Elasticsearch&lt;/b&gt; Service&lt;/li&gt;
+                              &lt;li&gt;Worked in AWS Search services team, focusing on AWS &lt;b&gt;CloudSearch&lt;/b&gt; and &lt;b&gt;Elasticsearch&lt;/b&gt; Service&lt;/li&gt;
                               &lt;li&gt;Migrated Search Services infrastructure to AWS Cloudformation as &lt;b&gt;infrastructure as code&lt;/b&gt; project &lt;/li&gt;
                               &lt;li&gt;Optimized Amazon &lt;b&gt;Logstash&lt;/b&gt; plugin based on the open-source version and increased transition speed by 40% &lt;/li&gt;
                               &lt;li&gt;Expanded Elasticsearch Services to new regions, including London, Paris, Beijing, Ningxia, Sweden &lt;/li&gt;
@@ -678,14 +694,14 @@ nothing we can do about this.&lt;/p&gt;
         &lt;div class=&quot;item&quot;&gt;
 							&lt;span class=&quot;info&quot;&gt;
                             &lt;ul class=&quot;ul_s&quot;&gt;
-                                &lt;li&gt;Program Language: Python, JAVA, C/C++, Ruby, PHP, HTML, JS, TCL&lt;/li&gt;
+                                &lt;li&gt;Program Language: Python, JAVA, C/C++, Golang, Ruby, PHP, HTML, JS, TCL&lt;/li&gt;
                                 &lt;!-- &lt;li&gt;HDL: Assembly language (on MIPS) , Verilog&lt;/li&gt; --&gt;
                                 &lt;li&gt;Web Frameworks: AngularJs, React, Bootstrap&lt;/li&gt;
                                 &lt;!-- &lt;li&gt;Version Control: GIT, SVN&lt;/li&gt; --&gt;
                                 &lt;!-- &lt;li&gt;IDE: Vim, Eclipse, IntelJ, Visual Studio, pyCharm, Matlab, RubyMine&lt;/li&gt; --&gt;
                                 &lt;li&gt;Mobile network development: Android, phoneGap &lt;/li&gt;
                                 &lt;li&gt;DevOps: Jenkins&lt;/li&gt;
-                                &lt;li&gt;AWS: Elasticsearch, SQS, EC2, EBS, ELB, SWF, EMR, DynamoDB, S3, Cloudformation, cloudwatch&lt;/li&gt;
+                                &lt;li&gt; Elasticsearch, SQS, EC2, EBS, ELB, SWF, EMR, DynamoDB, S3, Cloudformation, cloudwatch, Clickhouse, etcd&lt;/li&gt;
                                 &lt;li&gt;Version Control: git&lt;/li&gt;
                                 &lt;li&gt;IDE: Vim&lt;/li&gt;
                                 &lt;!-- &lt;li&gt;Big Data: Spark, Hadoop&lt;/li&gt; --&gt;
@@ -728,7 +744,7 @@ nothing we can do about this.&lt;/p&gt;
    <entry>
      <title>豆瓣FM(iOS 3.0)使用体会</title>
      <link href="http://beiyuu.com/douban-fm"/>
-     <updated>2013-06-06T00:00:00-07:00</updated>
+     <updated>2013-06-06T00:00:00-04:00</updated>
      <id>http://sakanabderrex.github.io//douban-fm</id>
      <content type="html">&lt;p&gt;豆瓣FM发布了全新设计的3.0版本，很多Feature不错：&lt;/p&gt;
 
@@ -800,7 +816,7 @@ nothing we can do about this.&lt;/p&gt;
    <entry>
      <title>史蒂夫·乔布斯：遗失的访谈</title>
      <link href="http://beiyuu.com/jobs-interview"/>
-     <updated>2013-05-14T00:00:00-07:00</updated>
+     <updated>2013-05-14T00:00:00-04:00</updated>
      <id>http://sakanabderrex.github.io//jobs-interview</id>
      <content type="html">&lt;p&gt;##1、做公司就是做产品&lt;/p&gt;
 
@@ -847,7 +863,7 @@ nothing we can do about this.&lt;/p&gt;
    <entry>
      <title>Edongle</title>
      <link href="http://beiyuu.com/edongle_blog"/>
-     <updated>2013-04-12T00:00:00-07:00</updated>
+     <updated>2013-04-12T00:00:00-04:00</updated>
      <id>http://sakanabderrex.github.io//edongle_blog</id>
      <content type="html">&lt;p&gt;#Edongle
  ————————————————-
@@ -938,7 +954,7 @@ nothing we can do about this.&lt;/p&gt;
    <entry>
      <title>编写可读代码的艺术</title>
      <link href="http://beiyuu.com/readable-code"/>
-     <updated>2013-03-21T00:00:00-07:00</updated>
+     <updated>2013-03-21T00:00:00-04:00</updated>
      <id>http://sakanabderrex.github.io//readable-code</id>
      <content type="html">&lt;p&gt;这是《The Art of Readable Code》的读书笔记，再加一点自己的认识。强烈推荐此书：&lt;/p&gt;
 
@@ -2384,7 +2400,7 @@ if ($document) {
    <entry>
      <title>40届全美音乐奖和55届格莱美颁奖演出观感</title>
      <link href="http://beiyuu.com/40-ama-55-grammy"/>
-     <updated>2013-02-19T00:00:00-08:00</updated>
+     <updated>2013-02-19T00:00:00-05:00</updated>
      <id>http://sakanabderrex.github.io//40-ama-55-grammy</id>
      <content type="html">&lt;p&gt;##40届全美音乐奖(Ameican Musican Awards)&lt;/p&gt;
 
@@ -2452,7 +2468,7 @@ if ($document) {
    <entry>
      <title>只有好的棋手才会走运</title>
      <link href="http://beiyuu.com/build-facebook"/>
-     <updated>2013-01-21T00:00:00-08:00</updated>
+     <updated>2013-01-21T00:00:00-05:00</updated>
      <id>http://sakanabderrex.github.io//build-facebook</id>
      <content type="html">&lt;p&gt;能和Facebook这样的公司一起成长太幸福，对作者真是羡慕嫉妒恨。&lt;/p&gt;
 
