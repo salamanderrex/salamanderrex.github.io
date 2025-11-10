@@ -10,7 +10,7 @@ category: blog
 Github Pages有以下几个优点：
 
 <ul>
-    <li>轻量级的博客系统，没有麻烦的配置</li>
+    <li>轻量级的博客系统，没有麻烦的配置 </li>
     <li>使用标记语言，比如<a href="http://markdown.tw">Markdown</a></li>
     <li>无需自己搭建服务器</li>
     <li>根据Github的限制，对应的每个站有300MB空间</li>
