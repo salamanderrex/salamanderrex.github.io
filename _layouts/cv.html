@@ -209,6 +209,57 @@
 				padding: 5px;
 			}
 		}
+
+		@media print {
+			@page {
+				size: letter;
+				margin: 0.25in 0.35in;
+			}
+			body {
+				font-size: 10px;
+				line-height: 14.5px;
+			}
+			#main {
+				box-shadow: none;
+				margin: 0;
+				padding: 0;
+				width: auto;
+			}
+			#title {
+				font-size: 26px;
+				line-height: 28px;
+				padding-bottom: 6px;
+				margin-bottom: 7px;
+			}
+			.section {
+				margin-bottom: 3px;
+			}
+			.section .title {
+				padding: 2px 5px;
+				margin-right: 20px;
+				width: 14%;
+			}
+			.section .set {
+				width: 82%;
+			}
+			.section-education .school,
+			.section-work .job_title {
+				margin: 3px 0;
+			}
+			.item {
+				margin-bottom: 5px;
+			}
+			.section-work .item {
+				break-inside: avoid;
+				page-break-inside: avoid;
+			}
+			ul {
+				padding-left: 14px;
+			}
+			a {
+				text-decoration: none;
+			}
+		}
 	</style>
 </head>
 <body class="lang-en ">
